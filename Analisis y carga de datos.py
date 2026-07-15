@@ -5,7 +5,8 @@ from collections import Counter
 import matplotlib.pyplot as plt
 import csv
 
-DATASET_DIR = "8266730"
+DATASET_DIR = "C:\\Users\\HOME\\OneDrive\\Documentos\\septimo\\vision\\8266730\\8266730"
+OUT_DIR = "C:\\Users\\HOME\\OneDrive\\Documentos\\septimo\\vision\\Proyecto integrador"
 
 CLASES = ["Afro-ecuadorians", "European descendants", "Indigenous", "Mestizos"]
 
@@ -78,10 +79,10 @@ plt.xticks(rotation=30, ha="right")
 plt.title("Número de instancias por clase")
 plt.ylabel("Cantidad de imágenes")
 plt.tight_layout()
-plt.savefig(os.path.join(DATASET_DIR, "instancias_por_clase.png"))
+plt.savefig(os.path.join(OUT_DIR, "instancias_por_clase.png"))
 plt.show()
 
-resumen_path = os.path.join(DATASET_DIR, "resumen_exploratorio.csv")
+resumen_path = os.path.join(OUT_DIR, "resumen_exploratorio.csv")
 with open(resumen_path, "w", newline="", encoding="utf-8") as f:
     writer = csv.writer(f)
     writer.writerow(["clase", "cantidad_imagenes"])
@@ -97,4 +98,4 @@ with open(resumen_path, "w", newline="", encoding="utf-8") as f:
         writer.writerow(["peso_promedio_kb", f"{sum(pesos_kb)/len(pesos_kb):.1f}"])
 
 print(f"\nResumen guardado en: {resumen_path}")
-print(f"Gráfico guardado en: {os.path.join(DATASET_DIR, 'instancias_por_clase.png')}")
+print(f"Gráfico guardado en: {os.path.join(OUT_DIR, 'instancias_por_clase.png')}")
