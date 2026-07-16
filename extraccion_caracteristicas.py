@@ -5,8 +5,8 @@ import numpy as np
 import pandas as pd
 
 # 1. Definir rutas de los datos
-INPUT_DIR = "/content/drive/MyDrive/Integrador/Dataset_Preprocesado"
-OUTPUT_DIR = "/content/drive/MyDrive/Integrador/Datasets_Caracteristicas"
+INPUT_DIR = "C:\\Users\\HOME\\OneDrive\\Documentos\\septimo\\vision\\Proyecto integrador\\Dataset_Preprocesado"
+OUTPUT_DIR = "C:\\Users\\HOME\\OneDrive\\Documentos\\septimo\\vision\\Proyecto integrador\\Datasets_Caracteristicas"
 
 CLASES = ["Afro-ecuadorians", "European descendants", "Indigenous", "Mestizos"]
 
