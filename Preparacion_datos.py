@@ -4,7 +4,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
 
 # Rutas de los datasets generados en la Meta 2
-INPUT_DIR = "C:\\Users\\HOME\\OneDrive\\Documentos\\septimo\\vision\\Proyecto integrador\\Datasets_Caracteristicas"
+INPUT_DIR = r"c:\Users\Lalavias\Documents\Machine proyecto final\ProyectoIntegrador_VC_MCL\Datasets_Caracteristicas"
 archivos_csv = ["dataset_hu.csv", "dataset_hog.csv", "dataset_brisk.csv"]
 
 # Diccionario maestro para guardar las divisiones de nuestros 3 datasets

@@ -2,8 +2,8 @@ import os
 import cv2
 import matplotlib.pyplot as plt
 
-DATASET_DIR = "C:\\Users\\HOME\\OneDrive\\Documentos\\septimo\\vision\\8266730\\8266730"
-OUTPUT_DIR = "C:\\Users\\HOME\\OneDrive\\Documentos\\septimo\\vision\\Proyecto integrador\\Dataset_Preprocesado"
+DATASET_DIR = r"c:\Users\Lalavias\Documents\Machine proyecto final\8266730"
+OUTPUT_DIR = r"c:\Users\Lalavias\Documents\Machine proyecto final\ProyectoIntegrador_VC_MCL\Dataset_Preprocesado"
 
 
 CLASES = ["Afro-ecuadorians", "European descendants", "Indigenous", "Mestizos"]

@@ -5,8 +5,8 @@ from collections import Counter
 import matplotlib.pyplot as plt
 import csv
 
-DATASET_DIR = "C:\\Users\\HOME\\OneDrive\\Documentos\\septimo\\vision\\8266730\\8266730"
-OUT_DIR = "C:\\Users\\HOME\\OneDrive\\Documentos\\septimo\\vision\\Proyecto integrador"
+DATASET_DIR = r"c:\Users\Lalavias\Documents\Machine proyecto final\8266730"
+OUT_DIR = r"c:\Users\Lalavias\Documents\Machine proyecto final\ProyectoIntegrador_VC_MCL"
 
 CLASES = ["Afro-ecuadorians", "European descendants", "Indigenous", "Mestizos"]
 
