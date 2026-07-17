@@ -4,10 +4,11 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
 import os
 
+base_dir = os.path.dirname(os.path.abspath(__file__))
 datasets = {
-    "HU (Momentos)": r"c:\Users\Lalavias\Documents\Machine proyecto final\ProyectoIntegrador_VC_MCL\Datasets_Caracteristicas\dataset_hu.csv",
-    "HOG (Avanzado)": r"c:\Users\Lalavias\Documents\Machine proyecto final\ProyectoIntegrador_VC_MCL\Datasets_Caracteristicas\dataset_hog.csv",
-    "BRISK (Investigado)": r"c:\Users\Lalavias\Documents\Machine proyecto final\ProyectoIntegrador_VC_MCL\Datasets_Caracteristicas\dataset_brisk.csv"
+    "HU (Momentos)": os.path.join(base_dir, "Datasets_Caracteristicas", "dataset_hu.csv"),
+    "HOG (Avanzado)": os.path.join(base_dir, "Datasets_Caracteristicas", "dataset_hog.csv"),
+    "BRISK (Investigado)": os.path.join(base_dir, "Datasets_Caracteristicas", "dataset_brisk.csv")
 }
 
 def entrenar_evaluar_rf(nombre_dataset, ruta_dataset):
