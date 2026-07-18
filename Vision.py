@@ -2,8 +2,12 @@ import os
 import cv2
 import matplotlib.pyplot as plt
 
-DATASET_DIR = r"c:\Users\Lalavias\Documents\Machine proyecto final\8266730"
-OUTPUT_DIR = r"c:\Users\Lalavias\Documents\Machine proyecto final\ProyectoIntegrador_VC_MCL\Dataset_Preprocesado"
+base_dir = os.path.dirname(os.path.abspath(__file__))
+# La carpeta de datos está un nivel arriba del código, o a nivel raíz del workspace.
+# c:\Users\jeffe\Documentos\Septimo Semestre\Proyecto zz\data
+workspace_root = os.path.dirname(base_dir) 
+DATASET_DIR = os.path.join(workspace_root, "data")
+OUTPUT_DIR = os.path.join(base_dir, "Dataset_Preprocesado")
 
 
 CLASES = ["Afro-ecuadorians", "European descendants", "Indigenous", "Mestizos"]
@@ -73,7 +77,7 @@ for clase in CLASES:
             ejemplos_procesados.append(img_binarizada)
             capturo_ejemplo = True
 
-    print(f"✅ Clase '{clase}' procesada. Imágenes guardadas en Dataset_Preprocesado.")
+    print(f"Clase '{clase}' procesada. Imágenes guardadas en Dataset_Preprocesado.")
 
 print("-" * 50)
 print("¡NUEVO Preprocesamiento completado!")
@@ -94,4 +98,4 @@ for i in range(4):
     axs[i, 1].axis('off')
 
 plt.tight_layout()
-plt.show()
+# plt.show()

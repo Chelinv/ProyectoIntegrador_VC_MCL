@@ -1,12 +1,14 @@
 import os
+# pyrefly: ignore [missing-import]
 import cv2
 import time
 import numpy as np
 import pandas as pd
 
 # 1. Definir rutas de los datos
-INPUT_DIR = r"c:\Users\Lalavias\Documents\Machine proyecto final\ProyectoIntegrador_VC_MCL\Dataset_Preprocesado"
-OUTPUT_DIR = r"c:\Users\Lalavias\Documents\Machine proyecto final\ProyectoIntegrador_VC_MCL\Datasets_Caracteristicas"
+base_dir = os.path.dirname(os.path.abspath(__file__))
+INPUT_DIR = os.path.join(base_dir, "Dataset_Preprocesado")
+OUTPUT_DIR = os.path.join(base_dir, "Datasets_Caracteristicas")
 
 CLASES = ["Afro-ecuadorians", "European descendants", "Indigenous", "Mestizos"]
 
@@ -86,7 +88,7 @@ for clase in CLASES:
         datos_brisk.append(fila_brisk)
         tiempo_brisk += (time.time() - t_inicio_brisk)  # Pausar y sumar tiempo BRISK
 
-    print(f"✅ Extracción completada para la clase: {clase}")
+    print(f"Extracción completada para la clase: {clase}")
 
 # 4. Guardar los 3 datasets
 df_hu = pd.DataFrame(datos_hu)

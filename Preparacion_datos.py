@@ -17,7 +17,7 @@ for archivo in archivos_csv:
     ruta_csv = os.path.join(INPUT_DIR, archivo)
     
     if not os.path.exists(ruta_csv):
-        print(f"⚠️ Archivo no encontrado: {ruta_csv}")
+        print(f"Archivo no encontrado: {ruta_csv}")
         continue
         
     # 1. Cargar el CSV
@@ -50,7 +50,7 @@ for archivo in archivos_csv:
         "clases_nombres": le.classes_ # Guardamos los nombres para la matriz de confusión luego
     }
     
-    print(f"✅ Dataset procesado: {archivo}")
+    print(f"Dataset procesado: {archivo}")
     print(f"   - Total de instancias originales: {len(df)}")
     print(f"   - Tamaño de Entrenamiento (X_train): {X_train.shape}")
     print(f"   - Tamaño de Prueba (X_test): {X_test.shape}")

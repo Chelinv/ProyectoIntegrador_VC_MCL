@@ -1,4 +1,5 @@
 import os
+# pyrefly: ignore [missing-import]
 import cv2
 from pathlib import Path
 from collections import Counter

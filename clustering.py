@@ -52,6 +52,8 @@ def dunn_index(X, labels):
                 
     return min_dist_inter / max_diametro
 
+resultados_ari = {}
+
 # Procesar cada uno de los datasets
 for nombre, ruta in datasets.items():
     if not os.path.exists(ruta):
@@ -121,5 +123,20 @@ for nombre, ruta in datasets.items():
     print(f"    - AMI: {ami:.4f}")
     print(f"    - NMI: {nmi:.4f}")
     print("=" * 40)
+    
+    # Guardamos el resultado del ARI para compararlos al final
+    resultados_ari[nombre] = ari
 
+print("\n" + "=" * 50)
+print("RESULTADO FINAL DEL CLUSTERING")
+print("=" * 50)
+
+# Buscar cuál tuvo el ARI más alto (el mejor ajustado a las etiquetas reales)
+mejor_dataset = max(resultados_ari, key=resultados_ari.get)
+mejor_puntuacion = resultados_ari[mejor_dataset]
+
+print(f"-> Tras comparar los 3 métodos de extracción de características,")
+print(f"-> el MEJOR dataset para agrupamiento (K-Means) es: {mejor_dataset}")
+print(f"-> con una puntuación ARI (Adjusted Rand Score) de: {mejor_puntuacion:.4f}")
+print("=" * 50)
 print("\nClustering Terminado")
