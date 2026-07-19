@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>resultados Machine learnign</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/Frontend_Machine/style.css">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <nav class="sidebar">
+        <h2>Fases del Proyecto</h2>
+        <ul>
+            <li><a href="/" style="text-decoration: none; color: inherit; display: block; padding: 1rem; border-radius: 12px; margin-bottom: 0.5rem; border: 1px solid transparent;">1. Análisis y Carga</a></li>
+            <li><a href="/" style="text-decoration: none; color: inherit; display: block; padding: 1rem; border-radius: 12px; margin-bottom: 0.5rem; border: 1px solid transparent;">2. Preprocesamiento (Visión)</a></li>
+            <li><a href="/" style="text-decoration: none; color: inherit; display: block; padding: 1rem; border-radius: 12px; margin-bottom: 0.5rem; border: 1px solid transparent;">3. Extracción de Características</a></li>
+            <li class="active" data-target="resultados">4. Resultados ML</li>
+            <li data-target="prediccion">5. Predicción en Vivo</li>
+        </ul>
+    </nav>
+
+    <main class="content-area">
+        
+        <!-- FASE RESULTADOS -->
+        <section id="resultados" class="phase-section active">
+            <div class="glass-container">
+                <header>
+                    <h1>Resultados <span>Machine Learning</span></h1>
+                    <p class="subtitle">Modelos: Máquina de Soporte Vectorial (SVM) y Random Forest</p>
+                </header>
+                
+                <div class="content-grid">
+                    <div class="text-content" style="grid-column: 1 / -1;">
+                        <h3>Métricas de Evaluación (Dataset de Test)</h3>
+                        <p>Tras reservar el 20% de nuestro conjunto de datos como <strong>Dataset de Test</strong> (imágenes que los algoritmos nunca habían visto en el entrenamiento), evaluamos el rendimiento real de los 4 modelos desarrollados. Estos son los resultados oficiales:</p>
+
+                        <div class="metrics-grid two-by-two">
+                            <div class="metric-card model-svm">
+                                <h4>SVM</h4>
+                                <div class="model-badge">Supervisado Clásico</div>
+                                <table class="comparison-table" style="font-size: 0.75rem;">
+                                    <tr><th>Extractor</th><th>Acc</th><th>Prec</th><th>Recall</th><th>F1</th></tr>
+                                    <tr class="winner-row"><td>HU</td><td>65.12%</td><td>42.40%</td><td>65.12%</td><td>51.36%</td></tr>
+                                    <tr><td>BRISK</td><td>62.79%</td><td>47.90%</td><td>62.79%</td><td>51.95%</td></tr>
+                                    <tr><td>HOG</td><td>52.33%</td><td>47.03%</td><td>52.33%</td><td>49.52%</td></tr>
+                                </table>
+                                <div class="winner-badge">Ganador: HU</div>
+                            </div>
+                            
+                            <!-- Modelo 2: Random Forest -->
+                            <div class="metric-card model-rf">
+                                <h4>Random Forest</h4>
+                                <div class="model-badge">Ensamble Supervisado</div>
+                                <table class="comparison-table" style="font-size: 0.75rem;">
+                                    <tr><th>Extractor</th><th>Acc</th><th>Prec</th><th>Recall</th><th>F1</th></tr>
+                                    <tr class="winner-row"><td>HOG</td><td>65.12%</td><td>42.40%</td><td>65.12%</td><td>51.36%</td></tr>
+                                    <tr class="winner-row"><td>BRISK</td><td>65.12%</td><td>42.40%</td><td>65.12%</td><td>51.36%</td></tr>
+                                    <tr><td>HU</td><td>56.98%</td><td>47.59%</td><td>56.98%</td><td>50.17%</td></tr>
+                                </table>
+                                <div class="winner-badge">Ganador Empate: HOG / BRISK</div>
+                            </div>
+
+                            <!-- Modelo 3: CNN -->
+                            <div class="metric-card model-cnn">
+                                <h4>CNN</h4>
+                                <div class="model-badge">Deep Learning</div>
+                                <p style="font-size: 0.75rem; color: #ddd; margin: 0 0 10px 0;">Extrae características automáticamente de los píxeles (Raw Pixels).</p>
+                                <table class="comparison-table" style="font-size: 0.75rem;">
+                                    <tr><th>Entrada</th><th>Acc</th><th>Prec</th><th>Recall</th><th>F1</th></tr>
+                                    <tr class="winner-row"><td>Raw Pixels</td><td>69.77%</td><td>48.67%</td><td>69.77%</td><td>57.34%</td></tr>
+                                </table>
+                                <div class="winner-badge">Ganador General: CNN</div>
+                            </div>
+
+                            <!-- Modelo 4: K-Means -->
+                            <div class="metric-card model-kmeans">
+                                <h4>K-Means</h4>
+                                <div class="model-badge">Clustering (No Supervisado)</div>
+                                <table class="comparison-table" style="font-size: 0.75rem;">
+                                    <tr><th>Extractor</th><th>Silueta</th><th>Dunn</th><th>ARI</th><th>AMI</th><th>NMI</th></tr>
+                                    <tr class="winner-row"><td>HOG</td><td>0.1674</td><td>0.2809</td><td>0.0309</td><td>0.0301</td><td>0.0430</td></tr>
+                                    <tr><td>HU</td><td>0.1883</td><td>0.0473</td><td>0.0008</td><td>-0.0030</td><td>0.0060</td></tr>
+                                    <tr><td>BRISK</td><td>0.0016</td><td>0.8251</td><td>0.0091</td><td>0.0016</td><td>0.0117</td></tr>
+                                </table>
+                                <div class="winner-badge">Mejor Estructura: HOG</div>
+                            </div>
+                        </div>
+
+                        <h3>1. Conclusión Global (Los 4 Modelos)</h3>
+                        <p>Al evaluar los 4 modelos en su totalidad, el ganador absoluto del proyecto es la <strong>Red Neuronal Convolucional (CNN) con un 69.77% de precisión</strong>. La razón principal de su victoria es su arquitectura de Deep Learning: a diferencia del resto, la CNN no requiere que extraigamos características manualmente, sino que trabaja directamente con los píxeles puros y aprende por sí misma a extraer los patrones más complejos de los rostros, logrando el mejor rendimiento.</p>
+                        
+                        <h3>2. Conclusión de Preprocesamiento Manual (SVM, Random Forest y K-Means)</h3>
+                        <p>Al evaluar los modelos clásicos utilizando los datos reales arrojados por el sistema, se observa un triple <strong>empate exacto en el primer lugar con 65.12% de precisión</strong>. Los ganadores de esta categoría son <strong>SVM (utilizando Momentos de HU)</strong> y <strong>Random Forest (utilizando HOG y BRISK)</strong>, ambos alcanzando incluso el mismo F1-Score (51.36%). Esto demuestra matemáticamente que la ingeniería de extracción de características llegó a su límite ("techo") en el 65.12%. Por otro lado, K-Means (al ser no supervisado) comprobó que los rostros son demasiado complejos para agruparse solos.</p>
+                        
+                        <div class="evidence-list">
+                            <!-- Evidencia 1: Comparativa Codo HOG y BRISK -->
+                            <div class="evidence-card">
+                                <div class="evidence-img">
+                                    <img src="/Resultados_Clustering/codo_hog.png" alt="Método del Codo HOG" class="zoomable-img" onclick="openModal(this.src, this.alt)">
+                                </div>
+                                <div class="evidence-text">
+                                    <h4>1. Estabilidad Geométrica: HOG vs Otros</h4>
+                                    <p>Esta gráfica del <strong>Método del Codo (HOG)</strong> muestra una curvatura suave y escalonada. Al compararla con BRISK, notamos que HOG procesa mejor los contornos de los rostros y le da al algoritmo K-Means una noción matemática más estable de que existen 4 grupos (etnias) latentes.</p>
+                                </div>
+                            </div>
+
+                            <!-- Evidencia 2: Codo BRISK -->
+                            <div class="evidence-card">
+                                <div class="evidence-img">
+                                    <img src="/Resultados_Clustering/codo_brisk.png" alt="Método del Codo BRISK" class="zoomable-img" onclick="openModal(this.src, this.alt)">
+                                </div>
+                                <div class="evidence-text">
+                                    <h4>2. Análisis de Puntos Clave (BRISK)</h4>
+                                    <p>El comportamiento de <strong>BRISK</strong> es distinto. Al ser un descriptor basado en puntos clave (como esquinas de los ojos), su reducción de inercia es más abrupta. K-Means lucha más por agrupar estos puntos de manera lógica, lo que explica por qué su puntuación de silueta fue casi cero (0.0019).</p>
+                                </div>
+                            </div>
+
+                            <!-- Evidencia 3: Codo HU -->
+                            <div class="evidence-card">
+                                <div class="evidence-img">
+                                    <img src="/Resultados_Clustering/codo_hu.png" alt="Método del Codo HU" class="zoomable-img" onclick="openModal(this.src, this.alt)">
+                                </div>
+                                <div class="evidence-text">
+                                    <h4>3. Análisis de Momentos (HU)</h4>
+                                    <p>A diferencia de los cientos de características de HOG, los <strong>Momentos de HU</strong> resumen el rostro en solo 7 variables globales. Su gráfica del codo muestra que pierde inercia muy lentamente, lo que indica que resumir un rostro en solo 7 números no ofrece suficiente detalle geométrico para separar las etnias.</p>
+                                </div>
+                            </div>
+
+                            <!-- Evidencia 4: Matriz Correlacion HU -->
+                            <div class="evidence-card">
+                                <div class="evidence-img">
+                                    <img src="/Resultados_Clustering/correlacion_hu.png" alt="Matriz de Correlación HU" class="zoomable-img" onclick="openModal(this.src, this.alt)">
+                                </div>
+                                <div class="evidence-text">
+                                    <h4>4. Colinealidad de Características (Matriz HU)</h4>
+                                    <p>Este mapa de calor evidencia la relación directa entre las variables. Algunos valores alcanzan la correlación máxima (1.0), lo que significa que el descriptor está enviando información redundante o repetida a los modelos de clasificación, dificultando su aprendizaje y bajando su efectividad final.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FASE PREDICCION EN VIVO -->
+        <section id="prediccion" class="phase-section" style="display: none;">
+            <div class="glass-container">
+                <header>
+                    <h1>Predicción <span>en Tiempo Real</span></h1>
+                    <p class="subtitle">Prueba los modelos con tu cámara web</p>
+                </header>
+                
+                <div class="content-grid">
+                    <div class="interactive-panel">
+                        <section class="controls">
+                            <div class="status-indicator" id="ml-status">Esperando cámara...</div>
+
+                            <div class="actions">
+                                <label for="ml-imageUpload" class="btn primary-btn">
+                                    Subir Imagen
+                                    <input type="file" id="ml-imageUpload" accept="image/*" style="display: none;">
+                                </label>
+                                <button id="ml-cameraBtn" class="btn secondary-btn">Encender Cámara</button>
+                                <button id="ml-captureBtn" class="btn primary-btn" style="display: none;">📷 Clasificar Rostro</button>
+                            </div>
+                            
+                            <!-- Selectores Dinámicos -->
+                            <div class="dynamic-selectors" style="margin-top: 15px; display: flex; gap: 15px; flex-wrap: wrap; justify-content: center; background: rgba(0,0,0,0.3); padding: 10px 20px; border-radius: 8px; border: 1px solid var(--glass-border);">
+                                <div style="display: flex; flex-direction: column; align-items: flex-start;">
+                                    <label for="modelSelect" style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 5px;">Modelo Predictivo:</label>
+                                    <select id="modelSelect" style="background: rgba(255,255,255,0.1); color: white; border: 1px solid rgba(255,255,255,0.2); padding: 5px 10px; border-radius: 6px; outline: none; cursor: pointer;">
+                                        <option value="cnn" style="background: #1a1a2e; color: white;">CNN (Deep Learning)</option>
+                                        <option value="svm" style="background: #1a1a2e; color: white;">SVM (Máquina de Soporte Vectorial)</option>
+                                        <option value="rf" style="background: #1a1a2e; color: white;">Random Forest</option>
+                                        <option value="kmeans" style="background: #1a1a2e; color: white;">K-Means (Clustering)</option>
+                                    </select>
+                                </div>
+                                <div style="display: flex; flex-direction: column; align-items: flex-start;">
+                                    <label for="extractorSelect" style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 5px;">Extractor (Preprocesamiento):</label>
+                                    <select id="extractorSelect" disabled style="background: rgba(255,255,255,0.1); color: white; border: 1px solid rgba(255,255,255,0.2); padding: 5px 10px; border-radius: 6px; outline: none; cursor: pointer; opacity: 0.5;">
+                                        <option value="hog" style="background: #1a1a2e; color: white;">HOG (Avanzado)</option>
+                                        <option value="hu" style="background: #1a1a2e; color: white;">Momentos de HU</option>
+                                        <option value="brisk" style="background: #1a1a2e; color: white;">BRISK (Puntos Clave)</option>
+                                    </select>
+                                </div>
+                                <div style="display: flex; flex-direction: column; align-items: center; justify-content: flex-end;">
+                                    <button id="ml-reevaluateBtn" class="btn primary-btn" style="display: none; padding: 5px 15px; font-size: 0.9rem; margin-top: 20px;">🔄 Volver a Intentar</button>
+                                </div>
+                            </div>
+                        </section>
+                        <div class="camera-wrapper">
+                            <video id="ml-videoElement" autoplay playsinline></video>
+                            <canvas id="ml-canvasOriginal" style="display: none;"></canvas>
+                            <img id="ml-imagePreview" style="display: none; max-width: 100%; border-radius: 12px;" />
+                        </div>
+                    </div>
+
+                    <!-- Panel de Resultados Dinámico -->
+                    <div class="results-panel">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                            <h3 style="margin: 0;">Resultado Dinámico</h3>
+                            <span id="activeModelBadge" style="background: rgba(46, 204, 113, 0.2); color: #2ecc71; padding: 5px 10px; border-radius: 6px; font-size: 0.8rem; font-weight: bold; border: 1px solid rgba(46, 204, 113, 0.5);">Modelo: CNN (Raw Pixels)</span>
+                        </div>
+                        
+                        <div class="prediction-box box-cnn" id="dynamic-result-box" style="padding: 2rem;">
+                            <h4 id="dynamic-model-name" style="font-size: 1.2rem; color: var(--text-muted); margin-bottom: 1rem;">CNN (Deep Learning)</h4>
+                            <div class="pred-class" id="dynamic-class" style="font-size: 2.5rem; color: var(--primary);">Esperando imagen...</div>
+                            <div class="pred-conf" id="dynamic-conf" style="font-size: 1rem; margin-top: 10px;">--%</div>
+                        </div>
+
+                        <!-- K-Means Reference Table -->
+                        <div id="kmeans-reference" style="display: none; margin-top: 20px; padding: 15px; background: rgba(0,0,0,0.3); border-radius: 8px; border: 1px solid var(--glass-border);">
+                            <h4 style="margin-top: 0; color: var(--text-muted); font-size: 0.9rem;">Referencia de Grupos (K-Means HOG)</h4>
+                            <table class="comparison-table" style="font-size: 0.75rem; margin-top: 10px;">
+                                <tr><th>Grupo</th><th>Composición Mayoritaria (Morfología)</th></tr>
+                                <tr><td>Grupo 0</td><td>Indígenas / Afroecuatorianos</td></tr>
+                                <tr><td>Grupo 1</td><td>Mestizos (Variante A) / Indígenas</td></tr>
+                                <tr><td>Grupo 2</td><td>Mestizos / Descendientes Europeos</td></tr>
+                                <tr><td>Grupo 3</td><td>Mestizos (Variante B)</td></tr>
+                            </table>
+                            <p style="font-size: 0.7rem; color: #aaa; margin-top: 5px;">* K-Means es un modelo no supervisado. Esta tabla muestra cómo el algoritmo agrupó matemáticamente los rostros sin conocer su etnia real, demostrando la complejidad morfológica del dataset.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Modal para Imágenes -->
+    <div id="imageModal" class="modal">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="expandedImg">
+        <div id="modalCaption"></div>
+    </div>
+
+    <script src="/Frontend_Machine/script.js"></script>
+</body>
+</html>
