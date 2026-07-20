@@ -91,6 +91,33 @@ def init_models():
     hog_descriptor = cv2.HOGDescriptor(winSize, blockSize, blockStride, cellSize, nbins)
     brisk_descriptor = cv2.BRISK_create()
 
+    brisk_descriptor = cv2.BRISK_create()
+
+# Detector de Rostros basado en Segmentación de Color (HSV) y Contornos
+def extract_face_roi(img_color):
+    hsv = cv2.cvtColor(img_color, cv2.COLOR_BGR2HSV)
+    lower_skin = np.array([0, 20, 70], dtype=np.uint8)
+    upper_skin = np.array([20, 255, 255], dtype=np.uint8)
+    mask = cv2.inRange(hsv, lower_skin, upper_skin)
+    
+    # Filtros Morfológicos
+    kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (11, 11))
+    mask = cv2.erode(mask, kernel, iterations=1)
+    mask = cv2.dilate(mask, kernel, iterations=2)
+    mask = cv2.GaussianBlur(mask, (3, 3), 0)
+    
+    contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+    if not contours:
+        raise ValueError("No face detected")
+        
+    c = max(contours, key=cv2.contourArea)
+    if cv2.contourArea(c) < 1500:
+        raise ValueError("No face detected")
+        
+    x, y, w, h = cv2.boundingRect(c)
+    gray_full = cv2.cvtColor(img_color, cv2.COLOR_BGR2GRAY)
+    return gray_full[y:y+h, x:x+w], gray_full
+
 init_models()
 
 # ==========================================
@@ -99,9 +126,11 @@ init_models()
 def preprocess_image(image_bytes):
     np_arr = np.frombuffer(image_bytes, np.uint8)
     img = cv2.imdecode(np_arr, cv2.IMREAD_COLOR)
-    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    
+    face_roi, _ = extract_face_roi(img)
+    
     clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8, 8))
-    clahe_img = clahe.apply(gray)
+    clahe_img = clahe.apply(face_roi)
     blur = cv2.bilateralFilter(clahe_img, 9, 75, 75)
     thresh = cv2.adaptiveThreshold(blur, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 11, 2)
     img_resized = cv2.resize(thresh, (64, 64))
@@ -142,12 +171,12 @@ def preprocess_demo():
         np_arr = np.frombuffer(image_bytes, np.uint8)
         img_original = cv2.imdecode(np_arr, cv2.IMREAD_COLOR)
         
-        # A. Escala de grises
-        gray = cv2.cvtColor(img_original, cv2.COLOR_BGR2GRAY)
+        # A. Detección de Rostro por HSV
+        face_roi, gray = extract_face_roi(img_original)
         
         # B. CLAHE
         clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8,8))
-        img_clahe = clahe.apply(gray)
+        img_clahe = clahe.apply(face_roi)
         
         # C. Filtro Bilateral
         img_blur = cv2.bilateralFilter(img_clahe, 9, 75, 75)
@@ -183,10 +212,11 @@ def extract_demo():
         np_arr = np.frombuffer(image_bytes, np.uint8)
         img_original = cv2.imdecode(np_arr, cv2.IMREAD_COLOR)
         
-        # 1. Preprocesamiento Completo Oculto
-        gray = cv2.cvtColor(img_original, cv2.COLOR_BGR2GRAY)
+        # 1. Preprocesamiento Completo con Detección de Rostro HSV
+        face_roi, gray = extract_face_roi(img_original)
+
         clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8,8))
-        img_clahe = clahe.apply(gray)
+        img_clahe = clahe.apply(face_roi)
         img_blur = cv2.bilateralFilter(img_clahe, 9, 75, 75)
         img_thresh = cv2.adaptiveThreshold(img_blur, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 11, 2)
         
@@ -285,7 +315,8 @@ def predict():
                 pred_cnn_raw = cnn_model.predict(X_cnn, verbose=0)[0]
                 class_idx = np.argmax(pred_cnn_raw)
                 prob_cnn = float(np.max(pred_cnn_raw))
-                return jsonify({"clase": clases_oficiales[class_idx], "prob": prob_cnn})
+                distribucion = {clases_oficiales[i]: float(pred_cnn_raw[i]) for i in range(len(clases_oficiales))}
+                return jsonify({"clase": clases_oficiales[class_idx], "prob": prob_cnn, "distribucion": distribucion})
             else:
                 return jsonify({'error': 'CNN model not loaded'}), 500
                 
@@ -295,8 +326,10 @@ def predict():
                 s = scalers[req_extractor]
                 feat_scaled = s.transform(features)
                 pred = m.predict(feat_scaled)[0]
-                prob = np.max(m.predict_proba(feat_scaled))
-                return jsonify({"clase": pred, "prob": float(prob)})
+                probs_raw = m.predict_proba(feat_scaled)[0]
+                prob = np.max(probs_raw)
+                distribucion = {m.classes_[i]: float(probs_raw[i]) for i in range(len(m.classes_))}
+                return jsonify({"clase": pred, "prob": float(prob), "distribucion": distribucion})
             else:
                 return jsonify({'error': 'SVM model not loaded for this extractor'}), 500
                 
@@ -304,8 +337,10 @@ def predict():
             if 'rf' in models and req_extractor in models['rf']:
                 m = models['rf'][req_extractor]
                 pred = m.predict(features)[0]
-                prob = np.max(m.predict_proba(features))
-                return jsonify({"clase": pred, "prob": float(prob)})
+                probs_raw = m.predict_proba(features)[0]
+                prob = np.max(probs_raw)
+                distribucion = {m.classes_[i]: float(probs_raw[i]) for i in range(len(m.classes_))}
+                return jsonify({"clase": pred, "prob": float(prob), "distribucion": distribucion})
             else:
                 return jsonify({'error': 'RF model not loaded for this extractor'}), 500
                 

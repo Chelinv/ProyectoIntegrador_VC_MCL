@@ -182,8 +182,12 @@ async function predictWithFlask(base64Img) {
     // Resetear UI
     const classEl = document.getElementById('dynamic-class');
     const confEl = document.getElementById('dynamic-conf');
+    const distContainer = document.getElementById('distribution-container');
+    
     classEl.textContent = 'Analizando...';
+    classEl.style.color = ''; // Reset color
     confEl.textContent = '--%';
+    if (distContainer) distContainer.style.display = 'none';
 
     try {
         const response = await fetch('http://127.0.0.1:5000/predict', {
@@ -209,14 +213,54 @@ async function predictWithFlask(base64Img) {
         classEl.textContent = data.clase;
         if(model === 'kmeans') {
             confEl.textContent = 'No Supervisado';
+            if(distContainer) distContainer.style.display = 'none';
         } else {
             confEl.textContent = `Accuracy: ${(data.prob * 100).toFixed(2)}%`;
+            
+            // Renderizar Distribución de Probabilidades
+            if (data.distribucion && distContainer) {
+                const distBars = document.getElementById('distribution-bars');
+                distContainer.style.display = 'block';
+                distBars.innerHTML = ''; 
+                
+                // Ordenar de mayor a menor probabilidad
+                const sortedClasses = Object.keys(data.distribucion).sort((a, b) => data.distribucion[b] - data.distribucion[a]);
+                
+                sortedClasses.forEach(className => {
+                    const prob = data.distribucion[className];
+                    const percentage = (prob * 100).toFixed(1);
+                    
+                    const isWinner = className === data.clase;
+                    const barColor = isWinner ? 'var(--primary)' : 'rgba(255, 255, 255, 0.4)';
+                    const textColor = isWinner ? 'white' : '#aaa';
+                    
+                    const barHtml = `
+                        <div style="margin-bottom: 10px;">
+                            <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: ${textColor}; margin-bottom: 3px;">
+                                <span>${className}</span>
+                                <span style="font-weight: ${isWinner ? 'bold' : 'normal'};">${percentage}%</span>
+                            </div>
+                            <div style="width: 100%; background: rgba(255, 255, 255, 0.1); border-radius: 4px; height: 8px; overflow: hidden;">
+                                <div style="width: ${percentage}%; background: ${barColor}; height: 100%; border-radius: 4px; transition: width 0.5s ease;"></div>
+                            </div>
+                        </div>
+                    `;
+                    distBars.innerHTML += barHtml;
+                });
+            }
         }
 
     } catch(err) {
         console.error(err);
-        statusEl.innerHTML = '❌ Error de Conexión o Modelo no disponible.';
-        classEl.textContent = 'Error';
-        confEl.textContent = err.message;
+        if (err.message === "No face detected") {
+            statusEl.innerHTML = '❌ <span style="color: #ff4444;">No se detectó ningún rostro.</span>';
+            classEl.textContent = 'Rostro no encontrado';
+            classEl.style.color = '#ff4444';
+            confEl.textContent = 'Por favor, apunta la cámara a tu cara.';
+        } else {
+            statusEl.innerHTML = '❌ Error de Conexión o Modelo no disponible.';
+            classEl.textContent = 'Error';
+            confEl.textContent = err.message;
+        }
     }
 }
