@@ -1,8 +1,10 @@
 import os
 import tensorflow as tf
 from tensorflow.keras import layers, models
+from tensorflow.keras.callbacks import EarlyStopping
 import matplotlib.pyplot as plt
 from sklearn.metrics import classification_report, accuracy_score, precision_score, recall_score, f1_score
+from sklearn.utils.class_weight import compute_class_weight
 import numpy as np
 import time
 
@@ -19,38 +21,42 @@ print("=" * 50)
 if not os.path.exists(DATASET_DIR):
     raise FileNotFoundError(f"No se encontró el directorio {DATASET_DIR}. Ejecuta Vision.py primero.")
 
-# 2. Cargar el dataset (80% entrenamiento, 20% prueba)
-print(f"Cargando imágenes desde: {DATASET_DIR}")
-train_dataset = tf.keras.utils.image_dataset_from_directory(
-    DATASET_DIR,
-    validation_split=0.2,
-    subset="training",
-    seed=42,
-    image_size=IMG_SIZE,
-    batch_size=BATCH_SIZE,
-    color_mode="grayscale" # Las imágenes procesadas están en blanco y negro
-)
+from sklearn.model_selection import train_test_split
+import cv2
 
-val_dataset = tf.keras.utils.image_dataset_from_directory(
-    DATASET_DIR,
-    validation_split=0.2,
-    subset="validation",
-    seed=42,
-    image_size=IMG_SIZE,
-    batch_size=BATCH_SIZE,
-    color_mode="grayscale"
-)
+print(f"Cargando imágenes desde: {DATASET_DIR} en memoria...")
 
-class_names = train_dataset.class_names
-print(f"Clases detectadas: {class_names}")
+X = []
+y = []
+class_names = sorted(os.listdir(DATASET_DIR))
 num_classes = len(class_names)
+print(f"Clases detectadas: {class_names}")
 
-# Optimizar para rendimiento
-AUTOTUNE = tf.data.AUTOTUNE
-train_dataset = train_dataset.cache().shuffle(1000).prefetch(buffer_size=AUTOTUNE)
-val_dataset = val_dataset.cache().prefetch(buffer_size=AUTOTUNE)
+for i, class_name in enumerate(class_names):
+    class_dir = os.path.join(DATASET_DIR, class_name)
+    for img_name in os.listdir(class_dir):
+        img_path = os.path.join(class_dir, img_name)
+        img = cv2.imread(img_path, cv2.IMREAD_GRAYSCALE)
+        if img is not None:
+            img = cv2.resize(img, IMG_SIZE)
+            X.append(img)
+            y.append(i)
 
-# 3. Definir la Arquitectura de la CNN
+X = np.array(X)
+y = np.array(y)
+X = X.reshape(-1, IMG_SIZE[0], IMG_SIZE[1], 1)
+
+print(f"Forma de X original: {X.shape}")
+
+# 1. IMPORTANTE: Dividir PRIMERO en entrenamiento y prueba para evitar fugas de datos (Data Leakage)
+X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42, stratify=y)
+
+# 2. (Balanceo Eliminado a petición del usuario)
+# Se entrenará directamente con los datos originales desbalanceados
+print(f"Forma de X_train (sin balanceo): {X_train.shape}")
+print(f"Forma de X_val intacto (imágenes reales): {X_val.shape}")
+
+# 3. Definir la Arquitectura de la CNN (Custom Architecture Simple)
 model = models.Sequential([
     # Capa de reescalado (Normalización de 0-255 a 0-1)
     layers.Rescaling(1./255, input_shape=(IMG_SIZE[0], IMG_SIZE[1], 1)),
@@ -70,12 +76,14 @@ model = models.Sequential([
     # Aplanamiento y Capas Densas
     layers.Flatten(),
     layers.Dense(128, activation='relu'),
-    layers.Dropout(0.5), # Regularización para evitar sobreajuste
+    layers.Dropout(0.5), # Regularización
     layers.Dense(num_classes, activation='softmax') # Clasificación final (4 clases)
 ])
 
 # Compilar el modelo
-model.compile(optimizer='adam',
+optimizer = tf.keras.optimizers.Adam(learning_rate=0.001)
+
+model.compile(optimizer=optimizer,
               loss=tf.keras.losses.SparseCategoricalCrossentropy(),
               metrics=['accuracy'])
 
@@ -83,13 +91,17 @@ model.summary()
 
 # 4. Entrenar la CNN
 print("\nComenzando el entrenamiento de la CNN...")
-EPOCHS = 20
+EPOCHS = 25
 inicio_tiempo = time.time()
 
+early_stop = EarlyStopping(monitor='val_loss', patience=5, restore_best_weights=True)
+
 history = model.fit(
-    train_dataset,
-    validation_data=val_dataset,
-    epochs=EPOCHS
+    X_train, y_train,
+    validation_data=(X_val, y_val),
+    epochs=EPOCHS,
+    batch_size=BATCH_SIZE,
+    callbacks=[early_stop]
 )
 tiempo_entrenamiento = time.time() - inicio_tiempo
 
@@ -98,19 +110,13 @@ print(f"\n{'='*40}")
 print("Resultados para CNN con TensorFlow/Keras")
 print(f"{'='*40}")
 
-# Obtener las predicciones reales sobre el dataset de validación
-y_true = []
-y_pred_probs = []
+# Evaluar y predecir para obtener métricas completas
+print("Evaluando el modelo...")
+y_true = y_val
+preds = model.predict(X_val, verbose=0)
+y_pred = np.argmax(preds, axis=1)
 
-for img_batch, label_batch in val_dataset:
-    y_true.extend(label_batch.numpy())
-    preds = model.predict(img_batch, verbose=0)
-    y_pred_probs.extend(preds)
-
-y_true = np.array(y_true)
-y_pred_probs = np.array(y_pred_probs)
-y_pred = np.argmax(y_pred_probs, axis=1)
-
+# Calcular métricas
 acc = accuracy_score(y_true, y_pred)
 prec = precision_score(y_true, y_pred, average='weighted', zero_division=0)
 rec = recall_score(y_true, y_pred, average='weighted', zero_division=0)

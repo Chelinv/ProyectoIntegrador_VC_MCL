@@ -6,13 +6,13 @@ import seaborn as sns
 from sklearn.cluster import KMeans
 from sklearn.preprocessing import StandardScaler, LabelEncoder
 from sklearn.metrics import silhouette_score, adjusted_rand_score, adjusted_mutual_info_score, normalized_mutual_info_score
+from sklearn.feature_selection import SelectPercentile, f_classif
 
 #Carpeta base del proyecto
 project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 
-#Rutas a los archivos de caracteristicas
 datasets = {
-    "HU (Momentos)": os.path.join(project_root, "data", "03_features", "dataset_hu.csv"),
+    "Zernike (Momentos)": os.path.join(project_root, "data", "03_features", "dataset_zernike.csv"),
     "HOG (Avanzado)": os.path.join(project_root, "data", "03_features", "dataset_hog.csv"),
     "BRISK (Investigado)": os.path.join(project_root, "data", "03_features", "dataset_brisk.csv")
 }
@@ -71,20 +71,26 @@ for nombre, ruta in datasets.items():
     le = LabelEncoder()
     y_true = le.fit_transform(y_str)
     
-    # Escalar o normalizar los datos
-    scaler = StandardScaler()
-    X_scaled = scaler.fit_transform(X)
+    # 1. Selección de características
+    selector = SelectPercentile(f_classif, percentile=50)
+    X_sel = selector.fit_transform(X, y_true)
     
-    # Correlacion (solo para HU por el tamano de HOG y BRISK)
-    if nombre == "HU (Momentos)":
-        plt.figure(figsize=(6, 5))
-        sns.heatmap(pd.DataFrame(X_scaled).corr(), annot=True, cmap="coolwarm")
+    # 2. (Balanceo Eliminado)
+
+    # 3. Escalar o normalizar los datos
+    scaler = StandardScaler()
+    X_scaled = scaler.fit_transform(X_sel)
+    
+    if nombre == "Zernike (Momentos)":
+        plt.figure(figsize=(10, 8))
+        import seaborn as sns
+        sns.heatmap(pd.DataFrame(X_scaled).corr(), annot=False, cmap="coolwarm")
         plt.title(f"Matriz de Correlacion - {nombre}")
         plt.tight_layout()
         plt.savefig(os.path.join(project_root, "outputs", "plots", f"correlacion_{nombre.split()[0].lower()}.png"))
         plt.close()
         print("  * Grafico de correlacion guardado.")
-        
+    
     # Metodo del codo
     inercias = []
     k_valores = range(1, 11)
@@ -107,6 +113,17 @@ for nombre, ruta in datasets.items():
     #Entrenar K-means con k=4 (4 etnias)
     kmeans = KMeans(n_clusters=4, random_state=42, n_init=10)
     pred_labels = kmeans.fit_predict(X_scaled)
+    
+    # --- GUARDAR MODELOS PARA EL SERVIDOR ---
+    import joblib
+    extractor_key = nombre.split()[0].lower()
+    model_dir = os.path.join(project_root, "outputs", "models")
+    os.makedirs(model_dir, exist_ok=True)
+    
+    joblib.dump(kmeans, os.path.join(model_dir, f"kmeans_model_{extractor_key}.pkl"))
+    joblib.dump(selector, os.path.join(model_dir, f"kmeans_selector_{extractor_key}.pkl"))
+    joblib.dump(scaler, os.path.join(model_dir, f"kmeans_scaler_{extractor_key}.pkl"))
+    # ----------------------------------------
     
     # Calcular las metricas de validacion
     silueta = silhouette_score(X_scaled, pred_labels)

@@ -360,8 +360,8 @@
 
                         <div class="descriptor-list" style="margin-bottom: 2rem;">
                             <div class="desc-item">
-                                <h4>1. Momentos de Hu (Global)</h4>
-                                <p>Capturan la forma general de la imagen. Genera 7 valores invariantes a escala, rotación y traslación.</p>
+                                <h4>1. Momentos de Zernike (Ortogonales)</h4>
+                                <p>Capturan características globales usando polinomios sobre un disco unitario. Muy robusto a la rotación. Genera 25 valores.</p>
                             </div>
                             <div class="desc-item">
                                 <h4>2. HOG (Avanzado / Local)</h4>
@@ -377,11 +377,11 @@
                         <p>Así es como los diferentes algoritmos "ven" e interpretan el mismo rostro para generar sus datos:</p>
                         
                         <div class="descriptor-visualizations">
-                            <!-- Hu -->
+                            <!-- Zernike -->
                             <div class="desc-vis-row">
                                 <div class="desc-vis-info">
-                                    <h4>1. Momentos de Hu</h4>
-                                    <p>Se enfoca en la silueta y distribución de la forma geométrica (como el centro de masa y el contorno principal).</p>
+                                    <h4>1. Momentos de Zernike</h4>
+                                    <p>Se enfoca en un disco unitario centralizado en el rostro para calcular sus polinomios ortogonales matemáticos.</p>
                                 </div>
                                 <div class="desc-vis-images">
                                     <div class="vis-box">
@@ -390,8 +390,8 @@
                                     </div>
                                     <div class="vis-arrow">➡️</div>
                                     <div class="vis-box">
-                                        <img src="hu_vis.jpg" alt="Hu Moments">
-                                        <p>Contorno y Centro (Hu)</p>
+                                        <img src="zernike_vis.jpg" alt="Zernike Moments">
+                                        <p>Disco de Zernike</p>
                                     </div>
                                 </div>
                             </div>
@@ -447,8 +447,8 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>Momentos (HU)</td>
-                                    <td>7</td>
+                                    <td>Momentos (Zernike)</td>
+                                    <td>25</td>
                                     <td>Float64</td>
                                 </tr>
                                 <tr>
@@ -488,9 +488,9 @@
                     </div>
                 </div>
                 <div class="step-card">
-                    <p class="subtitle">2. Hu</p>
+                    <p class="subtitle">2. Zernike</p>
                     <div class="img-wrapper">
-                        <canvas id="canvasHu" width="256" height="256"></canvas>
+                        <canvas id="canvasZernike" width="256" height="256"></canvas>
                     </div>
                 </div>
                 <div class="step-card">

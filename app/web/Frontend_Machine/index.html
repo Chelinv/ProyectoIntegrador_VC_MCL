@@ -63,7 +63,7 @@
                                         <th>F1</th>
                                     </tr>
                                     <tr class="winner-row">
-                                        <td>HU</td>
+                                        <td>Zernike</td>
                                         <td>65.12%</td>
                                         <td>42.40%</td>
                                         <td>65.12%</td>
@@ -71,20 +71,20 @@
                                     </tr>
                                     <tr>
                                         <td>BRISK</td>
-                                        <td>62.79%</td>
-                                        <td>47.90%</td>
-                                        <td>62.79%</td>
-                                        <td>51.95%</td>
+                                        <td>61.63%</td>
+                                        <td>48.14%</td>
+                                        <td>61.63%</td>
+                                        <td>51.73%</td>
                                     </tr>
                                     <tr>
                                         <td>HOG</td>
                                         <td>52.33%</td>
-                                        <td>47.03%</td>
+                                        <td>50.79%</td>
                                         <td>52.33%</td>
-                                        <td>49.52%</td>
+                                        <td>50.74%</td>
                                     </tr>
                                 </table>
-                                <div class="winner-badge">Ganador: HU</div>
+                                <div class="winner-badge">Ganador: Zernike</div>
                             </div>
 
                             <!-- Modelo 2: Random Forest -->
@@ -101,27 +101,27 @@
                                     </tr>
                                     <tr class="winner-row">
                                         <td>HOG</td>
-                                        <td>65.12%</td>
-                                        <td>42.40%</td>
-                                        <td>65.12%</td>
-                                        <td>51.36%</td>
-                                    </tr>
-                                    <tr class="winner-row">
-                                        <td>BRISK</td>
-                                        <td>65.12%</td>
-                                        <td>42.40%</td>
-                                        <td>65.12%</td>
-                                        <td>51.36%</td>
+                                        <td>66.28%</td>
+                                        <td>59.75%</td>
+                                        <td>66.28%</td>
+                                        <td>58.67%</td>
                                     </tr>
                                     <tr>
-                                        <td>HU</td>
-                                        <td>56.98%</td>
-                                        <td>47.59%</td>
-                                        <td>56.98%</td>
-                                        <td>50.17%</td>
+                                        <td>BRISK</td>
+                                        <td>63.95%</td>
+                                        <td>42.64%</td>
+                                        <td>63.95%</td>
+                                        <td>51.16%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Zernike</td>
+                                        <td>55.81%</td>
+                                        <td>44.02%</td>
+                                        <td>55.81%</td>
+                                        <td>49.22%</td>
                                     </tr>
                                 </table>
-                                <div class="winner-badge">Ganador Empate: HOG / BRISK</div>
+                                <div class="winner-badge">Ganador: HOG</div>
                             </div>
 
                             <!-- Modelo 3: CNN -->
@@ -140,13 +140,13 @@
                                     </tr>
                                     <tr class="winner-row">
                                         <td>Raw Pixels</td>
-                                        <td>69.77%</td>
-                                        <td>48.67%</td>
-                                        <td>69.77%</td>
-                                        <td>57.34%</td>
+                                        <td>65.12%</td>
+                                        <td>42.40%</td>
+                                        <td>65.12%</td>
+                                        <td>51.36%</td>
                                     </tr>
                                 </table>
-                                <div class="winner-badge">Ganador General: CNN</div>
+                                <div class="winner-badge">Mejor Deep Learning: CNN</div>
                             </div>
 
                             <!-- Modelo 4: K-Means -->
@@ -163,50 +163,39 @@
                                         <th>NMI</th>
                                     </tr>
                                     <tr class="winner-row">
-                                        <td>HOG</td>
-                                        <td>0.1674</td>
-                                        <td>0.2809</td>
-                                        <td>0.0309</td>
-                                        <td>0.0301</td>
-                                        <td>0.0430</td>
+                                        <td>Zernike</td>
+                                        <td>0.1153</td>
+                                        <td>0.1145</td>
+                                        <td>0.0517</td>
+                                        <td>0.0195</td>
+                                        <td>0.0285</td>
                                     </tr>
                                     <tr>
-                                        <td>HU</td>
-                                        <td>0.1883</td>
-                                        <td>0.0473</td>
-                                        <td>0.0008</td>
-                                        <td>-0.0030</td>
-                                        <td>0.0060</td>
+                                        <td>HOG</td>
+                                        <td>0.1597</td>
+                                        <td>0.2113</td>
+                                        <td>0.0295</td>
+                                        <td>0.0349</td>
+                                        <td>0.0485</td>
                                     </tr>
                                     <tr>
                                         <td>BRISK</td>
-                                        <td>0.0016</td>
-                                        <td>0.8251</td>
-                                        <td>0.0091</td>
-                                        <td>0.0016</td>
-                                        <td>0.0117</td>
+                                        <td>0.0021</td>
+                                        <td>0.7940</td>
+                                        <td>-0.0057</td>
+                                        <td>0.0146</td>
+                                        <td>0.0234</td>
                                     </tr>
                                 </table>
-                                <div class="winner-badge">Mejor Estructura: HOG</div>
+                                <div class="winner-badge">Mejor ARI: Zernike</div>
                             </div>
                         </div>
 
                         <h3>1. Conclusión Global (Los 4 Modelos)</h3>
-                        <p>Al evaluar los 4 modelos en su totalidad, el ganador absoluto del proyecto es la <strong>Red
-                                Neuronal Convolucional (CNN) con un 69.77% de precisión</strong>. La razón principal de
-                            su victoria es su arquitectura de Deep Learning: a diferencia del resto, la CNN no requiere
-                            que extraigamos características manualmente, sino que trabaja directamente con los píxeles
-                            puros y aprende por sí misma a extraer los patrones más complejos de los rostros, logrando
-                            el mejor rendimiento.</p>
+                        <p>Al evaluar los 4 modelos en su totalidad, tras eliminar el balanceo sintético de datos, el ganador absoluto del proyecto ahora es el ensamble clásico <strong>Random Forest (utilizando HOG) con un 66.28% de precisión</strong>. La CNN, al entrenarse solo con los datos desbalanceados originales, redujo su precisión a un 65.12%, demostrando que Random Forest fue más robusto ante el desbalanceo natural de las clases gracias a la excelente extracción de texturas de HOG.</p>
 
                         <h3>2. Conclusión de Preprocesamiento Manual (SVM, Random Forest y K-Means)</h3>
-                        <p>Al evaluar los modelos clásicos utilizando los datos reales arrojados por el sistema, se
-                            observa un triple <strong>empate exacto en el primer lugar con 65.12% de precisión</strong>.
-                            Los ganadores de esta categoría son <strong>SVM (utilizando Momentos de HU)</strong> y
-                            <strong>Random Forest (utilizando HOG y BRISK)</strong>, ambos alcanzando incluso el mismo
-                            F1-Score (51.36%). Esto demuestra matemáticamente que la ingeniería de extracción de
-                            características llegó a su límite ("techo") en el 65.12%. Por otro lado, K-Means (al ser no
-                            supervisado) comprobó que los rostros son demasiado complejos para agruparse solos.</p>
+                        <p>Al evaluar los modelos clásicos utilizando los datos desbalanceados arrojados por el sistema, el ganador es <strong>Random Forest (utilizando HOG) con 66.28% de precisión</strong>, seguido de cerca por <strong>SVM (utilizando Momentos de Zernike) y la propia CNN, ambos con 65.12%</strong>. Esto demuestra matemáticamente que, ante la falta de datos y desbalanceo, una buena ingeniería de extracción de características (HOG) supera al Deep Learning crudo. Por otro lado, K-Means logró su mejor métrica ARI (0.0517) agrupando los descriptores de Zernike.</p>
 
                         <div class="evidence-list">
                             <!-- Evidencia 1: Comparativa Codo HOG y BRISK -->
@@ -239,36 +228,18 @@
                                 </div>
                             </div>
 
-                            <!-- Evidencia 3: Codo HU -->
+                            <!-- Evidencia 3: Correlación Zernike -->
                             <div class="evidence-card">
                                 <div class="evidence-img">
-                                    <img src="/Resultados_Clustering/codo_hu.png" alt="Método del Codo HU"
+                                    <img src="/Resultados_Clustering/correlacion_zernike.png" alt="Correlación Zernike"
                                         class="zoomable-img" onclick="openModal(this.src, this.alt)">
                                 </div>
                                 <div class="evidence-text">
-                                    <h4>3. Análisis de Momentos (HU)</h4>
-                                    <p>A diferencia de los cientos de características de HOG, los <strong>Momentos de
-                                            HU</strong> resumen el rostro en solo 7 variables globales. Su gráfica del
-                                        codo muestra que pierde inercia muy lentamente, lo que indica que resumir un
-                                        rostro en solo 7 números no ofrece suficiente detalle geométrico para separar
-                                        las etnias.</p>
+                                    <h4>3. Independencia Ortogonal (Zernike)</h4>
+                                    <p>Esta matriz de correlación generada por los 25 <strong>Momentos de Zernike</strong> demuestra matemáticamente su propiedad de <em>ortogonalidad</em>. Al haber poca correlación redundante entre sus variables, Zernike le proporcionó al modelo SVM la robustez necesaria para alcanzar el 63.95% de precisión.</p>
                                 </div>
                             </div>
 
-                            <!-- Evidencia 4: Matriz Correlacion HU -->
-                            <div class="evidence-card">
-                                <div class="evidence-img">
-                                    <img src="/Resultados_Clustering/correlacion_hu.png" alt="Matriz de Correlación HU"
-                                        class="zoomable-img" onclick="openModal(this.src, this.alt)">
-                                </div>
-                                <div class="evidence-text">
-                                    <h4>4. Colinealidad de Características (Matriz HU)</h4>
-                                    <p>Este mapa de calor evidencia la relación directa entre las variables. Algunos
-                                        valores alcanzan la correlación máxima (1.0), lo que significa que el descriptor
-                                        está enviando información redundante o repetida a los modelos de clasificación,
-                                        dificultando su aprendizaje y bajando su efectividad final.</p>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -323,9 +294,9 @@
                                         (Preprocesamiento):</label>
                                     <select id="extractorSelect" disabled
                                         style="background: rgba(255,255,255,0.1); color: white; border: 1px solid rgba(255,255,255,0.2); padding: 5px 10px; border-radius: 6px; outline: none; cursor: pointer; opacity: 0.5;">
-                                        <option value="hog" style="background: #1a1a2e; color: white;">HOG (Avanzado)
+                                        <option value="zernike" style="background: #1a1a2e; color: white;">Momentos de Zernike
                                         </option>
-                                        <option value="hu" style="background: #1a1a2e; color: white;">Momentos de HU
+                                        <option value="hog" style="background: #1a1a2e; color: white;">HOG (Avanzado)
                                         </option>
                                         <option value="brisk" style="background: #1a1a2e; color: white;">BRISK (Puntos
                                             Clave)</option>

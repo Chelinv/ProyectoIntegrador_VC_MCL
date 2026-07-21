@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 cameraBtn3.classList.remove('secondary-btn');
                 cameraBtn3.classList.add('primary-btn');
                 
-                ['canvasHu', 'canvasHog', 'canvasBrisk'].forEach(id => {
+                ['canvasZernike', 'canvasHog', 'canvasBrisk'].forEach(id => {
                     document.getElementById(id).classList.remove('loaded');
                 });
                 
@@ -266,7 +266,9 @@ async function runPipelineDescriptors(sourceCanvas) {
         };
 
         drawImageToCanvas(data.base, 'canvasBase3');
-        drawImageToCanvas(data.hu, 'canvasHu');
+        if (data.zernike) {
+            drawImageToCanvas(data.zernike, 'canvasZernike');
+        }
         drawImageToCanvas(data.hog, 'canvasHog');
         drawImageToCanvas(data.brisk, 'canvasBrisk');
         

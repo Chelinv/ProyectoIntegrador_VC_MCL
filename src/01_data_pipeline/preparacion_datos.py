@@ -2,10 +2,11 @@ import os
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
+from sklearn.feature_selection import SelectPercentile, f_classif
 
 project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 INPUT_DIR = os.path.join(project_root, "data", "03_features")
-archivos_csv = ["dataset_hu.csv", "dataset_hog.csv", "dataset_brisk.csv"]
+archivos_csv = ["dataset_zernike.csv", "dataset_hog.csv", "dataset_brisk.csv"]
 
 # Diccionario maestro para guardar las divisiones de nuestros 3 datasets
 datos_preparados = {}
@@ -40,20 +41,25 @@ for archivo in archivos_csv:
     X_train, X_test, y_train, y_test = train_test_split(
         X, y_codificado, test_size=0.30, random_state=42, stratify=y_codificado
     )
+
+    # 5. Selección de características (ANOVA)
+    selector = SelectPercentile(f_classif, percentile=50)
+    X_train_sel = selector.fit_transform(X_train, y_train)
+    X_test_sel = selector.transform(X_test)
     
     # Guardamos todo en nuestro diccionario usando el nombre del archivo como llave
     datos_preparados[archivo] = {
-        "X_train": X_train,
-        "X_test": X_test,
-        "y_train": y_train,
+        "X_train": X_train_sel, # Entrenamos con los datos filtrados (sin balanceo)
+        "X_test": X_test_sel,   # Probamos con datos filtrados
+        "y_train": y_train,     # Etiquetas originales (desbalanceadas)
         "y_test": y_test,
         "clases_nombres": le.classes_ # Guardamos los nombres para la matriz de confusión luego
     }
     
     print(f"Dataset procesado: {archivo}")
     print(f"   - Total de instancias originales: {len(df)}")
-    print(f"   - Tamaño de Entrenamiento (X_train): {X_train.shape}")
-    print(f"   - Tamaño de Prueba (X_test): {X_test.shape}")
+    print(f"   - Tamaño de Entrenamiento (X_train filtrado): {X_train_sel.shape}")
+    print(f"   - Tamaño de Prueba (X_test filtrado): {X_test_sel.shape}")
     print(f"   - Clases codificadas: {list(zip(le.classes_, range(len(le.classes_))))}")
     print("-" * 50)
 

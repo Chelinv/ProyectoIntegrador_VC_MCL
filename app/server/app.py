@@ -3,12 +3,15 @@ import base64
 import numpy as np
 import cv2
 import pandas as pd
+import mahotas
 from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
 from sklearn.svm import SVC
-from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.cluster import KMeans
 from sklearn.preprocessing import StandardScaler
+from imblearn.over_sampling import RandomOverSampler
+from sklearn.feature_selection import SelectPercentile, f_classif
 import tensorflow as tf
 
 app = Flask(__name__, static_folder="../web")
@@ -26,7 +29,15 @@ models = {
     'rf': {},
     'kmeans': {}
 }
-scalers = {}
+scalers = {
+    'svm': {},
+    'kmeans': {}
+}
+selectors = {
+    'svm': {},
+    'rf': {},
+    'kmeans': {}
+}
 cnn_model = None
 
 # Extractores
@@ -41,40 +52,35 @@ def init_models():
     global cnn_model, hog_descriptor, brisk_descriptor
     print("Iniciando carga de modelos...")
     
-    rutas_csv = {
-        'hu': os.path.join(project_root, "data", "03_features", "dataset_hu.csv"),
-        'hog': os.path.join(project_root, "data", "03_features", "dataset_hog.csv"),
-        'brisk': os.path.join(project_root, "data", "03_features", "dataset_brisk.csv")
-    }
+    import joblib
+    model_dir = os.path.join(project_root, "outputs", "models")
     
-    for extractor_name, ruta in rutas_csv.items():
-        if os.path.exists(ruta):
-            print(f"Entrenando modelos para extractor: {extractor_name.upper()}...")
-            df = pd.read_csv(ruta)
-            X = df.iloc[:, :-1].values
-            y = df.iloc[:, -1].values
+    extractors = ['zernike', 'hog', 'brisk']
+    
+    for ext in extractors:
+        print(f"Cargando modelos para extractor: {ext.upper()}...")
+        # SVM
+        try:
+            models['svm'][ext] = joblib.load(os.path.join(model_dir, f"svm_model_{ext}.pkl"))
+            selectors['svm'][ext] = joblib.load(os.path.join(model_dir, f"svm_selector_{ext}.pkl"))
+            scalers['svm'][ext] = joblib.load(os.path.join(model_dir, f"svm_scaler_{ext}.pkl"))
+        except Exception as e:
+            print(f"  -> Advertencia: No se pudo cargar SVM para {ext}")
             
-            # Escalar
-            scaler = StandardScaler()
-            X_scaled = scaler.fit_transform(X)
-            scalers[extractor_name] = scaler
+        # RF
+        try:
+            models['rf'][ext] = joblib.load(os.path.join(model_dir, f"rf_model_{ext}.pkl"))
+            selectors['rf'][ext] = joblib.load(os.path.join(model_dir, f"rf_selector_{ext}.pkl"))
+        except Exception as e:
+            print(f"  -> Advertencia: No se pudo cargar RF para {ext}")
             
-            # SVM
-            svm_m = SVC(kernel='linear', probability=True, random_state=42)
-            svm_m.fit(X_scaled, y)
-            models['svm'][extractor_name] = svm_m
-            
-            # RF
-            rf_m = RandomForestClassifier(n_estimators=100, random_state=42)
-            rf_m.fit(X, y)
-            models['rf'][extractor_name] = rf_m
-            
-            # K-Means
-            km_m = KMeans(n_clusters=4, init='k-means++', n_init=10, max_iter=300, random_state=42)
-            km_m.fit(X_scaled)
-            models['kmeans'][extractor_name] = km_m
-        else:
-            print(f"ERROR: No se encontró {ruta}")
+        # KMeans
+        try:
+            models['kmeans'][ext] = joblib.load(os.path.join(model_dir, f"kmeans_model_{ext}.pkl"))
+            selectors['kmeans'][ext] = joblib.load(os.path.join(model_dir, f"kmeans_selector_{ext}.pkl"))
+            scalers['kmeans'][ext] = joblib.load(os.path.join(model_dir, f"kmeans_scaler_{ext}.pkl"))
+        except Exception as e:
+            print(f"  -> Advertencia: No se pudo cargar KMeans para {ext}")
 
     # Cargar CNN
     ruta_cnn = os.path.join(project_root, "outputs", "models", "modelo_cnn.keras")
@@ -227,17 +233,15 @@ def extract_demo():
         # 2. Base Binarizada
         base_vis = img_color_base.copy()
 
-        # 3. Hu (Contornos y Centro de Masa)
-        img_hu = img_color_base.copy()
-        contours, _ = cv2.findContours(img_resized, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-        cv2.drawContours(img_hu, contours, -1, (0, 0, 255), 2)
-        moments = cv2.moments(img_resized)
-        if moments["m00"] != 0:
-            cX = int(moments["m10"] / moments["m00"])
-            cY = int(moments["m01"] / moments["m00"])
-            cv2.circle(img_hu, (cX, cY), 5, (255, 0, 0), -1)
+        # 2.5 Zernike Visualization (Unit Disk)
+        img_zernike = img_color_base.copy()
+        center = (128, 128)
+        radius = 120
+        cv2.circle(img_zernike, center, radius, (0, 255, 255), 2) # Yellow circle
+        cv2.circle(img_zernike, center, 4, (0, 0, 255), -1) # Red center dot
+        cv2.putText(img_zernike, "Zernike Disk", (80, 20), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 255, 255), 2)
 
-        # 4. HOG
+        # 3. HOG
         _, hog_image = skimage_hog(img_resized, orientations=9, pixels_per_cell=(16, 16),
                             cells_per_block=(2, 2), visualize=True, channel_axis=None)
         hog_image_rescaled = exposure.rescale_intensity(hog_image, in_range=(0, 10))
@@ -255,7 +259,7 @@ def extract_demo():
 
         return jsonify({
             'base': mat_to_base64(base_vis),
-            'hu': mat_to_base64(img_hu),
+            'zernike': mat_to_base64(img_zernike),
             'hog': mat_to_base64(img_hog),
             'brisk': mat_to_base64(img_brisk)
         })
@@ -282,13 +286,10 @@ def predict():
         
         # 1. Extracción de características
         if req_model != 'cnn':
-            if req_extractor == 'hu':
-                momentos = cv2.moments(img_preprocesada)
-                hu = cv2.HuMoments(momentos).flatten()
-                for i in range(0, 7):
-                    if hu[i] != 0:
-                        hu[i] = -1 * np.sign(hu[i]) * np.log10(abs(hu[i]))
-                features = np.array(hu).reshape(1, -1)
+            if req_extractor == 'zernike':
+                # El preprocesamiento base la deja en 64x64
+                zernike_features = mahotas.features.zernike_moments(img_preprocesada, radius=32)
+                features = np.array(zernike_features).reshape(1, -1)
                 
             elif req_extractor == 'hog':
                 caracteristicas_hog = hog_descriptor.compute(img_preprocesada).flatten()
@@ -323,11 +324,16 @@ def predict():
         elif req_model == 'svm':
             if 'svm' in models and req_extractor in models['svm']:
                 m = models['svm'][req_extractor]
-                s = scalers[req_extractor]
-                feat_scaled = s.transform(features)
-                pred = m.predict(feat_scaled)[0]
+                sel = selectors['svm'][req_extractor]
+                s = scalers['svm'][req_extractor]
+                feat_sel = sel.transform(features)
+                feat_scaled = s.transform(feat_sel)
+                
                 probs_raw = m.predict_proba(feat_scaled)[0]
-                prob = np.max(probs_raw)
+                max_idx = np.argmax(probs_raw)
+                pred = m.classes_[max_idx]
+                prob = probs_raw[max_idx]
+                
                 distribucion = {m.classes_[i]: float(probs_raw[i]) for i in range(len(m.classes_))}
                 return jsonify({"clase": pred, "prob": float(prob), "distribucion": distribucion})
             else:
@@ -336,9 +342,14 @@ def predict():
         elif req_model == 'rf':
             if 'rf' in models and req_extractor in models['rf']:
                 m = models['rf'][req_extractor]
-                pred = m.predict(features)[0]
-                probs_raw = m.predict_proba(features)[0]
-                prob = np.max(probs_raw)
+                sel = selectors['rf'][req_extractor]
+                feat_sel = sel.transform(features)
+                
+                probs_raw = m.predict_proba(feat_sel)[0]
+                max_idx = np.argmax(probs_raw)
+                pred = m.classes_[max_idx]
+                prob = probs_raw[max_idx]
+                
                 distribucion = {m.classes_[i]: float(probs_raw[i]) for i in range(len(m.classes_))}
                 return jsonify({"clase": pred, "prob": float(prob), "distribucion": distribucion})
             else:
@@ -347,10 +358,12 @@ def predict():
         elif req_model == 'kmeans':
             if 'kmeans' in models and req_extractor in models['kmeans']:
                 m = models['kmeans'][req_extractor]
-                s = scalers[req_extractor]
-                feat_scaled = s.transform(features)
-                cluster_id = m.predict(feat_scaled)[0]
-                return jsonify({"clase": f"Grupo {cluster_id}", "prob": 1.0})
+                sel = selectors['kmeans'][req_extractor]
+                s = scalers['kmeans'][req_extractor]
+                feat_sel = sel.transform(features)
+                feat_scaled = s.transform(feat_sel)
+                cluster_idx = m.predict(feat_scaled)[0]
+                return jsonify({"clase": f"Grupo {cluster_idx}", "prob": 1.0})
             else:
                 return jsonify({'error': 'K-Means model not loaded for this extractor'}), 500
                 

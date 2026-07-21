@@ -1,6 +1,7 @@
 import cv2
 import os
 import numpy as np
+import mahotas
 try:
     from skimage.feature import hog
     from skimage import exposure
@@ -20,17 +21,16 @@ if img is None:
 img_resized = cv2.resize(img, (256, 256))
 gray = cv2.cvtColor(img_resized, cv2.COLOR_BGR2GRAY)
 
-# 1. Hu Moments Visualization (Shape contour)
-_, thresh = cv2.threshold(gray, 127, 255, cv2.THRESH_BINARY)
-contours, _ = cv2.findContours(thresh, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-img_hu = img_resized.copy()
-cv2.drawContours(img_hu, contours, -1, (0, 0, 255), 2) # Draw red contours
-moments = cv2.moments(thresh)
-if moments["m00"] != 0:
-    cX = int(moments["m10"] / moments["m00"])
-    cY = int(moments["m01"] / moments["m00"])
-    cv2.circle(img_hu, (cX, cY), 5, (255, 0, 0), -1) # Blue dot for center
-cv2.imwrite(os.path.join(out_dir, 'hu_vis.jpg'), img_hu)
+# 1. Zernike Visualization (Unit Disk)
+img_zernike = img_resized.copy()
+# Zernike moments are calculated over a circle (unit disk). 
+# We'll draw this disk and the centroid to represent the region of extraction.
+center = (128, 128)
+radius = 120
+cv2.circle(img_zernike, center, radius, (0, 255, 255), 2) # Yellow circle
+cv2.circle(img_zernike, center, 4, (0, 0, 255), -1) # Red center dot
+cv2.putText(img_zernike, "Zernike Disk", (80, 20), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 255, 255), 2)
+cv2.imwrite(os.path.join(out_dir, 'zernike_vis.jpg'), img_zernike)
 
 # 2. HOG Visualization
 if has_skimage:

@@ -4,6 +4,7 @@ import cv2
 import time
 import numpy as np
 import pandas as pd
+import mahotas
 
 # 1. Definir rutas de los datos
 project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
@@ -26,12 +27,12 @@ hog = cv2.HOGDescriptor(winSize, blockSize, blockStride, cellSize, nbins)
 brisk = cv2.BRISK_create()
 MAX_KEYPOINTS = 30
 
-datos_hu = []
+datos_zernike = []
 datos_hog = []
 datos_brisk = []
 
 # Cronómetros individuales inicializados en cero
-tiempo_hu = 0.0
+tiempo_zernike = 0.0
 tiempo_hog = 0.0
 tiempo_brisk = 0.0
 
@@ -52,17 +53,14 @@ for clase in CLASES:
 
         if img is None: continue
         img_resized = cv2.resize(img, (64, 64))
-
-        # --- TÉCNICA 1: Momentos de Hu ---
-        t_inicio_hu = time.time()  # Iniciar cronómetro Hu
-        momentos = cv2.moments(img_resized)
-        hu = cv2.HuMoments(momentos).flatten()
-        for i in range(0, 7):
-            if hu[i] != 0:
-                hu[i] = -1 * np.sign(hu[i]) * np.log10(abs(hu[i]))
-        fila_hu = list(hu) + [clase]
-        datos_hu.append(fila_hu)
-        tiempo_hu += (time.time() - t_inicio_hu)  # Pausar y sumar tiempo Hu
+        
+        # --- TÉCNICA 1: Momentos de Zernike ---
+        t_inicio_zernike = time.time()
+        # Radio de 32 para una imagen de 64x64
+        zernike_features = mahotas.features.zernike_moments(img_resized, radius=32)
+        fila_zernike = list(zernike_features) + [clase]
+        datos_zernike.append(fila_zernike)
+        tiempo_zernike += (time.time() - t_inicio_zernike)
 
         # --- TÉCNICA 2: HOG ---
         t_inicio_hog = time.time()  # Iniciar cronómetro HOG
@@ -91,11 +89,11 @@ for clase in CLASES:
     print(f"Extracción completada para la clase: {clase}")
 
 # 4. Guardar los 3 datasets
-df_hu = pd.DataFrame(datos_hu)
+df_zernike = pd.DataFrame(datos_zernike)
 df_hog = pd.DataFrame(datos_hog)
 df_brisk = pd.DataFrame(datos_brisk)
 
-df_hu.to_csv(os.path.join(OUTPUT_DIR, "dataset_hu.csv"), index=False)
+df_zernike.to_csv(os.path.join(OUTPUT_DIR, "dataset_zernike.csv"), index=False)
 df_hog.to_csv(os.path.join(OUTPUT_DIR, "dataset_hog.csv"), index=False)
 df_brisk.to_csv(os.path.join(OUTPUT_DIR, "dataset_brisk.csv"), index=False)
 
@@ -105,7 +103,7 @@ print("TABLA COMPARATIVA DE EXTRACCIÓN (Para informe LaTeX)")
 print("=" * 50)
 print(f"{'Algoritmo':<15} | {'N. Características':<20} | {'Formato':<10} | {'Tiempo Total (430 img)'}")
 print("-" * 75)
-print(f"{'Momentos (HU)':<15} | {df_hu.shape[1] - 1:<20} | {'Float64':<10} | {tiempo_hu:.4f} segundos")
+print(f"{'Zernike':<15} | {df_zernike.shape[1] - 1:<20} | {'Float64':<10} | {tiempo_zernike:.4f} segundos")
 print(f"{'Avanzado (HOG)':<15} | {df_hog.shape[1] - 1:<20} | {'Float32':<10} | {tiempo_hog:.4f} segundos")
 print(f"{'Investigado (BRISK)':<15} | {df_brisk.shape[1] - 1:<20} | {'Uint8':<10} | {tiempo_brisk:.4f} segundos")
 print("-" * 75)
