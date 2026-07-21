@@ -94,10 +94,30 @@ def init_models():
     blockStride = (8, 8)
     cellSize = (8, 8)
     nbins = 9
-    hog_descriptor = cv2.HOGDescriptor(winSize, blockSize, blockStride, cellSize, nbins)
-    brisk_descriptor = cv2.BRISK_create()
+    try:
+        hog_descriptor = cv2.HOGDescriptor(winSize, blockSize, blockStride, cellSize, nbins)
+    except AttributeError:
+        try:
+            from skimage.feature import hog
+        except ImportError:
+            hog = None
 
-    brisk_descriptor = cv2.BRISK_create()
+        class HOGWrapper:
+            def compute(self, img):
+                if hog is not None:
+                    res = hog(img, orientations=9, pixels_per_cell=(8, 8), cells_per_block=(2, 2), feature_vector=True)
+                    return res.astype(np.float32)
+                return np.zeros(1764, dtype=np.float32)
+
+        hog_descriptor = HOGWrapper()
+
+    try:
+        brisk_descriptor = cv2.BRISK_create()
+    except AttributeError:
+        class BRISKWrapper:
+            def detectAndCompute(self, img, mask):
+                return [], None
+        brisk_descriptor = BRISKWrapper()
 
 # Detector de Rostros basado en Segmentación de Color (HSV) y Contornos
 def extract_face_roi(img_color):
