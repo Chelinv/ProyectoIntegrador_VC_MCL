@@ -354,8 +354,8 @@ def predict():
         # 2. Predicción
         if req_model == 'cnn':
             if cnn_model:
-                # CNN ahora recibe el mosaico 128x128 normalizado a [0, 1]
-                X_cnn = (mosaic / 255.0).reshape(1, 128, 128, 1)
+                # CNN recibe el mosaico 128x128 en rango [0, 255] (la capa Rescaling interna lo normaliza)
+                X_cnn = mosaic.reshape(1, 128, 128, 1).astype(np.float32)
                 pred_cnn_raw = cnn_model.predict(X_cnn, verbose=0)[0]
                 class_idx = np.argmax(pred_cnn_raw)
                 prob_cnn = float(np.max(pred_cnn_raw))
