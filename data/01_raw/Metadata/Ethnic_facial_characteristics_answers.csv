@@ -1,0 +1,431 @@
+ID,Temporary_mark,Consent,Paternal_surname,Maternal_surname,Age,Province_birth,City_birth,Gender,Hair_type,Hair_color,Shape_lips,Skin_color,Eye_color,Shape_face,Shape_ears,Shape_chin,Shape_nose,Type_eyes,Shape_eyebrows,Ancestry,Afro-American_percentage,European_percentage,Indigenous_percentage,Total
+001_1,4/11/2019 12:40:50,Yes,Arias,Sampedro,20,Pichincha,Quito,Male,Wavy,Black,Thick,1,Dark brown,Diamond,Ovoids,Fugitive,Right,Sunk,Sinuous,"Afro-American, European, Native American (indigenous)",30%,30%,40%,100%
+001_10,4/3/2019 17:16:18,Yes,Tualombo,Díaz,74,Pichincha,Mejía,Male,Straight,Black,Thin,1,Dark brown,Triangular,Triangular,Square,Concave,Sunk,Sinuous,Native American (indigenous),0%,20%,80%,100%
+001_11,4/4/2019 11:51:25,Yes,Gonzalez,Yanacalla,37,Pichincha,Quito,Male,Straight,Black,Medium,1,Dark brown,Circular,Ovoids,Arcuate,Alomado,Sunk,Rectilines,Native American (indigenous),10%,30%,60%,100%
+001_12,4/4/2019 17:18:04,Yes,Calo,Caiza,37,Cotopaxi,Salcedo,Male,Straight,Black,Medium,1,Dark brown,Diamond,Triangular,Acute,Alomado,Protruding,Rectilines,Native American (indigenous),0%,50%,50%,100%
+001_13,4/5/2019 18:29:59,Yes,Caiza,Montatixe,65,Pichincha,Machachi,Male,Straight,Black,Thin,1,Dark brown,Circular,Triangular,Acute,Alomado,Protruding,Sinuous,Native American (indigenous),0%,20%,80%,100%
+001_14,4/8/2019 10:29:53,Yes,Limaico,Pilatasig,56,Cotopaxi,Latacunga,Male,Straight,Black,Medium,1,Dark brown,Oval,Triangular,Square,Right,Sunk,Rectilines,Native American (indigenous),0%,30%,70%,100%
+001_15,4/10/2019 10:56:36,Yes,Gualavisi,Quishpe,31,Pichincha,Quito,Male,Straight,Black,Medium,1,Dark brown,Circular,Triangular,Square,Alomado,Sunk,Sinuous,Native American (indigenous),0%,40%,60%,100%
+001_16,4/6/2019 11:24:59,Yes,Casa,Almachi,33,Cotopaxi,Latacunga,Male,Straight,Black,Medium,1,Dark brown,Diamond,Ovoids,Square,Right,Elongated,Sinuous,Native American (indigenous),10%,40%,50%,100%
+001_17,4/11/2019 12:33:44,Yes,Pujos,Tualombo,23,Pichincha,Quito,Male,Straight,Black,Medium,1,Dark brown,Circular,Ovoids,Flat,Right,Sunk,Sinuous,"Afro-American, Native American (indigenous)",10%,40%,50%,100%
+001_18,4/11/2019 12:39:04,Yes,German,Caiza,22,Pichincha,Sangolquí,Female,Straight,Black,Thin,1,Dark brown,Square,Circulars,Square,Right,Sunk,Rectilines,"European, Native American (indigenous)",0%,10%,90%,100%
+001_19,4/11/2019 12:39:06,Yes,Mañay,Changoluisa,22,Pichincha,Quito,Male,Straight,Brown,Medium,1,Dark brown,Triangular,Circulars,Acute,Concave,Protruding,Rectilines,Native American (indigenous),30%,50%,20%,100%
+001_2,4/1/2019 10:07:21,Yes,Taipe,Zapata,48,Pichincha,Quito,Male,Straight,Black,Medium,1,Dark brown,Oval,Rectangular,Square,Alomado,Protruding,Sinuous,Native American (indigenous),20%,30%,50%,100%
+001_20,4/11/2019 12:39:09,Yes,Rochina,Manobanda,23,Bolívar,Guaranda,Male,Straight,Black,Medium,1,Dark brown,Diamond,Ovoids,Flat,Concave,Elongated,Sinuous,Native American (indigenous),0%,0%,100%,100%
+001_21,4/11/2019 12:40:12,Yes,Pichamba,Tuquerres,23,Imbabura,Otavalo,Male,Wavy,Black,Medium,1,Dark brown,Circular,Triangular,Fugitive,Right,External Obliques,Asymmetrical,Native American (indigenous),0%,30%,70%,100%
+001_22,4/11/2019 12:41:11,Yes,Guandinango,De La Cruz,24,Imbabura,Cotacachi,Male,Wavy,Black,Medium,1,Dark brown,Diamond,Ovoids,Acute,Right,Sunk,Sinuous,Native American (indigenous),0%,10%,90%,100%
+001_23,4/11/2019 12:45:15,Yes,Osorio,Guaminga,24,Pichincha,Tumbaco,Male,Straight,Black,Medium,1,Dark brown,Oval,Ovoids,Flat,Right,Sunk,Rectilines,"European, Native American (indigenous)",0%,20%,80%,100%
+001_24,4/11/2019 19:35:04,Yes,Maza,Gonzalez,20,Pichincha,Quito,Female,Straight,Black,Medium,1,Dark brown,Oval,Triangular,Fugitive,Right,Elongated,Asymmetrical,Native American (indigenous),10%,10%,80%,100%
+001_25,4/11/2019 19:35:20,Yes,Iza,Cando,23,Pichincha,Quito,Male,Straight,Black,Medium,1,Dark brown,Diamond,Ovoids,Acute,Right,Protruding,Arched,"Afro-American, European, Native American (indigenous)",30%,10%,60%,100%
+001_26,4/11/2019 19:38:16,Yes,Morales ,Toapanta ,22,Pichincha,Quito ,Male,Straight,Black,Medium,1,Dark brown,Oval,Ovoids,Fugitive,Convex,Sunk,Asymmetrical,Native American (indigenous),40%,0%,60%,100%
+001_27,4/12/2019 11:27:06,Yes,Tocagón,Cabascango,21,Pichincha,Quito,Male,Straight,Black,Thick,1,Dark brown,Circular,Triangular,Fugitive,Right,Elongated,Rectilines,Native American (indigenous),0%,40%,60%,100%
+001_28,4/12/2019 11:32:17,Yes,Sanguña,Muzo,26,Pichincha,Quito,Male,Straight,Black,Thick,1,Dark brown,Circular,Circulars,Flat,In S,Elongated,Rectilines,Native American (indigenous),20%,20%,60%,100%
+001_29,4/12/2019 11:33:25,Yes,Saavedra,Lanchimba,22,Imbabura,Otavalo,Female,Straight,Brown,Thick,1,Dark brown,Triangular,Ovoids,Fugitive,Right,Sunk,Arched,Native American (indigenous),0%,0%,100%,100%
+001_3,4/1/2019 11:47:04,Yes,Caiza,Sandoval,87,Pichincha,Aloag,Male,Straight,Black,Thin,1,Dark brown,Rectangular,Rectangular,Square,Convex,Sunk,Arched,Native American (indigenous),0%,20%,80%,100%
+001_30,4/12/2019 15:34:30,Yes,Benavides,Anrango,29,Pichincha,Ibarra,Female,Wavy,Brown,Medium,1,Dark brown,Triangular,Ovoids,Acute,Right,Elongated,Arched,"Afro-American, European, Native American (indigenous)",20%,30%,50%,100%
+001_31,4/13/2019 13:57:49,Yes,Simbaña,Pachacama,50,Pichincha,Machachi,Male,Straight,Black,Medium,1,Dark brown,Square,Triangular,Acute,Right,Elongated,Arched,Native American (indigenous),0%,20%,80%,100%
+001_32,4/13/2019 15:33:24,Yes,Molina ,Molina ,39,Cotopaxi,Cotopaxi,Female,Straight,Black,Medium,1,Dark brown,Circular,Ovoids,Acute,Right,Sunk,Arched,Native American (indigenous),80%,10%,10%,100%
+001_33,4/14/2019 11:15:04,Yes,Huanca,Tandazo,42,Loja,Loja,Female,Straight,Black,Medium,1,Dark brown,Oval,Triangular,Flat,Right,Elongated,Rectilines,Native American (indigenous),0%,0%,100%,100%
+001_34,5/19/2019 15:36:48,Yes,Jumbo,Gonzalez,36,Pichincha,Quito,Male,Straight,Black,Thin,1,Amber,Oval,Rectangular,Flat,Alomado,Elongated,Sinuous,Afro-American,30%,10%,60%,100%
+001_35,5/19/2019 18:59:46,Yes,Lema,Quezada,49,El Oro,Zaruma,Male,Wavy,Black,Medium,1,Dark brown,Circular,Ovoids,Flat,Right,Elongated,Sinuous,Native American (indigenous),20%,30%,50%,100%
+001_36,4/18/2019 16:07:24,Yes,Logro,Lema,34,Pichincha,Quito,Female,Straight,Black,Medium,1,Dark brown,Oval,Triangular,Fugitive,Concave,Sunk,Arched,Native American (indigenous),0%,0%,100%,100%
+001_37,4/19/2019 12:01:08,Yes,Cando,Urquizo,24,Pichincha,Quito,Male,Straight,Black,Medium,1,Dark brown,Oval,Ovoids,Square,Convex,Sunk,Sinuous,"European, Native American (indigenous)",0%,50%,50%,100%
+001_38,4/19/2019 12:02:44,Yes,Urquizo,Paguay,42,Pichincha,Quito,Female,Straight,Black,Medium,1,Dark brown,Oval,Ovoids,Flat,Concave,Sunk,Arched,"European, Native American (indigenous)",0%,50%,50%,100%
+001_39,4/19/2019 12:10:18,Yes,Niza,Casa,62,Cotopaxi,Latacunga,Male,Straight,Black,Thick,1,Dark brown,Oval,Triangular,Square,Right,Sunk,Rectilines,"European, Native American (indigenous)",0%,50%,50%,100%
+001_4,4/1/2019 12:42:42,Yes,Chugchilan,Vega,36,Cotopaxi,Salcedo,Female,Straight,Black,Thick,1,Dark brown,Oval,Ovoids,Acute,Right,Elongated,Arched,Native American (indigenous),0%,20%,80%,100%
+001_40,4/19/2019 12:14:34,Yes,Chulco,Quishpe,36,Pichincha,Quito,Male,Wavy,Black,Medium,1,Dark brown,Circular,Ovoids,Flat,Right,Sunk,Rectilines,Native American (indigenous),0%,0%,100%,100%
+001_41,4/19/2019 12:25:06,Yes,Coyago,Maigua,29,Pichincha,Quito,Male,Straight,Black,Medium,1,Dark brown,Oval,Ovoids,Flat,Right,Sunk,Arched,Native American (indigenous),0%,0%,100%,100%
+001_42,4/27/2019 9:36:57,Yes,Suntaxi,Oña,38,Pichincha,Quito,Male,Straight,Black,Medium,1,Dark brown,Triangular,Ovoids,Acute,Right,Sunk,Sinuous,"European, Native American (indigenous)",0%,50%,50%,100%
+001_43,4/27/2019 10:09:34,Yes,Llumiquinga,Quinga,30,Pichincha,Quito,Male,Straight,Black,Medium,1,Dark brown,Oval,Ovoids,Flat,Right,Sunk,Rectilines,Native American (indigenous),0%,0%,100%,100%
+001_44,4/27/2019 10:11:49,Yes,Toapanta,Quishpe,21,Pichincha,Quito,Male,Straight,Black,Medium,1,Dark brown,Circular,Triangular,Square,Concave,Sunk,Rectilines,Native American (indigenous),0%,0%,100%,100%
+001_45,4/27/2019 10:20:29,Yes,Quishpe,Lochamin,35,Pichincha,Quito,Male,Straight,Black,Medium,1,Dark brown,Oval,Ovoids,Flat,Concave,Sunk,Rectilines,"European, Native American (indigenous)",0%,50%,50%,100%
+001_46,4/27/2019 10:23:49,Yes,Amanta,Criollo,21,Pichincha,Quito,Male,Straight,Black,Medium,1,Dark brown,Diamond,Ovoids,Acute,Right,Sunk,Rectilines,Native American (indigenous),0%,0%,100%,100%
+001_47,4/27/2019 10:27:37,Yes,Criollo,Gualotuña,21,Pichincha,Quito,Male,Straight,Black,Medium,1,Dark brown,Triangular,Triangular,Square,Concave,Sunk,Sinuous,Native American (indigenous),0%,0%,100%,100%
+001_48,4/27/2019 11:17:26,Yes,Cumbal,Llulluna,35,Pichincha,Quito,Male,Straight,Black,Medium,1,Dark brown,Oval,Ovoids,Split chin,Concave,Sunk,Arched,Native American (indigenous),0%,0%,100%,100%
+001_49,4/27/2019 11:34:43,Yes,Tumon,Guato,27,Tungurahua,Pelileo,Male,Straight,Black,Medium,1,Dark brown,Circular,Triangular,Flat,Concave,Sunk,Rectilines,Native American (indigenous),0%,0%,100%,100%
+001_5,4/1/2019 17:47:42,Yes,Lisintuña,Chito,22,Cotopaxi,El Corazón,Male,Straight,Black,Medium,1,Dark brown,Oval,Ovoids,Fugitive,Right,Protruding,Sinuous,Native American (indigenous),0%,20%,80%,100%
+001_50,4/27/2019 14:38:19,Yes,Wampankit,Kunamp,34,Morona Santiago,Palora,Female,Straight,Black,Medium,1,Dark brown,Circular,Ovoids,Flat,Concave,Sunk,Rectilines,Native American (indigenous),0%,0%,100%,100%
+001_6,4/2/2019 10:44:04,Yes,Llano,Chancusig,43,Cotopaxi,Tanicuchi,Female,Straight,Black,Medium,1,Dark brown,Diamond,Ovoids,Acute,Alomado,Sunk,Arched,Native American (indigenous),0%,20%,80%,100%
+001_7,4/2/2019 18:42:26,Yes,-,Tayupanta,67,Pichincha,Uyumbicho,Male,Straight,Black,Medium,1,Dark brown,Circular,Triangular,Square,Convex,Elongated,Sinuous,Native American (indigenous),10%,20%,70%,100%
+001_8,4/3/2019 14:39:40,Yes,Toapanta,Chancusig,46,Cotopaxi,Latacunga,Male,Straight,Black,Thin,1,Dark brown,Oval,Triangular,Square,Right,Sunk,Sinuous,Native American (indigenous),0%,40%,60%,100%
+001_9,4/3/2019 16:51:20,Yes,Cuji,Cachupud,38,Pichincha,Quito,Male,Straight,Black,Medium,1,Dark brown,Circular,Ovoids,Acute,Right,Sunk,Sinuous,Native American (indigenous),0%,30%,70%,100%
+002_1,4/27/2019 11:33:12,Yes,Peñaherrera,Fajardo,41,Guayas,Guayaquil,Male,Straight,Black,Medium,2,Dark brown,Circular,Ovoids,Acute,Concave,Sunk,Rectilines,"European, Native American (indigenous)",0%,50%,50%,100%
+002_10,4/19/2019 15:32:00,Yes,Chiriboga,Valencia,21,Pichincha,Quito,Male,Straight,Black,Thick,2,Dark brown,Square,Ovoids,Square,Right,Elongated,Sinuous,"Afro-American, European, Native American (indigenous)",50%,10%,40%,100%
+002_11,4/19/2019 15:46:09,Yes,Zavala,Loor,25,Los Ríos,Quevedo,Female,Curly,Brown,Thin,2,Dark brown,Triangular,Ovoids,Acute,Concave,Sunk,Sinuous,Afro-American,20%,80%,0%,100%
+002_12,4/5/2019 11:32:24,Yes,Zambrano,Villón,43,Guayas,Guayaquil,Female,Straight,Brown,Medium,2,Dark brown,Circular,Ovoids,Acute,Right,Protruding,Rectilines,European,0%,60%,40%,100%
+002_13,4/5/2019 11:46:51,Yes,Camacho,Barrera,66,Pichincha,Quito,Male,Straight,Black,Medium,2,Dark brown,Circular,Ovoids,Flat,Right,External Obliques,Sinuous,"European, Native American (indigenous)",0%,60%,40%,100%
+002_14,4/5/2019 12:05:16,Yes,Aguirre,Ruiz,57,El Oro,Piñas,Male,Wavy,Black,Thin,2,Hazelnut,Triangular,Triangular,Acute,Right,Sunk,Sinuous,European,0%,60%,40%,100%
+002_15,4/5/2019 12:24:59,Yes,-,Caisalitin,49,Cotopaxi,Latacunga,Male,Straight,Black,Thin,2,Dark brown,Circular,Ovoids,Acute,Right,Sunk,Sinuous,"European, Native American (indigenous)",0%,50%,50%,100%
+002_16,4/5/2019 12:49:22,Yes,Pasquel,Narváez,50,Imbabura,Atuntaqui,Male,Straight,Brown,Medium,2,Hazelnut,Diamond,Rectangular,Square,Right,Protruding,Arched,European,0%,70%,30%,100%
+002_17,4/6/2019 10:54:52,Yes,Trejo,Escobar,41,Pichincha,Quito,Male,Straight,Black,Medium,2,Dark brown,Circular,Ovoids,Square,Right,Sunk,Rectilines,"European, Native American (indigenous)",0%,70%,30%,100%
+002_18,4/6/2019 11:10:50,Yes,Naranjo,Huera,32,Santo Domingo de los Tsáchilas,Sto Domingo,Male,Straight,Brown,Medium,2,Dark brown,Oval,Ovoids,Acute,Right,Sunk,Sinuous,European,0%,70%,30%,100%
+002_19,4/6/2019 12:24:57,Yes,Tapia,Troya,62,Cotopaxi,Latacunga,Male,Straight,Black,Medium,2,Dark brown,Oval,Ovoids,Square,Right,External Obliques,Sinuous,"European, Native American (indigenous)",0%,50%,50%,100%
+002_2,4/3/2019 13:27:54,Yes,Quinto,Zoor,20,Los Ríos,Buena Fé,Female,Curly,Brown,Thick,2,Dark brown,Circular,Ovoids,Acute,Concave,Elongated,Sinuous,"European, Native American (indigenous)",0%,70%,30%,100%
+002_20,4/6/2019 14:59:56,Yes,Bonifáz,Chávez,55,Chimborazo,Riobamba,Male,Straight,Black,Medium,2,Green,Oval,Ovoids,Acute,Convex,External Obliques,Sinuous,"European, Native American (indigenous)",0%,70%,30%,100%
+002_21,4/6/2019 15:54:14,Yes,Bonifáz,Chávez,51,Pichincha,Quito,Female,Straight,Black,Medium,2,Dark brown,Oval,Ovoids,Acute,Right,Sunk,Arched,"European, Native American (indigenous)",0%,60%,40%,100%
+002_22,5/30/2019 10:34:18,Yes,Rodriguez,Gallegos,32,Guayas,Guayaquil,Male,Straight,Brown,Medium,2,Dark brown,Triangular,Ovoids,Split chin,Right,Elongated,Rectilines,European,10%,80%,10%,100%
+002_23,4/8/2019 10:27:01,Yes,Ortiz,Pozo,41,Pichincha,Quito,Male,Straight,Black,Medium,2,Amber,Diamond,Rectangular,Acute,Concave,Sunk,Sinuous,European,0%,60%,40%,100%
+002_24,4/8/2019 11:34:24,Yes,Rodriguez,Pinto,55,Imbabura,Ibarra,Male,Straight,Brown,Thin,2,Amber,Oval,Triangular,Flat,Alomado,Sunk,Sinuous,European,0%,60%,40%,100%
+002_25,4/8/2019 12:33:57,Yes,Guayaquil,Tapia,59,Cotopaxi,Latacunga,Male,Straight,Brown,Medium,2,Dark brown,Triangular,Ovoids,Square,Right,Sunk,Sinuous,European,0%,60%,40%,100%
+002_26,4/8/2019 12:45:30,Yes,Guayaquil,Tapia,49,Cotopaxi,Latacunga,Male,Wavy,Brown,Thin,2,Hazelnut,Circular,Triangular,Acute,Alomado,Sunk,Sinuous,European,0%,70%,30%,100%
+002_27,4/8/2019 14:23:32,Yes,Paredes,Gallardo,45,Pichincha,Quito,Male,Curly,Black,Thin,2,Dark brown,Circular,Triangular,Acute,Right,Sunk,Sinuous,European,0%,70%,30%,100%
+002_28,4/8/2019 14:48:11,Yes,Vega,Alegria,59,Bolívar,Guaranda,Male,Straight,Black,Medium,2,Blue,Circular,Ovoids,Acute,Right,Sunk,Sinuous,European,0%,80%,20%,100%
+002_29,4/9/2019 12:05:35,Yes,Alvares,Guerrero,43,Loja,Loja,Male,Straight,Brown,Medium,2,Hazelnut,Diamond,Ovoids,Square,Right,External Obliques,Rectilines,"European, Native American (indigenous)",0%,60%,40%,100%
+002_3,4/3/2019 17:11:59,Yes,Yánez,Espinoza,72,Pichincha,Mejía,Male,Straight,Black,Medium,2,Dark brown,Triangular,Rectangular,Square,Right,External Obliques,Arched,"European, Native American (indigenous)",0%,70%,30%,100%
+002_30,4/9/2019 13:21:25,Yes,Garzón,Murillo,56,Pichincha,Quito,Male,Wavy,Black,Thin,2,Dark brown,Oval,Rectangular,Square,Concave,Sunk,Sinuous,"European, Native American (indigenous)",0%,60%,40%,100%
+002_31,4/9/2019 13:24:49,Yes,Moncayo,Ibarra,62,Carchi,Tulcán,Male,Curly,Black,Thick,2,Dark brown,Square,Triangular,Square,Right,Sunk,Sinuous,"European, Native American (indigenous)",0%,60%,40%,100%
+002_32,4/9/2019 18:38:03,Yes,Oviedo,Masmuta,40,Carchi,Tulcán,Female,Straight,Brown,Thin,2,Hazelnut,Oval,Ovoids,Acute,Right,Sunk,Arched,"European, Native American (indigenous)",0%,60%,40%,100%
+002_33,4/10/2019 11:19:03,Yes,Villamarín,Jácome,30,Pichincha,Quito,Male,Curly,Black,Thick,2,Dark brown,Triangular,Triangular,Square,Right,Sunk,Sinuous,"European, Native American (indigenous)",10%,50%,40%,100%
+002_34,4/10/2019 13:57:21,Yes,Murillo,Iza,38,Pichincha,Quito,Male,Straight,Black,Thin,2,Dark brown,Oval,Ovoids,Acute,Concave,External Obliques,Sinuous,"European, Native American (indigenous)",10%,50%,40%,100%
+002_35,4/11/2019 12:28:03,Yes,Carrera,Calvachi,25,Pichincha,Quito,Male,Straight,Brown,Thick,2,Hazelnut,Diamond,Ovoids,Arcuate,Sinuous,Protruding,Sinuous,European,0%,70%,30%,100%
+002_36,4/11/2019 12:35:40,Yes,Zapata,Caisaguano,24,Pichincha,Quito,Male,Straight,Black,Medium,2,Dark brown,Triangular,Ovoids,Flat,Right,Sunk,Sinuous,Native American (indigenous),10%,30%,60%,100%
+002_37,4/11/2019 12:37:48,Yes,Espinosa,Miranda,23,Pichincha,Quito,Male,Straight,Brown,Medium,2,Amber,Oval,Ovoids,Fugitive,Concave,Sunk,Internal Obliques,"European, Native American (indigenous)",0%,70%,30%,100%
+002_38,4/11/2019 19:36:47,Yes,Garrido,Mena,21,Pichincha,Quito,Male,Wavy,Brown,Thin,2,Amber,Oval,Circulars,Acute,In S,Protruding,Sinuous,"European, Native American (indigenous)",10%,70%,20%,100%
+002_39,4/11/2019 19:39:34,Yes,López,Baca,23,Pichincha,Quito,Male,Straight,Black,Medium,2,Dark brown,Square,Ovoids,Arcuate,Right,Sunk,Internal Obliques,"European, Native American (indigenous)",0%,30%,70%,100%
+002_4,4/3/2019 17:58:22,Yes,López,Niebla,37,Tungurahua,Pillaro,Male,Straight,Black,Medium,2,Dark brown,Diamond,Triangular,Acute,Right,Sunk,Sinuous,European,0%,60%,40%,100%
+002_40,4/12/2019 11:27:29,Yes,González,Gavilanez,21,Pichincha,Quito,Male,Straight,Black,Thick,2,Dark brown,Oval,Ovoids,Flat,Right,Sunk,Rectilines,Native American (indigenous),0%,0%,100%,100%
+002_41,4/12/2019 11:28:14,Yes,Andrade,Sabay,23,Pichincha,Quito,Male,Straight,Brown,Medium,2,Dark brown,Rectangular,Ovoids,Flat,Right,Elongated,Asymmetrical,Native American (indigenous),0%,30%,70%,100%
+002_42,4/12/2019 11:31:51,Yes,Muñoz,Teran,23,Pichincha,Quito,Male,Straight,Black,Medium,2,Hazelnut,Triangular,Ovoids,Fugitive,Alomado,Sunk,Arched,"European, Native American (indigenous)",0%,60%,40%,100%
+002_43,4/12/2019 15:29:13,Yes,Jaramillo,Aguiar,22,Pichincha,Quito,Female,Wavy,Brown,Thick,2,Dark brown,Circular,Ovoids,Flat,Right,Sunk,Rectilines,Native American (indigenous),0%,60%,40%,100%
+002_44,4/12/2019 15:29:59,Yes,Márquez,Yépez,28,Pichincha,Quito,Male,Wavy,Brown,Medium,2,Hazelnut,Circular,Triangular,Acute,Alomado,Sunk,Arched,"Afro-American, European, Native American (indigenous)",40%,50%,10%,100%
+002_45,4/12/2019 15:32:37,Yes,Guerra,Cajas,22,Pichincha,Quito,Male,Straight,Brown,Thick,2,Hazelnut,Diamond,Ovoids,Flat,Right,Elongated,Rectilines,"European, Native American (indigenous)",0%,10%,90%,100%
+002_46,4/13/2019 14:05:59,Yes,Hidalgo,Casa,29,Pichincha,Quito,Male,Wavy,Brown,Thick,2,Green,Circular,Ovoids,Square,In S,External Obliques,Sinuous,Native American (indigenous),0%,0%,100%,100%
+002_47,4/13/2019 15:26:13,Yes,Benavides,Vaca,20,Pichincha,Quito,Male,Straight,Brown,Thin,2,Hazelnut,Circular,Ovoids,Fugitive,Right,Elongated,Arched,Native American (indigenous),0%,10%,90%,100%
+002_48,5/19/2019 18:11:53,Yes,Quezada,Arias,58,Zamora Chinchipe,Yacuanbi,Male,Straight,Black,Medium,2,Hazelnut,Circular,Circulars,Acute,Right,Sunk,Sinuous,Native American (indigenous),10%,30%,60%,100%
+002_49,4/18/2019 13:29:36,Yes,Aro,Apraez,67,Imbabura,Ibarra,Female,Straight,Black,Thin,2,Dark brown,Oval,Ovoids,Flat,Right,Elongated,Internal Obliques,"European, Native American (indigenous)",0%,50%,50%,100%
+002_5,4/4/2019 9:01:20,Yes,Salgado,Garces,56,Guayas,Milagro,Male,Straight,Black,Thin,2,Dark brown,Circular,Triangular,Acute,Sinuous,External Obliques,Sinuous,European,0%,60%,40%,100%
+002_50,4/19/2019 15:30:43,Yes,Chiriboga,Cruz,60,Pichincha,Quito,Female,Wavy,Black,Medium,2,Dark brown,Circular,Ovoids,Flat,Concave,Sunk,Rectilines,"European, Native American (indigenous)",0%,50%,50%,100%
+002_6,4/4/2019 11:01:20,Yes,Jarrin,Cisneros,55,Pichincha,Quito,Male,Wavy,Brown,Thin,2,Dark brown,Circular,Ovoids,Acute,Concave,Sunk,Sinuous,European,0%,70%,30%,100%
+002_7,4/4/2019 14:29:27,Yes,Flores,Guijarro,26,Pichincha,Quito,Male,Curly,Black,Medium,2,Dark brown,Circular,Ovoids,Fugitive,Concave,Sunk,Arched,"European, Native American (indigenous)",0%,60%,40%,100%
+002_8,4/4/2019 17:31:00,Yes,Reinoso,Mantilla,33,Manabí,Portoviejo,Male,Straight,Black,Medium,2,Dark brown,Oval,Rectangular,Acute,Right,Sunk,Rectilines,European,0%,60%,40%,100%
+002_9,4/27/2019 14:33:55,Yes,Valencia,Vásquez ,40,Pichincha,Quito,Female,Straight,Black,Thin,2,Dark brown,Circular,Ovoids,Flat,Concave,Sunk,Arched,"Afro-American, European, Native American (indigenous)",30%,40%,30%,100%
+003_1,5/30/2019 12:08:08,Yes,Mendez,Preciado,50,Esmeraldas,Esmeraldas,Male,Afro,Black,Medium,3,Dark brown,Circular,Ovoids,Square,Right,Sunk,Sinuous,"Afro-American, Native American (indigenous)",90%,0%,10%,100%
+003_10,4/12/2019 20:06:48,Yes,D'Leon,Caicedo,20,Esmeraldas,San Lorenzo,Male,Afro,Black,Thick,3,Dark brown,Circular,Triangular,Acute,Concave,Sunk,Arched,Afro-American,100%,0%,0%,100%
+003_11,4/19/2019 12:18:29,Yes,Caisedo,Padilla,25,Esmeraldas,Esmeraldas,Male,Afro,Black,Thick,3,Dark brown,Square,Ovoids,Acute,Right,Sunk,Rectilines,Afro-American,100%,0%,0%,100%
+003_12,4/26/2019 12:44:00,Yes,Minda,Rengifo,29,Pichincha,Quito,Female,Afro,Brown,Thick,3,Dark brown,Oval,Ovoids,Flat,Right,Sunk,Rectilines,Afro-American,100%,0%,0%,100%
+003_13,4/26/2019 12:53:28,Yes,Veliz,Castilla,26,Esmeraldas,Esmeraldas,Male,Afro,Black, Thick and bulky,3,Dark brown,Circular,Ovoids,Square,In S,Sunk,Arched,Afro-American,100%,0%,0%,100%
+003_14,4/27/2019 9:56:06,Yes,Vaquerizo,Quiñonez,23,Pichincha,Quito,Female,Afro,Brown,Medium,3,Dark brown,Circular,Ovoids,Flat,Concave,Sunk,Arched,Afro-American,100%,0%,0%,100%
+003_15,4/27/2019 10:02:46,Yes,Bone,Farias,36,Santo Domingo de los Tsáchilas,El Carmen,Male,Afro,Black, Thick and bulky,3,Dark brown,Oval,Ovoids,Flat,Concave,Sunk,Rectilines,Afro-American,100%,0%,0%,100%
+003_16,4/27/2019 10:05:40,Yes,Orejuela,Micolta,25,Esmeraldas,Esmeraldas,Male,Afro,Black,Thick,3,Dark brown,Oval,Triangular,Flat,Right,Sunk,Rectilines,Afro-American,100%,0%,0%,100%
+003_17,4/27/2019 10:07:39,Yes,Muñoz,Zurita,19,Pichincha,Quito,Male,Afro,Black,Thick,3,Dark brown,Oval,Ovoids,Flat,Right,Sunk,Rectilines,Afro-American,100%,0%,0%,100%
+003_18,4/27/2019 11:10:58,Yes,Vallejo,Castillo,30,Esmeraldas,Esmeraldas,Male,Afro,Black,Thick,3,Dark brown,Oval,Triangular,Flat,Right,Sunk,Sinuous,Afro-American,100%,0%,0%,100%
+003_19,4/28/2019 11:36:30,Yes,Chala,Molina,24,Pichincha,Quito,Male,Afro,Black,Thick,3,Dark brown,Rectangular,Ovoids,Split chin,Right,Sunk,Internal Obliques,Afro-American,100%,0%,0%,100%
+003_2,4/2/2019 10:52:58,Yes,Delvicier,Valencia,42,Esmeraldas,Esmeraldas,Male,Afro,Black,Thick,3,Dark brown,Oval,Rectangular,Flat,Concave,Protruding,Rectilines,"Afro-American, Native American (indigenous)",60%,20%,20%,100%
+003_20,5/30/2019 11:23:04,Yes,Valencia,Garcia,42,Orellana,El Coca,Female,Afro,Black,Thick,3,Dark brown,Circular,Ovoids,Acute,Right,Sunk,Rectilines,Afro-American,80%,10%,10%,100%
+003_21,5/5/2019 10:23:04,Yes,De la cruz,Espinoza,34,Carchi,Valle del Chota,Male,Afro,Black, Thick and bulky,3,Dark brown,Oval,Ovoids,Flat,Right,Sunk,Rectilines,Afro-American,100%,0%,0%,100%
+003_22,5/30/2019 11:33:05,Yes,Montaño,Nazareno,49,Esmeraldas,Esmeraldas,Male,Afro,Black,Thick,3,Dark brown,Diamond,Ovoids,Square,Right,Protruding,Sinuous,Afro-American,90%,0%,10%,100%
+003_23,5/30/2019 11:45:06,Yes,Rivera,Cabezas,61,Esmeraldas,Esmeraldas,Male,Curly,Black,Thick,3,Dark brown,Oval,Rectangular,Fugitive,In S,Sunk,Sinuous,"Afro-American, Native American (indigenous)",80%,10%,10%,100%
+003_24,5/5/2019 10:34:13,Yes,Folleco,Morales,24,Imbabura,Cotacachi,Male,Afro,Black,Thick,3,Dark brown,Oval,Ovoids,Square,Right,Sunk,Rectilines,Afro-American,100%,0%,0%,100%
+003_25,5/5/2019 11:11:45,Yes,Folleco,Morales,37,Imbabura,Cotacachi,Male,Afro,Black,Thick,3,Dark brown,Oval,Ovoids,Flat,Right,Sunk,Rectilines,Afro-American,100%,0%,0%,100%
+003_26,5/5/2019 11:13:18,Yes,Lara,Suarez,37,Imbabura,Ibarra,Male,Afro,Black,Thick,3,Dark brown,Rectangular,Ovoids,Flat,Right,Sunk,Rectilines,Afro-American,100%,0%,0%,100%
+003_27,5/5/2019 11:15:37,Yes,Morales,PaStraight,37,Imbabura,Cotacachi,Male,Afro,Black,Thick,3,Dark brown,Oval,Ovoids,Flat,Right,Sunk,Rectilines,Afro-American,100%,0%,0%,100%
+003_28,5/5/2019 11:17:16,Yes,Cuero,Padilla ,46,Imbabura,Ibarra,Male,Afro,Black,Thick,3,Dark brown,Oval,Ovoids,Flat,Right,Sunk,Rectilines,Afro-American,100%,0%,0%,100%
+003_29,5/5/2019 11:18:58,Yes,Morales,PaStraight,27,Imbabura,Ibarra,Male,Afro,Black,Thick,3,Dark brown,Oval,Ovoids,Flat,Right,Sunk,Rectilines,Afro-American,100%,0%,0%,100%
+003_3,5/30/2019 11:03:02,Yes,Quiroz,Montaño,42,Esmeraldas,Esmeraldas,Male,Afro,Black,Medium,3,Dark brown,Circular,Ovoids,Acute,Right,Sunk,Sinuous,Afro-American,90%,0%,10%,100%
+003_30,5/5/2019 11:20:40,Yes,Morales,Oberliz,28,Pichincha,Quito,Male,Afro,Black,Thick,3,Dark brown,Oval,Ovoids,Flat,Right,Sunk,Rectilines,Afro-American,100%,0%,0%,100%
+003_31,5/30/2019 11:52:07,Yes,Realpe,Tenorio,59,Esmeraldas,Esmeraldas,Male,Afro,Black,Thick,3,Dark brown,Diamond,Ovoids,Square,Alomado,Sunk,Sinuous,Afro-American,100%,0%,0%,100%
+003_32,5/5/2019 11:24:15,Yes,Folleco,Espinoza,24,Imbabura,Ibarra,Female,Afro,Black,Medium,3,Dark brown,Oval,Ovoids,Flat,Concave,Sunk,Arched,Afro-American,100%,0%,0%,100%
+003_33,5/5/2019 11:25:44,Yes,Folleco,Espinoza,18,Imbabura,Ibarra,Male,Afro,Black,Thick,3,Dark brown,Oval,Ovoids,Flat,Right,Sunk,Rectilines,Afro-American,100%,0%,0%,100%
+003_34,5/5/2019 11:29:51,Yes,Folleco,Espinoza,50,Imbabura,Cotacachi,Male,Afro,Black,Thick,3,Dark brown,Oval,Ovoids,Flat,Right,Sunk,Rectilines,Afro-American,100%,0%,0%,100%
+003_35,5/5/2019 12:12:15,Yes,Maldonado,Espinosa,57,Imbabura,Ibarra,Male,Afro,Black,Thick,3,Dark brown,Oval,Ovoids,Flat,Convex,Sunk,Rectilines,Afro-American,100%,0%,0%,100%
+003_36,5/24/2019 20:14:59,Yes,Angulo,Preciado,36,Esmeraldas,Esmeraldas,Male,Afro,Black,Medium,3,Dark brown,Square,Ovoids,Flat,Concave,Sunk,Rectilines,Afro-American,100%,0%,0%,100%
+003_37,5/25/2019 12:13:27,Yes,Minda,Carcelen,42,Imbabura,Ibarra ,Female,Afro,Black, Thick and bulky,3,Dark brown,Circular,Ovoids,Flat,Convex,Sunk,Rectilines,Afro-American,100%,0%,0%,100%
+003_38,5/25/2019 12:24:44,Yes,Rodríguez,Ramírez ,27,Esmeraldas,Esmeraldas,Male,Afro,Black,Thick,3,Dark brown,Oval,Ovoids,Flat,Convex,Sunk,Rectilines,Afro-American,100%,0%,0%,100%
+003_39,5/25/2019 12:50:15,Yes,Arroyo,Quiñonez,34,Pichincha,Quito,Female,Afro,Black,Thick,3,Dark brown,Circular,Ovoids,Flat,Concave,Sunk,Rectilines,Afro-American,100%,0%,0%,100%
+003_4,4/8/2019 15:09:41,Yes,Pullas,Muñoz,47,Pichincha,Quito,Male,Afro,Black,Thick,3,Dark brown,Circular,Rectangular,Square,Concave,Sunk,Sinuous,Afro-American,70%,20%,10%,100%
+003_40,5/25/2019 12:59:56,Yes,Angulo,Navarrete,32,Guayas,Guayaquil ,Male,Afro,Black,Thick,3,Dark brown,Oval,Ovoids,Flat,Concave,Sunk,Rectilines,Afro-American,100%,0%,0%,100%
+003_41,5/25/2019 16:13:55,Yes,Villalba,Justellano,24,Pichincha,Quito,Male,Afro,Black, Thick and bulky,3,Dark brown,Oval,Ovoids,Fugitive,Convex,Sunk,Rectilines,Afro-American,100%,0%,0%,100%
+003_42,5/30/2019 10:53:01,Yes,Quiñonez,Arboleda,51,Esmeraldas,Esmeraldas,Male,Afro,Black,Thick,3,Dark brown,Circular,Ovoids,Fugitive,Right,Protruding,Sinuous,Afro-American,90%,0%,10%,100%
+003_43,5/25/2019 17:11:08,Yes,Folleco,Minda,18,Pichincha,Quito,Female,Afro,Black,Thick,3,Dark brown,Oval,Ovoids,Acute,Right,Sunk,Arched,Afro-American,100%,0%,0%,100%
+003_44,5/25/2019 17:58:44,Yes,Ayala,Minda,19,Imbabura,Ibarra,Male,Afro,Black,Thick,3,Dark brown,Oval,Ovoids,Square,Concave,Sunk,Rectilines,Afro-American,100%,0%,0%,100%
+003_45,5/25/2019 18:01:59,Yes,Pilataxi,Minda,15,Pichincha,Quito,Female,Afro,Black,Thick,3,Dark brown,Circular,Ovoids,Acute,Concave,Sunk,Rectilines,Afro-American,100%,0%,0%,100%
+003_46,5/25/2019 18:03:59,Yes,Minda,Carcelen,23,Pichincha,Quito,Female,Afro,Black,Thick,3,Dark brown,Oval,Ovoids,Acute,Concave,Sunk,Arched,Afro-American,100%,0%,0%,100%
+003_47,5/25/2019 18:05:54,Yes,Bautista,Delgado,27,Esmeraldas,Esmeraldas,Male,Afro,Black,Thick,3,Dark brown,Oval,Ovoids,Acute,Convex,Sunk,Rectilines,Afro-American,100%,0%,0%,100%
+003_48,5/28/2019 1:47:45,Yes,Angulo,Zamora,38,Pichincha,Quito,Male,Afro,Black, Thick and bulky,3,Dark brown,Triangular,Triangular,Acute,In S,Sunk,Sinuous,Afro-American,70%,10%,20%,100%
+003_49,4/12/2019 19:51:55,Yes,Estacio,Porozo,40,Esmeraldas,San Lorenzo,Male,Afro,Black,Medium,3,Dark brown,Circular,Ovoids,Flat,Right,Sunk,Sinuous,Afro-American,70%,20%,10%,100%
+003_5,5/30/2019 10:43:00,Yes,Nazareno,Ayala,42,Esmeraldas,Esmeraldas,Male,Afro,Black,Medium,3,Dark brown,Circular,Ovoids,Acute,Right,Sunk,Sinuous,Afro-American,90%,0%,10%,100%
+003_50,5/30/2019 11:13:03,Yes,Rodriguez,Borja,24,Esmeraldas,Esmeraldas,Male,Afro,Black,Thick,3,Dark brown,Oval,Triangular,Square,Right,Sunk,Sinuous,"Afro-American, Native American (indigenous)",80%,0%,20%,100%
+003_6,4/9/2019 18:53:18,Yes,Toral,Cabezas,33,Esmeraldas,Esmeralda,Male,Wavy,Black, Thick and bulky,3,Dark brown,Diamond,Triangular,Acute,Right,Elongated,Sinuous,"Afro-American, Native American (indigenous)",60%,10%,30%,100%
+003_7,4/12/2019 19:56:08,Yes,Caicedo,Nazareno,39,Esmeraldas,Sta Rita,Female,Afro,Black, Thick and bulky,3,Dark brown,Diamond,Triangular,Acute,In S,Protruding,Internal Obliques,Afro-American,80%,0%,20%,100%
+003_8,4/12/2019 19:48:05,Yes,Caicedo,Caicedo,22,Esmeraldas,Esmeraldas,Female,Afro,Black,Medium,3,Dark brown,Oval,Triangular,Flat,Right,Sunk,Arched,Afro-American,100%,0%,0%,100%
+003_9,4/12/2019 19:52:33,Yes,Vernaza,Quintero,23,Esmeraldas,Esmeraldas,Male,Afro,Black,Thick,3,Dark brown,Square,Triangular,Fugitive,Concave,Sunk,Rectilines,Afro-American,100%,0%,0%,100%
+004_1,4/1/2019 9:38:02,Yes,Alejandro,Pitizaca,55,Loja,Catacocha,Male,Straight,Black,Thin,4,Dark brown,Diamond,Triangular,Acute,Right,Sunk,Asymmetrical,Native American (indigenous),20%,50%,30%,100%
+004_10,4/1/2019 17:26:14,Yes,-,Molina,71,Cotopaxi,Juan Montalvo,Male,Straight,Black,Thin,4,Amber,Square,Triangular,Square,Right,Sunk,Sinuous,Native American (indigenous),0%,20%,80%,100%
+004_100,4/6/2019 9:02:41,Yes,Narváez,Potosi,39,Carchi,Tulcán,Male,Straight,Black,Medium,4,Dark brown,Circular,Ovoids,Square,Right,Sunk,Sinuous,Native American (indigenous),0%,30%,70%,100%
+004_101,4/6/2019 9:48:42,Yes,Vásquez,Cevallos,51,Pichincha,Quito,Male,Straight,Black,Medium,4,Dark brown,Diamond,Ovoids,Square,Right,Sunk,Rectilines,Native American (indigenous),0%,40%,60%,100%
+004_102,4/6/2019 10:05:05,Yes,Galárraga,Beltrán,51,Pichincha,Quito,Male,Straight,Black,Medium,4,Dark brown,Circular,Ovoids,Acute,Right,Sunk,Sinuous,Native American (indigenous),0%,40%,60%,100%
+004_103,4/6/2019 10:35:16,Yes,Moya,Haro,40,Tungurahua,Pillaro,Male,Straight,Black,Medium,4,Dark brown,Diamond,Ovoids,Acute,Right,External Obliques,Sinuous,Native American (indigenous),0%,50%,50%,100%
+004_104,4/6/2019 10:42:24,Yes,Morales,Cruz,59,Pichincha,Quito,Male,Straight,Black,Medium,4,Dark brown,Oval,Triangular,Acute,Alomado,Sunk,Sinuous,Native American (indigenous),0%,50%,50%,100%
+004_105,4/6/2019 10:48:01,Yes,Ortiz,Veloz,40,Santo Domingo de los Tsáchilas,Sto Domingo,Male,Curly,Black,Medium,4,Dark brown,Circular,Ovoids,Acute,Right,Elongated,Sinuous,"European, Native American (indigenous)",0%,50%,50%,100%
+004_106,4/5/2019 16:35:04,Yes,Santamaria,Vásquez,32,Pichincha,Quito,Male,Straight,Black,Thick,4,Dark brown,Circular,Ovoids,Acute,Right,Elongated,Rectilines,"Afro-American, Native American (indigenous)",30%,20%,50%,100%
+004_107,4/6/2019 11:07:25,Yes,Freire,Martínez,45,Bolívar,Echeandía,Male,Straight,Black,Thick,4,Dark brown,Circular,Triangular,Square,Right,Sunk,Sinuous,Native American (indigenous),0%,40%,60%,100%
+004_108,4/6/2019 11:30:36,Yes,Tasiguano,Chulca,50,Pichincha,Aloag,Male,Straight,Black,Medium,4,Dark brown,Circular,Ovoids,Square,Right,Sunk,Rectilines,Native American (indigenous),0%,40%,60%,100%
+004_109,4/6/2019 11:41:17,Yes,Escudero,López,48,Cotopaxi,Sigchos,Male,Straight,Black,Medium,4,Dark brown,Diamond,Ovoids,Flat,Right,Sunk,Sinuous,"European, Native American (indigenous)",0%,50%,50%,100%
+004_11,4/1/2019 17:32:56,Yes,Pozo,Lagos,50,Carchi,Tulcán,Male,Straight,Black,Medium,4,Dark brown,Rectangular,Rectangular,Square,Right,Elongated,Sinuous,"European, Native American (indigenous)",0%,30%,70%,100%
+004_110,4/6/2019 12:18:59,Yes,Tituaña,Pulluquitin,56,Tungurahua,Pillaro,Male,Straight,Black,Medium,4,Dark brown,Diamond,Triangular,Square,Right,Sunk,Rectilines,Native American (indigenous),0%,30%,70%,100%
+004_111,4/6/2019 12:21:14,Yes,Amaguaña,Quillupangui,25,Pichincha,Quito,Male,Straight,Black,Thick,4,Dark brown,Oval,Ovoids,Flat,Right,Sunk,Sinuous,Native American (indigenous),0%,40%,60%,100%
+004_112,4/6/2019 12:29:48,Yes,Barrionuevo,Caiza,26,Pichincha,Machachi,Female,Straight,Black,Medium,4,Dark brown,Diamond,Ovoids,Acute,Right,Sunk,Arched,Native American (indigenous),0%,40%,60%,100%
+004_113,4/6/2019 12:33:09,Yes,Chiguano,Pilatasig,18,Cotopaxi,Pujilí,Male,Straight,Black,Medium,4,Dark brown,Oval,Ovoids,Acute,Convex,Sunk,Sinuous,Native American (indigenous),0%,40%,60%,100%
+004_114,4/6/2019 12:53:14,Yes,Caiza,Chulca,53,Pichincha,Quito,Female,Straight,Black,Medium,4,Dark brown,Circular,Ovoids,Flat,Concave,Sunk,Sinuous,Native American (indigenous),0%,30%,70%,100%
+004_115,4/6/2019 12:58:28,Yes,Briones,Caiza,18,Pichincha,Quito,Male,Straight,Black,Thick,4,Dark brown,Oval,Rectangular,Acute,Concave,Sunk,Rectilines,Native American (indigenous),0%,40%,60%,100%
+004_116,4/6/2019 12:59:58,Yes,López,Caiza,32,Pichincha,Quito,Male,Straight,Black,Thick,4,Dark brown,Triangular,Ovoids,Acute,Right,Sunk,Sinuous,Native American (indigenous),0%,40%,60%,100%
+004_117,4/6/2019 13:06:27,Yes,-,Argotty,55,Pichincha,Quito,Male,Straight,Black,Thin,4,Dark brown,Triangular,Triangular,Acute,Convex,Sunk,Sinuous,Native American (indigenous),0%,40%,60%,100%
+004_118,4/6/2019 13:11:22,Yes,Cruz,Logacho,48,Pichincha,Quito,Male,Straight,Black,Medium,4,Dark brown,Rectangular,Ovoids,Square,Right,Protruding,Sinuous,Native American (indigenous),20%,30%,50%,100%
+004_119,4/6/2019 13:18:22,Yes,Egas,Pullas,46,Pichincha,Quito,Male,Straight,Black,Medium,4,Dark brown,Oval,Triangular,Square,Right,Sunk,Sinuous,Native American (indigenous),0%,50%,50%,100%
+004_12,4/1/2019 17:39:57,Yes,Vaca,Romero,38,Pichincha,Quito,Male,Straight,Black,Medium,4,Dark brown,Circular,Rectangular,Flat,Alomado,Protruding,Arched,Native American (indigenous),0%,30%,70%,100%
+004_120,4/6/2019 13:23:01,Yes,Ramírez,Sambuche,30,Pichincha,Quito,Male,Straight,Black,Medium,4,Dark brown,Circular,Triangular,Acute,Concave,External Obliques,Rectilines,Native American (indigenous),0%,40%,60%,100%
+004_121,4/6/2019 13:33:10,Yes,Pulamarin,Hurtado,20,Pichincha,Quito,Male,Straight,Black,Medium,4,Dark brown,Oval,Ovoids,Acute,Right,Sunk,Sinuous,Native American (indigenous),0%,40%,60%,100%
+004_122,4/6/2019 13:57:42,Yes,Zuñiga,Contreras,48,Pichincha,Quito,Male,Straight,Black,Medium,4,Dark brown,Oval,Rectangular,Square,Right,Sunk,Sinuous,"European, Native American (indigenous)",0%,60%,40%,100%
+004_123,4/6/2019 14:06:21,Yes,Tamayo,Guerrero,63,Carchi,Bolivar,Male,Straight,Black,Medium,4,Dark brown,Circular,Ovoids,Square,Right,Sunk,Sinuous,"European, Native American (indigenous)",10%,40%,50%,100%
+004_124,4/6/2019 14:24:16,Yes,Caiza,Hernandez,52,Carchi,Tulcán,Male,Wavy,Black,Thick,4,Dark brown,Square,Ovoids,Flat,Right,Sunk,Sinuous,Native American (indigenous),0%,40%,60%,100%
+004_125,4/6/2019 14:34:10,Yes,Aguilar,Galvez,40,Pichincha,Quito,Male,Straight,Black,Medium,4,Dark brown,Circular,Triangular,Square,Right,Sunk,Rectilines,"European, Native American (indigenous)",10%,40%,50%,100%
+004_126,4/6/2019 14:53:11,Yes,Pérez,Jurado,55,Pichincha,Quito,Female,Curly,Brown,Medium,4,Dark brown,Circular,Ovoids,Acute,Concave,Sunk,Arched,"European, Native American (indigenous)",0%,40%,60%,100%
+004_127,4/6/2019 16:08:39,Yes,Chimbo,Mazabanda,44,Bolívar,Guaranda,Male,Straight,Black,Thick,4,Dark brown,Circular,Ovoids,Acute,Right,Sunk,Sinuous,Native American (indigenous),0%,40%,60%,100%
+004_128,4/8/2019 10:32:51,Yes,Egas,Alav,40,Pichincha,Quito,Male,Curly,Black,Thick,4,Dark brown,Circular,Triangular,Flat,Alomado,Sunk,Sinuous,Native American (indigenous),10%,30%,60%,100%
+004_129,4/8/2019 10:41:51,Yes,Pisco,Tipantuña,27,Tungurahua,Pillaro,Male,Straight,Black,Thick,4,Dark brown,Circular,Triangular,Flat,Right,External Obliques,Arched,Native American (indigenous),0%,50%,50%,100%
+004_13,4/1/2019 17:44:17,Yes,Punina,Chito,44,Cotopaxi,El Corazón,Male,Straight,Black,Thin,4,Dark brown,Circular,Rectangular,Flat,Right,External Obliques,Arched,Native American (indigenous),0%,30%,70%,100%
+004_130,4/8/2019 10:45:52,Yes,Egas,Gaón,52,Pichincha,Quito,Male,Straight,Black,Thick,4,Dark brown,Triangular,Ovoids,Square,Right,Sunk,Sinuous,Native American (indigenous),0%,40%,60%,100%
+004_131,4/8/2019 10:48:33,Yes,Usiña,Pasquel,29,Carchi,Tulcán,Male,Straight,Black,Medium,4,Dark brown,Circular,Triangular,Acute,Concave,Sunk,Sinuous,Native American (indigenous),0%,40%,60%,100%
+004_132,4/8/2019 11:27:38,Yes,Angos,Villarreal,70,Pichincha,Quito,Male,Straight,Black,Medium,4,Dark brown,Circular,Triangular,Acute,Right,External Obliques,Sinuous,European,0%,70%,30%,100%
+004_133,4/8/2019 11:49:13,Yes,Fuentes,Lugmaña,35,Pichincha,Quito,Male,Straight,Black,Thin,4,Dark brown,Circular,Ovoids,Square,Right,External Obliques,Sinuous,Native American (indigenous),0%,40%,60%,100%
+004_134,4/8/2019 13:56:48,Yes,Viracocha,Yánez,47,Cotopaxi,Latacunga,Male,Straight,Black,Medium,4,Dark brown,Circular,Circulars,Acute,Right,Sunk,Sinuous,Native American (indigenous),0%,40%,60%,100%
+004_135,4/8/2019 14:38:22,Yes,Jato,Arellano,30,Pichincha,Quito,Male,Wavy,Black,Medium,4,Dark brown,Circular,Triangular,Acute,Right,Sunk,Sinuous,Native American (indigenous),10%,40%,50%,100%
+004_136,4/8/2019 14:53:28,Yes,Chasi,Aguaiza,46,Imbabura,Pimampiro,Male,Straight,Black,Medium,4,Dark brown,Circular,Ovoids,Acute,Right,Sunk,Sinuous,Native American (indigenous),0%,40%,60%,100%
+004_137,5/30/2019 12:32:10,Yes,Baquerano,Yepez,45,Los Ríos,Pueblo Viejo,Female,Straight,Brown,Thick,4,Dark brown,Triangular,Triangular,Acute,Right,Sunk,Arched,Native American (indigenous),10%,30%,60%,100%
+004_138,4/8/2019 17:26:17,Yes,Pantoja,Guzmán,43,Carchi,Tulcán,Male,Wavy,Black,Medium,4,Dark brown,Circular,Triangular,Acute,Right,Sunk,Sinuous,"European, Native American (indigenous)",0%,40%,60%,100%
+004_139,4/8/2019 18:09:53,Yes,Pardo,Simbaña,38,Napo,El Chaco,Male,Straight,Black, Thick and bulky,4,Dark brown,Triangular,Ovoids,Acute,Convex,Elongated,Sinuous,Native American (indigenous),0%,30%,70%,100%
+004_14,4/1/2019 17:55:31,Yes,-,Chacón,65,Carchi,Tulcán,Male,Straight,Black,Thin,4,Amber,Rectangular,Rectangular,Flat,Right,Sunk,Internal Obliques,"European, Native American (indigenous)",0%,30%,70%,100%
+004_140,4/9/2019 8:59:11,Yes,Vera,García,29,Manabí,Flavio Alfaro,Male,Curly,Black,Medium,4,Dark brown,Oval,Triangular,Acute,Right,Sunk,Asymmetrical,"European, Native American (indigenous)",0%,40%,60%,100%
+004_141,4/9/2019 9:34:38,Yes,Moreno,Pérez,42,Pichincha,Quito,Male,Straight,Black,Medium,4,Dark brown,Oval,Triangular,Acute,Alomado,Sunk,Sinuous,Native American (indigenous),0%,40%,60%,100%
+004_142,4/9/2019 9:56:43,Yes,Caiza,Chamorro,37,Pichincha,Machachi,Male,Straight,Black,Medium,4,Dark brown,Circular,Triangular,Square,Right,Sunk,Sinuous,Native American (indigenous),0%,40%,60%,100%
+004_143,4/9/2019 10:59:47,Yes,Tonato,Chisaguano,58,Pichincha,Quito,Male,Straight,Black,Medium,4,Dark brown,Circular,Ovoids,Acute,Alomado,External Obliques,Sinuous,Native American (indigenous),0%,40%,60%,100%
+004_144,4/9/2019 11:04:39,Yes,Vozmediano,Santamaría,44,Pichincha,Quito,Male,Straight,Black,Medium,4,Dark brown,Square,Ovoids,Square,Right,Sunk,Sinuous,"European, Native American (indigenous)",0%,40%,60%,100%
+004_145,4/9/2019 11:09:49,Yes,Capilla,Altamirano,33,Cotopaxi,Latacunga,Male,Straight,Black,Medium,4,Dark brown,Square,Triangular,Acute,Right,Sunk,Sinuous,Native American (indigenous),0%,40%,60%,100%
+004_146,4/9/2019 11:15:58,Yes,Capilla,Altamirano,40,Cotopaxi,Latacunga,Male,Straight,Black,Thin,4,Dark brown,Square,Ovoids,Acute,Right,Sunk,Sinuous,Native American (indigenous),0%,40%,60%,100%
+004_147,4/9/2019 11:28:35,Yes,Capilla,Altamirano,36,Cotopaxi,Latacunga,Male,Straight,Black,Medium,4,Dark brown,Circular,Triangular,Acute,Right,Protruding,Sinuous,Native American (indigenous),0%,40%,60%,100%
+004_148,4/9/2019 11:47:38,Yes,Pozo,Ordoñez,56,Carchi,Tulcán,Male,Wavy,Brown,Medium,4,Dark brown,Diamond,Ovoids,Acute,Convex,Sunk,Sinuous,"European, Native American (indigenous)",0%,50%,50%,100%
+004_149,5/19/2019 19:05:37,Yes,Hurtado,Hurtado,39,Cotopaxi,La Mana,Female,Straight,Black,Thin,4,Dark brown,Diamond,Circulars,Flat,Right,Protruding,Arched,Native American (indigenous),10%,30%,60%,100%
+004_15,4/1/2019 18:00:52,Yes,Villa,Rodriguez,42,Pichincha,Quito,Male,Straight,Black,Thin,4,Dark brown,Circular,Rectangular,Square,Sinuous,Elongated,Internal Obliques,"European, Native American (indigenous)",0%,40%,60%,100%
+004_150,4/9/2019 13:10:59,Yes,Garzón,Murillo,49,Pichincha,Quito,Male,Straight,Black,Medium,4,Dark brown,Oval,Ovoids,Square,Concave,External Obliques,Sinuous,"European, Native American (indigenous)",0%,40%,60%,100%
+004_151,4/9/2019 13:14:07,Yes,Naranjo,Vargas,36,Bolívar,San José,Male,Straight,Black,Medium,4,Dark brown,Diamond,Triangular,Square,Right,Sunk,Sinuous,Native American (indigenous),0%,40%,60%,100%
+004_152,4/9/2019 13:26:27,Yes,Puente,Morisindro,39,Sucumbíos,Lago Agrio,Male,Straight,Black,Thick,4,Dark brown,Circular,Ovoids,Acute,Concave,Sunk,Sinuous,Native American (indigenous),0%,40%,60%,100%
+004_153,4/9/2019 13:29:19,Yes,Lasso,Benavides,29,Pichincha,Quito,Male,Straight,Black,Thick,4,Dark brown,Circular,Triangular,Acute,Right,Sunk,Sinuous,"European, Native American (indigenous)",0%,60%,40%,100%
+004_154,4/9/2019 14:09:09,Yes,Mosquera,Quinteros,36,Cotopaxi,Latacunga,Female,Straight,Brown,Medium,4,Dark brown,Oval,Triangular,Acute,Concave,Protruding,Arched,Native American (indigenous),0%,40%,60%,100%
+004_155,4/9/2019 18:45:57,Yes,Gonzalez,Sabando,40,Esmeraldas,Muisne,Male,Afro,Brown,Medium,4,Dark brown,Oval,Triangular,Acute,Concave,Elongated,Sinuous,"Afro-American, Native American (indigenous)",60%,10%,30%,100%
+004_156,4/10/2019 10:52:51,Yes,Zumba,Paredes,50,Cotopaxi,Pujilí,Male,Straight,Black,Thin,4,Dark brown,Oval,Ovoids,Acute,Right,Sunk,Sinuous,Native American (indigenous),10%,40%,50%,100%
+004_157,4/10/2019 11:09:44,Yes,Quelal,Portilla,36,Carchi,Tulcán,Male,Straight,Black,Thin,4,Dark brown,Square,Triangular,Square,Concave,Sunk,Sinuous,Native American (indigenous),0%,40%,60%,100%
+004_158,4/10/2019 11:15:45,Yes,Pumisacho,Simba,37,Pichincha,Quito,Male,Straight,Black,Medium,4,Dark brown,Triangular,Triangular,Acute,Right,Sunk,Sinuous,Native American (indigenous),0%,40%,60%,100%
+004_159,4/10/2019 12:19:28,Yes,Villota,Alvarez,29,Santo Domingo de los Tsáchilas,Sto Domingo,Male,Straight,Black,Medium,4,Dark brown,Circular,Ovoids,Acute,Right,Elongated,Sinuous,Native American (indigenous),10%,40%,50%,100%
+004_16,19/05/2019 16:59,Yes,Quezada,Quezada,63,El Oro,Machala,Male,Straight,Black,Thin,4,Dark brown,Oval,Ovoids,Square,Alomado,Sunk,Sinuous,Native American (indigenous),0%,30%,70%,100%
+004_160,4/10/2019 14:57:35,Yes,Rivadeneira,Pacheco,24,Pichincha,Quito,Male,Straight,Black,Medium,4,Dark brown,Oval,Ovoids,Acute,Concave,Sunk,Sinuous,Native American (indigenous),0%,40%,60%,100%
+004_161,4/10/2019 14:59:54,Yes,Huicamaigua,Panchi,31,Cotopaxi,Latacunga,Male,Straight,Black, Thick and bulky,4,Dark brown,Circular,Triangular,Acute,Right,Sunk,Sinuous,Native American (indigenous),10%,30%,60%,100%
+004_162,4/10/2019 15:49:11,Yes,Tobar,Guallichico,57,Pichincha,Sangolqui,Male,Straight,Black,Medium,4,Dark brown,Triangular,Triangular,Acute,Right,Sunk,Sinuous,Native American (indigenous),0%,40%,60%,100%
+004_163,4/10/2019 18:20:23,Yes,Quijia,Delgado,62,Pichincha,Quito,Male,Straight,Black,Medium,4,Dark brown,Diamond,Ovoids,Acute,Right,Sunk,Sinuous,Native American (indigenous),0%,40%,60%,100%
+004_164,4/11/2019 12:29:50,Yes,DOMINGUEZ,ORQUERA,21,Pichincha,Quito,Male,Straight,Black,Medium,4,Dark brown,Rectangular,Ovoids,Fugitive,Concave,Sunk,Arched,Native American (indigenous),10%,30%,60%,100%
+004_165,4/11/2019 12:32:34,Yes,Borja,Pérez,24,Pichincha,Quito,Male,Straight,Brown,Medium,4,Dark brown,Oval,Ovoids,Flat,Alomado,Protruding,Rectilines,Afro-American,90%,10%,0%,100%
+004_166,4/11/2019 12:34:48,Yes,Saráuz,Rivadeneira,20,Pichincha,Quito,Male,Straight,Black,Thick,4,Dark brown,Diamond,Triangular,Flat,Right,Sunk,Sinuous,"European, Native American (indigenous)",0%,60%,40%,100%
+004_167,4/11/2019 12:35:10,Yes,Pozo,Tocto,21,Pichincha,Quito,Male,Straight,Black,Medium,4,Dark brown,Oval,Ovoids,Fugitive,Convex,Sunk,Sinuous,Afro-American,0%,0%,100%,100%
+004_168,4/11/2019 12:36:13,Si,Vizcaino,Taipe,26,Pichincha,Quito,Male,Wavy,Black,Thick,4,Dark brown,Triangular,Ovoids,Fugitive,Right,Sunk,Internal Obliques,"European, Native American (indigenous)",0%,40%,60%,100%
+004_169,4/11/2019 12:36:18,Yes,Constante,Jauregui,20,Pichincha,Quito,Male,Straight,Black,Thick,4,Dark brown,Oval,Rectangular,Acute,Right,External Obliques,Rectilines,"European, Native American (indigenous)",10%,30%,60%,100%
+004_17,5/19/2019 15:38:58,Yes,Guerrero,Paz,44,El Oro,Las Lajas,Male,Straight,Black,Medium,4,Dark brown,Oval,Ovoids,Flat,Alomado,Sunk,Sinuous,Native American (indigenous),10%,20%,70%,100%
+004_170,4/11/2019 12:37:22,Yes,Chacha,Molina,20,Pichincha,Quito,Male,Straight,Black,Medium,4,Dark brown,Square,Triangular,Acute,In S,Elongated,Rectilines,"Afro-American, European",50%,0%,50%,100%
+004_171,4/11/2019 12:37:23,Yes,Pastas,Pastaz,21,Carchi,Mira,Male,Straight,Black,Thick,4,Dark brown,Oval,Ovoids,Fugitive,Right,External Obliques,Rectilines,Afro-American,70%,20%,10%,100%
+004_172,4/11/2019 12:37:59,Yes,Tatayo,Hernandez,22,Pichincha,Quito,Male,Afro,Black,Thick,4,Dark brown,Square,Circulars,Fugitive,Concave,Elongated,Sinuous,Native American (indigenous),40%,0%,60%,100%
+004_173,4/11/2019 12:38:05,Yes,Sanabria,Altamirano,23,Bolívar,Guaranda,Male,Curly,Black,Medium,4,Dark brown,Diamond,Ovoids,Flat,Concave,Sunk,Arched,Native American (indigenous),30%,0%,70%,100%
+004_174,4/11/2019 12:41:33,Yes,Cabascango,García,20,Pichincha,Quito,Male,Straight,Black,Medium,4,Dark brown,Oval,Ovoids,Acute,Right,Sunk,Sinuous,Native American (indigenous),0%,30%,70%,100%
+004_175,4/11/2019 12:42:21,Yes,Cabezas,Miranda,21,Pichincha,Quito,Male,Straight,Black,Thick,4,Dark brown,Diamond,Circulars,Acute,Concave,External Obliques,Sinuous,"European, Native American (indigenous)",0%,70%,30%,100%
+004_176,4/11/2019 12:42:48,Yes,Tapia,Fuenmayor,24,Pichincha,Quito,Male,Straight,Black,Medium,4,Dark brown,Diamond,Circulars,Acute,Concave,External Obliques,Sinuous,"European, Native American (indigenous)",0%,50%,50%,100%
+004_177,4/11/2019 12:47:31,Yes,Gonzalez,Collaguazo ,21,Pichincha,Quito,Female,Straight,Brown,Thin,4,Dark brown,Oval,Ovoids,Outgoing,Alomado,Elongated,Internal Obliques,Native American (indigenous),10%,40%,50%,100%
+004_178,4/11/2019 19:34:30,Yes,Ormaza,Espín,20,Pichincha,Quito,Male,Wavy,Black,Thick,4,Dark brown,Oval,Ovoids,Acute,Right,Sunk,Sinuous,"European, Native American (indigenous)",0%,80%,20%,100%
+004_179,4/11/2019 19:35:13,Yes,Cárdenas,Tuza,20,Pichincha,Quito,Male,Straight,Black,Medium,4,Dark brown,Circular,Rectangular,Acute,Right,Elongated,Rectilines,"European, Native American (indigenous)",20%,30%,50%,100%
+004_18,4/2/2019 10:29:43,Yes,Zambrano,Mendoza,51,Manabí,Pichincha,Male,Straight,Black,Medium,4,Dark brown,Circular,Triangular,Acute,Right,Elongated,Sinuous,"European, Native American (indigenous)",0%,30%,70%,100%
+004_180,4/11/2019 19:37:44,Yes,Guevara,Padilla,23,Pichincha,Quito,Male,Straight,Black,Medium,4,Dark brown,Oval,Triangular,Flat,Right,External Obliques,Sinuous,Native American (indigenous),0%,0%,100%,100%
+004_181,4/11/2019 19:38:26,Yes,Guamanzara,Cabrera,20,Pichincha,Quito,Female,Wavy,Black,Medium,4,Dark brown,Circular,Ovoids,Flat,Right,Protruding,Internal Obliques,Native American (indigenous),0%,20%,80%,100%
+004_182,4/11/2019 19:38:44,Yes,Pillajo,Nogales,22,Pichincha,Quito,Female,Wavy,Black,Medium,4,Dark brown,Circular,Circulars,Flat,Right,Elongated,Arched,Native American (indigenous),0%,0%,100%,100%
+004_183,4/11/2019 19:38:50,Yes,vega,casa,21,Pichincha,Quito,Male,Curly,Black,Medium,4,Dark brown,Oval,Triangular,Flat,Right,External Obliques,Sinuous,"European, Native American (indigenous)",20%,20%,60%,100%
+004_184,4/11/2019 19:39:23,Yes,Yanqui,Toasa,24,Pichincha,Quito,Male,Straight,Black,Medium,4,Dark brown,Diamond,Ovoids,Acute,Right,Sunk,Sinuous,"European, Native American (indigenous)",0%,50%,50%,100%
+004_185,4/11/2019 19:40:26,Yes,Fernandez,Paucar,23,Pichincha,Quito,Male,Straight,Black,Thick,4,Dark brown,Circular,Ovoids,Fugitive,Concave,Elongated,Sinuous,Native American (indigenous),30%,0%,70%,100%
+004_186,4/11/2019 19:40:30,Yes,Alvarez,Chamorro,20,Pichincha,Quíto,Male,Wavy,Black,Medium,4,Dark brown,Circular,Triangular,Acute,Concave,Sunk,Internal Obliques,Native American (indigenous),20%,0%,80%,100%
+004_187,4/11/2019 19:40:45,Yes,Jimenez,Logacho,23,Pichincha,Quito,Male,Wavy,Black,Medium,4,Dark brown,Circular,Circulars,Flat,Right,Sunk,Rectilines,Native American (indigenous),20%,0%,80%,100%
+004_188,4/12/2019 11:25:42,Yes,Gualotuña,Pachacama,23,Pichincha,Quito,Male,Straight,Black,Thick,4,Dark brown,Rectangular,Triangular,Acute,Alomado,Sunk,Sinuous,Native American (indigenous),0%,0%,100%,100%
+004_189,4/12/2019 11:26:14,Yes,Gomez,Herrera,22,Pichincha,Quito,Male,Afro,Brown,Thin,4,Amber,Triangular,Ovoids,Acute,Right,Sunk,Sinuous,Native American (indigenous),10%,40%,50%,100%
+004_19,5/30/2019 9:42:45,Yes,Chillogalli,Avila,39,Guayas,Guayaquil,Male,Straight,Black,Thin,4,Dark brown,Diamond,Ovoids,Acute,Concave,Elongated,Internal Obliques,Native American (indigenous),10%,40%,50%,100%
+004_190,4/12/2019 11:27:10,Yes,Espin,Vera,22,Pichincha,Quito,Male,Straight,Black,Thick,4,Dark brown,Oval,Ovoids,Fugitive,Right,Sunk,Arched,Native American (indigenous),20%,30%,50%,100%
+004_191,4/12/2019 11:28:30,Yes,Gutierrez,Yanez,21,Pichincha,Quito,Female,Straight,Brown,Thick,4,Dark brown,Diamond,Ovoids,Acute,Right,External Obliques,Sinuous,Native American (indigenous),20%,20%,60%,100%
+004_192,4/12/2019 11:29:22,Yes,Dominguez,LLumipanta,25,Pichincha,Quito,Male,Straight,Black,Medium,4,Dark brown,Oval,Triangular,Flat,Right,Elongated,Internal Obliques,Native American (indigenous),10%,0%,90%,100%
+004_193,4/12/2019 11:29:30,Yes,Calderon,Pacheco,30,Pichincha,Quito,Male,Straight,Black,Medium,4,Amber,Oval,Triangular,Fugitive,Right,Elongated,Rectilines,"European, Native American (indigenous)",10%,40%,50%,100%
+004_194,4/12/2019 11:31:54,Yes,Carrion,Chillagana,24,Pichincha,Quito,Male,Afro,Brown,Medium,4,Dark brown,Circular,Triangular,Flat,Right,Elongated,Arched,Native American (indigenous),40%,10%,50%,100%
+004_195,4/12/2019 11:31:57,Yes,Cando,Andrade,22,Pichincha,Quito,Male,Wavy,Black,Medium,4,Dark brown,Oval,Circulars,Flat,Convex,Sunk,Arched,"Afro-American, Native American (indigenous)",60%,10%,30%,100%
+004_196,4/12/2019 11:33:22,Yes,Tomalá,Tomalá,21,Santa Elena,Ancón,Male,Straight,Black,Thin,4,Dark brown,Circular,Ovoids,Fugitive,Right,Elongated,Sinuous,Afro-American,30%,20%,50%,100%
+004_197,4/12/2019 11:38:17,Yes,Taco,Taco,23,Cotopaxi,Salcedo,Male,Wavy,Black,Medium,4,Dark brown,Oval,Ovoids,Flat,Right,Sunk,Rectilines,Native American (indigenous),20%,10%,70%,100%
+004_198,4/12/2019 11:43:10,Yes,Lopez,Guayguacundo,24,Pichincha,Quito,Male,Straight,Brown,Thick,4,Dark brown,Oval,Ovoids,Flat,Right,Sunk,Asymmetrical,"European, Native American (indigenous)",0%,60%,40%,100%
+004_199,4/12/2019 15:28:39,Yes,Arguello,Paez,24,Pichincha,Quito,Male,Straight,Black,Thick,4,Dark brown,Triangular,Triangular,Fugitive,Concave,External Obliques,Arched,Native American (indigenous),10%,40%,50%,100%
+004_2,4/1/2019 10:27:41,Yes,Pugla,Macas,52,Loja,Saraguro,Male,Straight,Black,Thin,4,Dark brown,Diamond,Ovoids,Flat,Concave,Protruding,Sinuous,Native American (indigenous),0%,30%,70%,100%
+004_20,4/2/2019 11:02:37,Yes,Díaz,Cruz,38,Pichincha,Quito,Male,Straight,Black,Medium,4,Dark brown,Circular,Ovoids,Fugitive,Right,Sunk,External Obliques,"European, Native American (indigenous)",0%,40%,60%,100%
+004_200,4/12/2019 15:29:17,Yes,Villacrés,Rocha,29,Pichincha,Quito,Male,Straight,Black,Medium,4,Dark brown,Oval,Triangular,Arcuate,Right,Sunk,Arched,European,0%,30%,70%,100%
+004_201,4/12/2019 15:31:10,Yes,Perugachi,Velasco,26,Pichincha,Quito,Male,Wavy,Brown,Medium,4,Dark brown,Oval,Ovoids,Fugitive,Right,Sunk,External Obliques,Native American (indigenous),20%,10%,70%,100%
+004_202,4/12/2019 15:31:21,Yes,Macas,Narvaez,25,Loja,Cariamanga,Male,Straight,Black,Medium,4,Dark brown,Square,Triangular,Fugitive,Right,Sunk,Sinuous,"European, Native American (indigenous)",0%,50%,50%,100%
+004_203,4/12/2019 15:32:01,Yes,Iza,Noroña,24,Pichincha,Quito,Female,Wavy,Brown,Thick,4,Amber,Circular,Triangular,Flat,Concave,Sunk,Arched,Native American (indigenous),20%,20%,60%,100%
+004_204,4/12/2019 15:32:14,Yes,Mera,Salazar,32,Pichincha,Quito,Female,Wavy,Brown,Medium,4,Dark brown,Oval,Ovoids,Fugitive,Sinuous,Sunk,Arched,"Afro-American, Native American (indigenous)",30%,40%,30%,100%
+004_205,4/12/2019 15:32:48,Yes,Toctaguano,Puga,24,Pichincha,Quito,Male,Straight,Black,Thick,4,Dark brown,Circular,Ovoids,Arcuate,Convex,Elongated,Sinuous,Native American (indigenous),10%,40%,50%,100%
+004_206,4/12/2019 15:34:00,Yes,Cadena,Panchi,26,Pichincha,Quito,Female,Wavy,Brown,Medium,4,Dark brown,Oval,Ovoids,Flat,Concave,Sunk,Arched,Native American (indigenous),20%,20%,60%,100%
+004_207,4/12/2019 15:34:20,Yes,Torres,Cuenca,22,Pichincha,Quito,Female,Straight,Brown,Medium,4,Dark brown,Oval,Ovoids,Fugitive,Right,Elongated,Asymmetrical,Afro-American,30%,30%,40%,100%
+004_208,4/12/2019 15:35:42,Yes,Tixilema,Azoguez,24,Bolívar,Guaranda,Female,Wavy,Black,Medium,4,Dark brown,Circular,Triangular,Acute,Concave,Elongated,Sinuous,Native American (indigenous),10%,50%,40%,100%
+004_209,4/12/2019 15:36:10,Yes,Recalde,Chavez,28,Pichincha,Quito,Male,Straight,Black,Medium,4,Dark brown,Rectangular,Rectangular,Flat,Right,Elongated,Arched,"Afro-American, Native American (indigenous)",60%,10%,30%,100%
+004_21,4/2/2019 11:28:30,Yes,López,Gonzáles,37,Tungurahua,Ambato,Female,Straight,Brown,Thick,4,Dark brown,Circular,Ovoids,Acute,Right,Sunk,Internal Obliques,Native American (indigenous),0%,30%,70%,100%
+004_210,4/12/2019 15:36:38,Yes,Chicango,Rosero,30,Carchi,Tulcán,Female,Wavy,Black,Thick,4,Dark brown,Oval,Ovoids,Acute,Right,Sunk,Arched,"European, Native American (indigenous)",0%,40%,60%,100%
+004_211,4/12/2019 15:38:07,Yes,Meza,Tapia,25,Pichincha,Quito,Male,Straight,Black,Medium,4,Dark brown,Diamond,Ovoids,Fugitive,Convex,Protruding,Rectilines,Native American (indigenous),0%,0%,100%,100%
+004_212,4/12/2019 15:38:51,Yes,Flores,Heredia,27,Pichincha,Quito,Male,Wavy,Brown,Medium,4,Dark brown,Oval,Ovoids,Acute,Right,Protruding,Sinuous,Native American (indigenous),0%,30%,70%,100%
+004_213,4/13/2019 12:28:49,Yes,-,Vásquez,78,Cotopaxi,Latacunga,Female,Straight,Black,Thin,4,Dark brown,Circular,Triangular,Flat,Right,Sunk,Rectilines,"Afro-American, Native American (indigenous)",0%,40%,60%,100%
+004_214,4/13/2019 12:51:10,Yes,Utreras,Alomoto,21,Pichincha,Quito,Male,Straight,Black,Medium,4,Dark brown,Circular,Rectangular,Flat,Right,External Obliques,Sinuous,Native American (indigenous),0%,0%,100%,100%
+004_215,4/13/2019 13:02:37,Yes,Osejo,Chávez,20,Pichincha,Quito,Male,Curly,Black,Medium,4,Dark brown,Diamond,Circulars,Acute,Alomado,Sunk,Rectilines,"Afro-American, Native American (indigenous)",20%,20%,60%,100%
+004_216,4/13/2019 13:05:53,Yes,Bautista,Galarza,22,Pichincha,Quito,Female,Straight,Black,Thick,4,Dark brown,Square,Ovoids,Acute,Right,Elongated,Internal Obliques,"European, Native American (indigenous)",10%,10%,80%,100%
+004_217,4/13/2019 15:20:39,Yes,Bonilla,Lasso,21,Pichincha,Quito,Female,Straight,Brown,Medium,4,Dark brown,Oval,Ovoids,Fugitive,In S,Elongated,Asymmetrical,Native American (indigenous),10%,0%,90%,100%
+004_218,4/13/2019 15:45:42,Yes,Lopez,Valencia,21,Pichincha,Quito,Male,Wavy,Black,Medium,4,Dark brown,Diamond,Ovoids,Flat,Convex,Protruding,Rectilines,Afro-American,20%,20%,60%,100%
+004_219,4/13/2019 15:48:28,Yes,Valencia,Vásquez ,47,Pichincha,Quito,Female,Curly,Black,Thin,4,Dark brown,Circular,Triangular,Flat,Right,Sunk,Arched,"Afro-American, Native American (indigenous)",50%,0%,50%,100%
+004_22,4/2/2019 11:11:01,Yes,Carrera,Lescano,39,Pichincha,Quito,Male,Straight,Black,Thin,4,Dark brown,Square,Ovoids,Split chin,Right,Sunk,Rectilines,"European, Native American (indigenous)",0%,30%,70%,100%
+004_220,4/13/2019 16:10:34,Yes,López,Rugel,54,Pichincha,Quito,Male,Straight,Black,Thin,4,Dark brown,Circular,Triangular,Flat,Concave,Sunk,Rectilines,Native American (indigenous),0%,50%,50%,100%
+004_221,4/13/2019 16:36:01,Yes,Molina,Garcia,48,Pichincha,Quito,Female,Wavy,Black,Medium,4,Dark brown,Oval,Triangular,Acute,Concave,Sunk,Arched,"European, Native American (indigenous)",0%,50%,50%,100%
+004_222,4/14/2019 11:31:35,Yes,Pérez ,Tipán,70,Pichincha,Quito,Male,Straight,Black,Medium,4,Dark brown,Oval,Ovoids,Flat,Right,Elongated,Rectilines,Native American (indigenous),0%,0%,100%,100%
+004_223,4/14/2019 11:58:28,Yes,Castro,Mosquera,19,Pichincha,Quito,Female,Straight,Brown,Medium,4,Dark brown,Oval,Ovoids,Flat,Convex,Elongated,External Obliques,"Afro-American, European, Native American (indigenous)",10%,40%,50%,100%
+004_224,4/14/2019 12:07:17,Yes,Mosquera,Flores ,30,Pichincha,Machachi,Female,Straight,Brown,Medium,4,Dark brown,Oval,Ovoids,Flat,Concave,Elongated,Arched,"Afro-American, European, Native American (indigenous)",10%,40%,50%,100%
+004_225,4/14/2019 12:25:18,Yes,Ibarra,Granda,31,Pichincha,Quito,Male,Wavy,Brown,Medium,4,Hazelnut,Diamond,Ovoids,Fugitive,Right,Protruding,Asymmetrical,Native American (indigenous),0%,30%,70%,100%
+004_226,4/14/2019 13:25:36,Yes,Paz,Huanca,23,Santo Domingo de los Tsáchilas,Santo Domingo de los Tsáchilas,Male,Wavy,Brown,Medium,4,Dark brown,Circular,Ovoids,Acute,Convex,Elongated,Arched,"Afro-American, Native American (indigenous)",0%,30%,70%,100%
+004_227,5/19/2019 17:00:10,Yes,Quezada,Arias,45,Azuay,Cochapata,Male,Straight,Black,Medium,4,Dark brown,Diamond,Ovoids,Acute,Right,Sunk,Sinuous,Native American (indigenous),10%,20%,70%,100%
+004_228,4/14/2019 14:46:20,Yes,Lasso,Vásquez ,38,Pichincha,Quito ,Male,Curly,Brown,Medium,4,Dark brown,Triangular,Ovoids,Acute,Right,Sunk,Sinuous,"European, Native American (indigenous)",0%,50%,50%,100%
+004_229,4/18/2019 11:55:34,Yes,Hidalgo,Casa,41,Pichincha,Quito,Female,Wavy,Brown,Medium,4,Hazelnut,Circular,Ovoids,Fugitive,Concave,Sunk,Asymmetrical,Native American (indigenous),0%,0%,100%,100%
+004_23,4/2/2019 11:34:34,Yes,Rojas,Palomeque,30,Pichincha,Quito,Male,Straight,Black,Medium,4,Dark brown,Diamond,Ovoids,Acute,Right,Sunk,Arched,"European, Native American (indigenous)",0%,40%,60%,100%
+004_230,4/18/2019 12:08:09,Yes,Zapata,Hidalgo,19,Pichincha,Quito,Female,Straight,Black,Medium,4,Dark brown,Circular,Circulars,Acute,Right,Sunk,Asymmetrical,Native American (indigenous),0%,0%,100%,100%
+004_231,4/4/2019 18:55:45,Yes,Pullas,Rodríguez,30,Pichincha,Quito,Male,Wavy,Black,Medium,4,Dark brown,Circular,Triangular,Acute,Right,Sunk,Rectilines,"European, Native American (indigenous)",0%,50%,50%,100%
+004_232,4/18/2019 12:25:49,Yes,Valencia,Vásquez ,54,Pichincha,Quito,Male,Straight,Brown,Medium,4,Dark brown,Oval,Triangular,Acute,Convex,Sunk,Sinuous,"Afro-American, Native American (indigenous)",50%,0%,50%,100%
+004_233,4/18/2019 12:29:27,Yes,Valencia ,Tacuri,25,Pichincha,Quito,Male,Straight,Brown,Thick,4,Dark brown,Circular,Triangular,Flat,Concave,Protruding,Asymmetrical,"Afro-American, Native American (indigenous)",50%,0%,50%,100%
+004_234,4/18/2019 12:32:44,Yes,Valencia ,Tacuri,20,Pichincha,Quito,Male,Straight,Black,Medium,4,Dark brown,Oval,Ovoids,Acute,Right,Sunk,Sinuous,"Afro-American, Native American (indigenous)",30%,0%,70%,100%
+004_235,4/18/2019 12:54:22,Yes,Rojas,Taipe,18,Pichincha,Quito,Female,Straight,Brown,Medium,4,Dark brown,Oval,Ovoids,Flat,Concave,Elongated,Rectilines,Native American (indigenous),0%,0%,100%,100%
+004_236,4/18/2019 13:41:26,Yes,Toaquiza,Urrea,26,Pichincha,Quito,Male,Straight,Brown,Medium,4,Dark brown,Circular,Ovoids,Flat,Sinuous,Sunk,Sinuous,"European, Native American (indigenous)",0%,10%,90%,100%
+004_237,4/18/2019 14:20:18,Yes,Gaibor,Trujillo,40,Manabí,Montalvo,Male,Straight,Black,Thin,4,Dark brown,Oval,Triangular,Flat,Concave,Sunk,Arched,"European, Native American (indigenous)",0%,50%,50%,100%
+004_238,4/18/2019 14:24:16,Yes,Bajaña,Herrera,24,Los Ríos,Quevedo,Male,Straight,Black,Thin,4,Dark brown,Circular,Triangular,Flat,Concave,Sunk,Arched,Native American (indigenous),0%,0%,100%,100%
+004_239,4/18/2019 15:21:08,Yes,Hidalgo,Cruz,73,Pichincha,Cantón Mejía ,Male,Straight,Black,Medium,4,Amber,Rectangular,Ovoids,Flat,Right,Sunk,Sinuous,"European, Native American (indigenous)",0%,50%,50%,100%
+004_24,4/2/2019 12:17:14,Yes,Cañizares,Oyos,37,Pichincha,Quito,Male,Straight,Black,Thin,4,Dark brown,Rectangular,Ovoids,Square,Right,Sunk,Sinuous,Native American (indigenous),0%,20%,80%,100%
+004_240,4/18/2019 15:37:33,Yes,Durán,Quimbita,40,Pichincha,Quito,Female,Straight,Black,Medium,4,Dark brown,Circular,Triangular,Square,Alomado,Sunk,Internal Obliques,"European, Native American (indigenous)",0%,50%,50%,100%
+004_241,4/18/2019 15:42:20,Yes,Terán,Durán ,24,Pichincha,Quito,Female,Straight,Black,Medium,4,Dark brown,Oval,Ovoids,Flat,Concave,Sunk,Internal Obliques,"European, Native American (indigenous)",0%,50%,50%,100%
+004_242,5/30/2019 9:51:48,Yes,Vera,Erazo,34,Guayas,Guayaquil,Male,Wavy,Black,Thick,4,Dark brown,Triangular,Ovoids,Acute,Right,Elongated,Asymmetrical,Afro-American,30%,40%,30%,100%
+004_243,4/18/2019 15:47:30,Yes,Camuendo,Cotacachi,35,Pichincha,Quito,Female,Straight,Black,Medium,4,Dark brown,Oval,Ovoids,Acute,Concave,Sunk,Arched,Native American (indigenous),0%,0%,100%,100%
+004_244,4/18/2019 16:51:43,Yes,Muñoz,Guachamin,41,Pichincha,Quito,Female,Straight,Black,Medium,4,Dark brown,Oval,Ovoids,Flat,Concave,Sunk,Arched,Native American (indigenous),0%,0%,100%,100%
+004_245,4/19/2019 11:35:48,Yes,Diaz,Vallejo,55,Pichincha,Quito,Male,Straight,Black,Medium,4,Dark brown,Square,Triangular,Flat,Right,Sunk,Sinuous,"European, Native American (indigenous)",0%,50%,50%,100%
+004_246,4/19/2019 11:46:38,Yes,Revelo,Travez,28,Pichincha,Quito,Female,Straight,Brown,Medium,4,Dark brown,Oval,Ovoids,Flat,Alomado,Sunk,Arched,"European, Native American (indigenous)",0%,50%,50%,100%
+004_247,4/19/2019 11:50:36,Yes,Travez,Villagomez,62,Cotopaxi,Latacunga,Female,Wavy,Black,Thin,4,Dark brown,Oval,Ovoids,Flat,Alomado,Sunk,Arched,"European, Native American (indigenous)",0%,50%,50%,100%
+004_248,4/19/2019 11:54:42,Yes,Lema,Gualpa,46,Pichincha,Quito,Female,Straight,Black,Medium,4,Dark brown,Oval,Triangular,Acute,Right,Sunk,Internal Obliques,Native American (indigenous),0%,0%,100%,100%
+004_249,4/19/2019 11:56:51,Yes,Taipe,Gutiérrez ,34,Pichincha,Quito,Female,Straight,Black,Medium,4,Dark brown,Oval,Ovoids,Flat,Right,Elongated,Arched,Native American (indigenous),0%,0%,100%,100%
+004_25,4/2/2019 12:19:12,Yes,Chuquimarca,Urbano,43,El Oro,Pasaje,Male,Straight,Black,Medium,4,Dark brown,Circular,Triangular,Acute,Alomado,Sunk,Sinuous,Native American (indigenous),0%,30%,70%,100%
+004_250,4/19/2019 11:59:00,Yes,Guevara,Santín,39,Pichincha,Quito,Male,Straight,Black,Medium,4,Dark brown,Oval,Ovoids,Flat,Right,Sunk,Rectilines,"European, Native American (indigenous)",0%,50%,50%,100%
+004_251,4/19/2019 12:04:34,Yes,Sunta,Guerrero,38,Pichincha,Quito,Female,Straight,Black,Medium,4,Dark brown,Oval,Ovoids,Flat,Concave,Sunk,Arched,"European, Native American (indigenous)",0%,50%,50%,100%
+004_252,4/19/2019 12:06:32,Yes,López ,Amagua,52,Pichincha,Quito,Male,Wavy,Black,Thin,4,Dark brown,Circular,Ovoids,Flat,Concave,Sunk,Sinuous,"European, Native American (indigenous)",0%,50%,50%,100%
+004_253,4/19/2019 12:08:28,Yes,Romero,Córdova,53,Loja,Loja,Female,Straight,Brown,Thin,4,Dark brown,Circular,Triangular,Square,Concave,Sunk,Arched,"European, Native American (indigenous)",0%,50%,50%,100%
+004_254,4/19/2019 12:12:18,Yes,Jaya,Meneses,36,Pichincha,Quito,Male,Straight,Black,Thin,4,Dark brown,Oval,Ovoids,Flat,Right,Sunk,Rectilines,"European, Native American (indigenous)",0%,50%,50%,100%
+004_255,4/19/2019 12:15:28,Yes,Granda,Morales,31,Pichincha,Quito,Female,Wavy,Brown,Medium,4,Dark brown,Diamond,Ovoids,Acute,Concave,Elongated,Arched,Native American (indigenous),0%,50%,50%,100%
+004_256,4/19/2019 12:20:06,Yes,Escobar,Castillo,27,Pichincha,Quito,Male,Straight,Brown,Medium,4,Dark brown,Square,Ovoids,Square,Alomado,Sunk,Sinuous,Native American (indigenous),0%,50%,50%,100%
+004_257,4/19/2019 15:34:48,Yes,Chiriboga,Cruz,55,Pichincha,Quito,Male,Straight,Black,Medium,4,Dark brown,Oval,Ovoids,Acute,Right,External Obliques,Asymmetrical,Native American (indigenous),0%,0%,100%,100%
+004_258,4/19/2019 15:38:00,Yes,Pazmiño,Sánchez,45,Pichincha,Quito,Female,Wavy,Brown,Medium,4,Dark brown,Triangular,Triangular,Acute,Right,Protruding,Arched,Native American (indigenous),0%,0%,100%,100%
+004_259,4/19/2019 15:40:47,Yes,Jácome ,Chiriboga ,37,Pichincha,Quito,Male,Straight,Brown,Thick,4,Dark brown,Oval,Ovoids,Square,Right,Sunk,Asymmetrical,Native American (indigenous),0%,20%,80%,100%
+004_26,5/30/2019 10:39:39,Yes,Nuñez,Franco,45,Guayas,Guayaquil,Male,Straight,Black,Medium,4,Dark brown,Diamond,Triangular,Square,Alomado,Protruding,Sinuous,Native American (indigenous),0%,40%,60%,100%
+004_260,4/19/2019 15:42:40,Yes,Chiriboga,Cruz,47,Pichincha,Quito,Male,Straight,Brown,Medium,4,Dark brown,Oval,Ovoids,Acute,Right,Sunk,Rectilines,Native American (indigenous),0%,60%,40%,100%
+004_261,4/20/2019 12:08:03,Yes,Salazar,Ortiz,47,Pichincha,Quito,Female,Wavy,Brown,Medium,4,Dark brown,Oval,Ovoids,Flat,Concave,Sunk,Arched,"European, Native American (indigenous)",0%,50%,50%,100%
+004_262,4/20/2019 12:16:50,Yes,Salazar,Ortiz,58,Pichincha,Quito,Male,Wavy,Black,Medium,4,Dark brown,Oval,Ovoids,Acute,Right,Sunk,Rectilines,"European, Native American (indigenous)",0%,50%,50%,100%
+004_263,4/26/2019 12:39:53,Yes,Merelo,López ,29,Los Ríos,Ventanas,Female,Straight,Black,Medium,4,Dark brown,Circular,Ovoids,Flat,Concave,Sunk,Arched,"European, Native American (indigenous)",0%,50%,50%,100%
+004_264,4/26/2019 12:41:15,Yes,Ortega,Carvajal,55,Pichincha,El Quinche,Female,Straight,Black,Thin,4,Dark brown,Circular,Ovoids,Acute,Right,Elongated,Rectilines,Native American (indigenous),0%,40%,60%,100%
+004_265,4/26/2019 12:41:58,Yes,Ronda,Mejia,35,Pichincha,Quito,Female,Straight,Black,Medium,4,Dark brown,Oval,Ovoids,Flat,Concave,Sunk,Rectilines,"European, Native American (indigenous)",0%,50%,50%,100%
+004_266,5/19/2019 14:34:03,Yes,Mendoza,Serrano,21,Pichincha,Quito,Female,Straight,Brown,Medium,4,Dark brown,Circular,Ovoids,Fugitive,Right,Sunk,External Obliques,Native American (indigenous),10%,30%,60%,100%
+004_267,5/19/2019 18:07:37,Yes,Quezada,Lema,18,Pichincha,Quito,Male,Straight,Black,Medium,4,Dark brown,Oval,Circulars,Acute,Concave,Elongated,Internal Obliques,Native American (indigenous),10%,20%,70%,100%
+004_268,5/19/2019 19:15:26,Yes,Torres,Salazar,35,Loja,Cariamanga,Female,Wavy,Brown,Thin,4,Amber,Circular,Ovoids,Flat,Convex,Sunk,Arched,"European, Native American (indigenous)",10%,30%,60%,100%
+004_269,4/27/2019 10:15:40,Yes,González ,Carcelen,40,Pichincha,Quito,Male,Curly,Black,Medium,4,Dark brown,Circular,Ovoids,Flat,Concave,Sunk,Rectilines,"European, Native American (indigenous)",0%,50%,50%,100%
+004_27,5/30/2019 12:16:09,Yes,España,Nera,32,Guayas,Guayaquil,Male,Curly,Black,Medium,4,Dark brown,Square,Triangular,Acute,Right,Sunk,Sinuous,Native American (indigenous),0%,30%,70%,100%
+004_270,4/27/2019 10:17:47,Yes,Crisanto,Oña,25,Pichincha,Quito,Male,Straight,Black,Medium,4,Dark brown,Square,Triangular,Acute,Right,Sunk,Sinuous,"European, Native American (indigenous)",0%,50%,50%,100%
+004_271,4/27/2019 11:36:22,Yes,Cuichan,Jiménez ,27,Pichincha,Quito,Male,Straight,Black,Thin,4,Dark brown,Circular,Ovoids,Flat,Right,Sunk,Rectilines,"European, Native American (indigenous)",0%,30%,70%,100%
+004_272,4/28/2019 11:30:22,Yes,Lopez,Salcedo,25,Pichincha,Quito,Female,Straight,Brown,Medium,4,Dark brown,Circular,Ovoids,Flat,Right,Sunk,Arched,Native American (indigenous),0%,0%,100%,100%
+004_273,4/28/2019 11:46:25,Yes,Correa,Tonato,40,Pichincha,Quito,Male,Wavy,Black,Thin,4,Dark brown,Circular,Ovoids,Flat,Right,Sunk,Rectilines,Native American (indigenous),0%,0%,100%,100%
+004_274,4/28/2019 11:55:11,Yes,Correa,Tonato,48,Cotopaxi,Salcedo,Male,Wavy,Black,Medium,4,Dark brown,Circular,Triangular,Flat,Concave,Sunk,Rectilines,Native American (indigenous),0%,0%,100%,100%
+004_275,4/28/2019 12:00:55,Yes,Bravo,Trujillo,41,Pichincha,Quito,Female,Straight,Black,Medium,4,Dark brown,Circular,Ovoids,Flat,Concave,Sunk,Arched,"European, Native American (indigenous)",0%,70%,30%,100%
+004_276,4/28/2019 12:03:36,Yes,Bravo ,Trujillo,40,Pichincha,Quito,Female,Straight,Brown,Medium,4,Dark brown,Circular,Ovoids,Flat,Concave,Sunk,Arched,"European, Native American (indigenous)",0%,30%,70%,100%
+004_277,4/28/2019 12:35:14,Yes,Molina,Tamayo,60,Loja,Calvas,Female,Straight,Brown,Thin,4,Dark brown,Circular,Ovoids,Flat,Concave,Sunk,Arched,"European, Native American (indigenous)",0%,50%,50%,100%
+004_278,4/28/2019 13:07:06,Yes,Lasso,Vásquez,28,Pichincha,Quito,Female,Straight,Black,Thin,4,Dark brown,Circular,Ovoids,Flat,Concave,Sunk,Arched,"European, Native American (indigenous)",0%,30%,70%,100%
+004_279,4/28/2019 13:25:45,Yes,Bonilla,Lasso,18,Pichincha,Quito,Female,Straight,Brown,Thin,4,Dark brown,Triangular,Ovoids,Flat,Concave,Sunk,Rectilines,"European, Native American (indigenous)",0%,30%,70%,100%
+004_28,5/19/2019 15:50:43,Yes,Holguin,Merchan,22,Guayas,Guayaquil,Male,Wavy,Black,Medium,4,Dark brown,Oval,Ovoids,Fugitive,Sinuous,Protruding,Sinuous,Native American (indigenous),20%,10%,70%,100%
+004_280,4/13/2019 15:16:10,Yes,Lasso,Vásquez ,47,Pichincha,Quito,Male,Straight,Black,Thin,4,Dark brown,Circular,Ovoids,Acute,Right,Sunk,Arched,Native American (indigenous),0%,0%,100%,100%
+004_29,4/2/2019 14:59:14,Yes,Tipantuña,Chicaiza,56,Pichincha,Mejía,Male,Straight,Black,Thin,4,Dark brown,Square,Rectangular,Square,Convex,Sunk,Sinuous,Native American (indigenous),0%,30%,70%,100%
+004_3,4/1/2019 11:30:37,Yes,Molina,Ligña,37,Pichincha,Quito,Male,Straight,Black,Medium,4,Dark brown,Circular,Ovoids,Arcuate,Sinuous,Sunk,Sinuous,Native American (indigenous),20%,20%,60%,100%
+004_30,4/2/2019 16:18:48,Yes,Ormaza,Imbaquingo,47,Carchi,Tulcán,Male,Straight,Black,Medium,4,Dark brown,Circular,Ovoids,Split chin,Right,Sunk,Sinuous,Native American (indigenous),0%,30%,70%,100%
+004_31,4/2/2019 16:23:05,Yes,Iza,Paucar,35,Pichincha,Quito,Male,Straight,Black,Medium,4,Dark brown,Oval,Ovoids,Flat,Right,Sunk,Rectilines,Native American (indigenous),0%,30%,70%,100%
+004_32,4/2/2019 16:38:49,Yes,Morocho,Morocho,30,Loja,Juntas,Male,Straight,Black,Medium,4,Dark brown,Diamond,Ovoids,Flat,Right,Sunk,Rectilines,Native American (indigenous),0%,30%,70%,100%
+004_33,19/05/2019 17:09,Yes,Quezada,Diaz,28,Pichincha,Quito,Male,Straight,Black,Medium,4,Dark brown,Triangular,Ovoids,Acute,Right,Sunk,Sinuous,Native American (indigenous),0%,30%,70%,100%
+004_34,4/19/2019 12:20:40,Yes,Vega,Cando,57,Bolívar,Guaranda,Male,Straight,Black,Thin,4,Dark brown,Oval,Ovoids,Flat,Right,Sunk,Sinuous,"European, Native American (indigenous)",0%,50%,50%,100%
+004_35,4/2/2019 18:06:37,Yes,Tupiza,Simbaña,30,Pichincha,Quito,Male,Straight,Black,Thick,4,Dark brown,Circular,Triangular,Square,Convex,Elongated,Sinuous,Native American (indigenous),0%,30%,70%,100%
+004_36,4/2/2019 18:33:21,Yes,Peñafiel,Hurtado,56,Imbabura,Ibarra,Male,Straight,Black,Medium,4,Dark brown,Square,Ovoids,Flat,Right,Sunk,Arched,"European, Native American (indigenous)",10%,30%,60%,100%
+004_37,4/2/2019 18:49:48,Yes,Rocha,Robayo,34,Cotopaxi,Mulalo,Male,Straight,Black,Medium,4,Dark brown,Triangular,Triangular,Acute,Right,Elongated,Arched,Native American (indigenous),0%,20%,80%,100%
+004_38,4/3/2019 11:12:54,Yes,MonteBlack,Pozo,43,Sucumbíos,San Francisco,Male,Straight,Black,Thick,4,Dark brown,Oval,Ovoids,Square,Convex,Elongated,Sinuous,Native American (indigenous),0%,40%,60%,100%
+004_39,4/3/2019 11:35:23,Yes,Yaselga,Yaselga,52,Imbabura,Ibarra,Male,Wavy,Black,Medium,4,Dark brown,Circular,Triangular,Acute,Convex,Sunk,Arched,"European, Native American (indigenous)",10%,40%,50%,100%
+004_4,4/1/2019 12:21:58,Yes,Chiguano,Barros,56,Pichincha,Aloasi,Female,Straight,Black,Medium,4,Dark brown,Circular,Circulars,Acute,Convex,Sunk,Rectilines,Native American (indigenous),0%,30%,70%,100%
+004_40,4/3/2019 11:49:20,Yes,Quishpe,Quishpe,44,Cotopaxi,Pujilí,Male,Straight,Black,Medium,4,Dark brown,Circular,Triangular,Square,Convex,Elongated,Sinuous,Native American (indigenous),0%,40%,60%,100%
+004_41,4/3/2019 12:15:54,Yes,Goyes,Ruiz,34,Guayas,Guayaquil,Male,Wavy,Black,Thick,4,Dark brown,Circular,Triangular,Square,Convex,Protruding,Sinuous,"European, Native American (indigenous)",0%,30%,70%,100%
+004_42,4/3/2019 12:29:53,Yes,Crespo,Granda,52,Loja,Macará,Male,Straight,Black,Medium,4,Dark brown,Circular,Triangular,Square,Right,Protruding,Sinuous,"European, Native American (indigenous)",0%,50%,50%,100%
+004_43,4/3/2019 13:11:16,Yes,Almendariz,Gualzaqui,53,Imbabura,Cotacachi,Female,Wavy,Black,Medium,4,Dark brown,Circular,Ovoids,Square,Right,Elongated,Sinuous,"European, Native American (indigenous)",0%,50%,50%,100%
+004_44,4/3/2019 13:18:04,Yes,-,Sacón,47,Manabí,Calceta,Male,Curly,Black,Thick,4,Dark brown,Circular,Triangular,Acute,Right,Elongated,Sinuous,European,0%,60%,40%,100%
+004_45,4/3/2019 13:53:06,Yes,Larco,Cárdenas,36,Pichincha,Quito,Female,Wavy,Brown,Thick,4,Dark brown,Circular,Ovoids,Fugitive,Concave,Elongated,Internal Obliques,Native American (indigenous),0%,40%,60%,100%
+004_46,4/3/2019 16:46:07,Yes,Cuji,Cachupud,21,Pichincha,Pichincha,Male,Straight,Black,Medium,4,Dark brown,Square,Ovoids,Fugitive,Right,Sunk,Sinuous,Native American (indigenous),0%,40%,60%,100%
+004_47,4/3/2019 16:54:43,Yes,Chamorro,Malquin,53,Carchi,Tulcán,Male,Straight,Black,Medium,4,Dark brown,Oval,Ovoids,Arcuate,Right,Sunk,Arched,Native American (indigenous),0%,40%,60%,100%
+004_48,4/3/2019 16:58:17,Yes,Tasigchava,Redroban,55,Bolívar,Facundo Vélez,Male,Straight,Black,Thin,4,Dark brown,Triangular,Triangular,Acute,Alomado,Sunk,Sinuous,Native American (indigenous),0%,40%,60%,100%
+004_49,4/3/2019 17:06:11,Yes,Córdova,Yazán,34,Carchi,Tulcán,Male,Straight,Black,Thick,4,Dark brown,Square,Rectangular,Acute,Sinuous,Sunk,Sinuous,"European, Native American (indigenous)",0%,40%,60%,100%
+004_5,4/1/2019 12:34:58,Yes,Toapanta,Cadena,70,Pichincha,Aloasi,Male,Straight,Black,Thick,4,Dark brown,Circular,Rectangular,Acute,Convex,Sunk,Rectilines,Native American (indigenous),0%,20%,80%,100%
+004_50,4/3/2019 17:21:49,Yes,Jami,Campues,30,Pichincha,Cayambe,Male,Straight,Black,Medium,4,Dark brown,Circular,Triangular,Acute,Right,Sunk,Rectilines,Native American (indigenous),0%,40%,60%,100%
+004_51,4/3/2019 17:25:07,Yes,Casa,Gavilina,35,Pichincha,Quito,Male,Straight,Black,Medium,4,Dark brown,Circular,Triangular,Arcuate,Right,External Obliques,Internal Obliques,Native American (indigenous),0%,30%,70%,100%
+004_52,4/3/2019 17:30:39,Yes,Luna,Navarrete,45,Guayas,Guayaquil,Male,Curly,Black,Thick,4,Dark brown,Diamond,Ovoids,Square,Right,Sunk,Arched,"European, Native American (indigenous)",20%,60%,20%,100%
+004_53,4/3/2019 17:37:14,Yes,Acosta,Cevallos,39,Pichincha,Quito,Male,Curly,Brown,Medium,4,Dark brown,Circular,Circulars,Flat,Sinuous,External Obliques,Asymmetrical,Native American (indigenous),20%,30%,50%,100%
+004_54,4/3/2019 17:42:19,Yes,Garzón,Heredia,44,Pichincha,Quito,Male,Wavy,Brown,Thick,4,Dark brown,Square,Triangular,Square,Right,Sunk,Sinuous,"European, Native American (indigenous)",0%,40%,60%,100%
+004_55,4/3/2019 18:05:45,Yes,Toapanta,Toapanta,28,Pichincha,Quito,Male,Straight,Black,Medium,4,Dark brown,Circular,Rectangular,Acute,Right,Sunk,Arched,Native American (indigenous),0%,40%,60%,100%
+004_56,4/3/2019 18:21:15,Yes,Pinos,Móran,50,Bolívar,Caluma,Male,Straight,Brown,Thin,4,Dark brown,Circular,Triangular,Square,Alomado,Protruding,Sinuous,"European, Native American (indigenous)",0%,40%,60%,100%
+004_57,4/3/2019 18:34:47,Yes,Zapata,Galárraga,23,Pichincha,Quito,Male,Straight,Black,Medium,4,Dark brown,Circular,Rectangular,Acute,Right,Sunk,Rectilines,Native American (indigenous),0%,50%,50%,100%
+004_58,4/4/2019 9:04:47,Yes,Yánez,Aguas,57,Cotopaxi,Latacunga,Male,Straight,Black,Medium,4,Dark brown,Square,Triangular,Square,Right,Sunk,Sinuous,Native American (indigenous),0%,30%,70%,100%
+004_59,4/4/2019 9:43:15,Yes,Salguero,Vaca,74,Cotopaxi,Pujilí,Male,Straight,Black,Medium,4,Dark brown,Diamond,Triangular,Square,Right,Sunk,Sinuous,"European, Native American (indigenous)",0%,40%,60%,100%
+004_6,4/1/2019 12:49:03,Yes,Posso,Recalde,45,Pichincha,Quito,Male,Straight,Black,Medium,4,Dark brown,Circular,Circulars,Flat,Right,Protruding,Sinuous,"European, Native American (indigenous)",20%,20%,60%,100%
+004_60,4/4/2019 10:26:07,Yes,Sangoluiza,Pachacama,56,Pichincha,Quito,Male,Straight,Black,Medium,4,Dark brown,Triangular,Ovoids,Split chin,Right,Sunk,Sinuous,Native American (indigenous),0%,30%,70%,100%
+004_61,4/4/2019 11:37:57,Yes,Chamba,Vinueza,35,Pichincha,Quito,Male,Straight,Black,Medium,4,Dark brown,Circular,Ovoids,Square,Concave,Protruding,Sinuous,Native American (indigenous),0%,40%,60%,100%
+004_62,4/4/2019 11:44:06,Yes,Vaca,Carrillo,40,Cotopaxi,Saquisilí,Male,Curly,Black,Medium,4,Dark brown,Circular,Triangular,Flat,Right,External Obliques,Rectilines,Native American (indigenous),0%,40%,60%,100%
+004_63,4/4/2019 12:03:56,Yes,-,Criollo,62,Bolívar,Chillanes,Male,Straight,Black,Medium,4,Dark brown,Triangular,Triangular,Flat,Right,External Obliques,Rectilines,Native American (indigenous),0%,30%,70%,100%
+004_64,5/19/2019 17:05:11,Yes,Nausin,Villasis,31,Bolívar,San José del Tambo,Female,Straight,Black,Medium,4,Dark brown,Diamond,Ovoids,Flat,Right,Sunk,Internal Obliques,Native American (indigenous),10%,20%,70%,100%
+004_65,4/4/2019 12:27:16,Yes,Martinez,Juiña,33,Pichincha,Quito,Male,Wavy,Black,Medium,4,Hazelnut,Circular,Triangular,Square,Right,Sunk,Rectilines,"European, Native American (indigenous)",0%,40%,60%,100%
+004_66,4/4/2019 12:29:53,Yes,Pachacama,Reinoso,39,Pichincha,Quito,Male,Straight,Black,Thin,4,Dark brown,Circular,Triangular,Square,Right,Sunk,Internal Obliques,Native American (indigenous),0%,40%,60%,100%
+004_67,4/4/2019 13:22:05,Yes,Flores,Flores,41,Pichincha,Quito,Male,Straight,Black,Medium,4,Dark brown,Circular,Triangular,Flat,Right,Sunk,Sinuous,Native American (indigenous),0%,30%,70%,100%
+004_68,4/4/2019 16:34:10,Yes,Romero,Molina,36,Cañar,Azogues,Male,Curly,Brown,Medium,4,Dark brown,Diamond,Rectangular,Acute,Right,Sunk,Rectilines,"Afro-American, Native American (indigenous)",20%,30%,50%,100%
+004_69,4/4/2019 16:45:08,Yes,Calero,Mantilla,72,Bolívar,Guaranda,Male,Straight,Black,Thin,4,Dark brown,Diamond,Triangular,Flat,Right,Sunk,Arched,"European, Native American (indigenous)",0%,40%,60%,100%
+004_7,4/1/2019 13:54:11,Yes,Jimenez,Sarango,31,Pichincha,Quito,Male,Straight,Black,Medium,4,Dark brown,Square,Ovoids,Flat,Concave,Protruding,Sinuous,"European, Native American (indigenous)",0%,30%,70%,100%
+004_70,4/4/2019 16:56:49,Yes,Pullas,Muñoz,29,Pichincha,Quito,Male,Straight,Black,Thick,4,Dark brown,Oval,Triangular,Acute,Convex,Sunk,Rectilines,Native American (indigenous),10%,30%,60%,100%
+004_71,4/4/2019 17:10:31,Yes,Roman,Guevara,27,Imbabura,Otavalo,Male,Curly,Black,Medium,4,Dark brown,Oval,Circulars,Acute,Concave,Sunk,Arched,Native American (indigenous),0%,50%,50%,100%
+004_72,5/19/2019 16:56:19,Yes,Pinargote,Zambrano,40,Santo Domingo de los Tsáchilas,Santo domingo,Male,Straight,Black,Medium,4,Dark brown,Triangular,Ovoids,Acute,Right,Protruding,Sinuous,Native American (indigenous),10%,20%,70%,100%
+004_73,4/4/2019 17:43:32,Yes,Montaluisa,Salazar,49,Pichincha,Quito,Male,Straight,Black,Medium,4,Dark brown,Oval,Ovoids,Split chin,Right,Protruding,Sinuous,Native American (indigenous),0%,50%,50%,100%
+004_74,4/4/2019 18:15:48,Yes,Tacuri,Flores,44,Cotopaxi,Latacunga,Male,Straight,Black,Medium,4,Dark brown,Square,Ovoids,Acute,Right,External Obliques,Rectilines,Native American (indigenous),0%,40%,60%,100%
+004_75,4/4/2019 18:28:41,Yes,Chiluisa,Guamangallo,45,Cotopaxi,Latacunga,Male,Straight,Black,Thin,4,Dark brown,Circular,Ovoids,Flat,Right,Sunk,Sinuous,Native American (indigenous),0%,50%,50%,100%
+004_76,4/4/2019 18:57:34,Yes,Vargas,Caiza,30,Pichincha,Mejía,Male,Straight,Black,Medium,4,Dark brown,Oval,Ovoids,Acute,Right,External Obliques,Rectilines,Native American (indigenous),0%,40%,60%,100%
+004_77,4/4/2019 18:59:39,Yes,Candelario,Arellano,45,Los Ríos,Quevedo,Male,Wavy,Black,Thick,4,Dark brown,Triangular,Triangular,Acute,Right,Sunk,Sinuous,Native American (indigenous),0%,50%,50%,100%
+004_78,5/30/2019 9:56:54,Yes,Aguirre,Ceballos,42,Guayas,Guayaquil,Female,Straight,Brown,Medium,4,Dark brown,Diamond,Ovoids,Fugitive,Right,Protruding,Arched,Native American (indigenous),10%,40%,50%,100%
+004_79,4/4/2019 19:06:42,Yes,Simbaña,Tacuri,45,Napo,Baeza,Male,Straight,Black,Medium,4,Dark brown,Circular,Circulars,Square,Right,Sunk,Rectilines,Native American (indigenous),0%,50%,50%,100%
+004_8,4/1/2019 14:59:49,Yes,Trávez,Chicaiza,53,Cotopaxi,Latacunga,Male,Straight,Black,Medium,4,Dark brown,Square,Ovoids,Flat,Right,Sunk,Sinuous,Native American (indigenous),0%,30%,70%,100%
+004_80,4/4/2019 19:21:42,Yes,Veloz,Aldas,46,Pichincha,Quito,Male,Wavy,Black,Medium,4,Dark brown,Oval,Triangular,Square,Right,Elongated,Sinuous,Native American (indigenous),0%,50%,50%,100%
+004_81,4/5/2019 10:58:10,Yes,Gudiño,Paredes,58,Carchi,Tulcán,Male,Curly,Black,Medium,4,Hazelnut,Square,Triangular,Square,Concave,External Obliques,Sinuous,European,0%,60%,40%,100%
+004_82,4/5/2019 11:01:09,Yes,-,Fuel,57,Pichincha,Mejía,Male,Straight,Black,Medium,4,Dark brown,Circular,Ovoids,Fugitive,Alomado,Protruding,Rectilines,Native American (indigenous),0%,40%,60%,100%
+004_83,4/5/2019 11:19:42,Yes,Toctaguano,Quinatoa,39,Cotopaxi,Latacunga,Male,Straight,Black,Medium,4,Dark brown,Circular,Ovoids,Acute,Right,Elongated,Sinuous,Native American (indigenous),0%,40%,60%,100%
+004_84,4/5/2019 11:25:28,Yes,Changoluisa,Venegas,42,Cotopaxi,Latacunga,Male,Straight,Black,Medium,4,Dark brown,Circular,Triangular,Square,Right,Elongated,Rectilines,Native American (indigenous),0%,60%,40%,100%
+004_85,4/5/2019 11:50:53,Yes,Aguilar ,Guayasamin,61,Pichincha,Mejía,Male,Straight,Black,Medium,4,Dark brown,Square,Ovoids,Square,Right,Sunk,Sinuous,Native American (indigenous),0%,50%,50%,100%
+004_86,4/5/2019 11:56:19,Yes,Terán,Quilligana,43,Imbabura,Pimampiro,Male,Curly,Brown,Thick,4,Amber,Circular,Triangular,Square,Right,Sunk,Rectilines,Native American (indigenous),10%,40%,50%,100%
+004_87,4/5/2019 12:10:03,Yes,Ramos,Ramos,37,Pichincha,Quito,Male,Straight,Black,Thick,4,Dark brown,Circular,Triangular,Flat,Right,Elongated,Rectilines,Native American (indigenous),0%,50%,50%,100%
+004_88,4/5/2019 12:16:17,Yes,Tasigchana,Escudero,34,Pichincha,Quito,Female,Straight,Brown,Medium,4,Dark brown,Circular,Ovoids,Split chin,Concave,Protruding,Arched,Native American (indigenous),10%,30%,60%,100%
+004_89,4/5/2019 12:29:27,Yes,Cardenas,Malliquinga,34,Pichincha,Quito,Male,Straight,Black,Thick,4,Dark brown,Circular,Ovoids,Fugitive,Right,Elongated,Rectilines,Native American (indigenous),0%,40%,60%,100%
+004_9,5/19/2019 14:55:25,Yes,Quezada ,Quezada,39,Sucumbíos,Lago Agrio,Female,Wavy,Black,Thin,4,Dark brown,Oval,Ovoids,Flat,Right,Elongated,Arched,Native American (indigenous),10%,20%,70%,100%
+004_90,4/5/2019 12:34:47,Yes,Suárez,Fonseca,53,Cotopaxi,Latacunga,Male,Straight,Black,Thick,4,Dark brown,Oval,Triangular,Square,Concave,External Obliques,Sinuous,"European, Native American (indigenous)",0%,60%,40%,100%
+004_91,4/5/2019 13:22:15,Yes,Segovia,Cabrera,48,Cotopaxi,La Maná,Male,Straight,Black,Medium,4,Dark brown,Oval,Ovoids,Flat,Right,Sunk,Sinuous,"European, Native American (indigenous)",0%,50%,50%,100%
+004_92,4/5/2019 14:23:17,Yes,-,Buñay,47,Chimborazo,Guamote,Male,Straight,Black,Thick,4,Dark brown,Oval,Triangular,Square,Right,Protruding,Sinuous,Native American (indigenous),10%,40%,50%,100%
+004_93,4/5/2019 14:37:51,Yes,Paredes,Moya,45,Pichincha,Quito,Male,Straight,Black,Thick,4,Dark brown,Circular,Triangular,Fugitive,Concave,Sunk,Rectilines,Native American (indigenous),10%,30%,60%,100%
+004_94,4/5/2019 15:32:38,Yes,Rosero,Amaguaña,47,Pichincha,Quito,Female,Straight,Black,Medium,4,Dark brown,Circular,Ovoids,Acute,Right,Sunk,Arched,Native American (indigenous),0%,50%,50%,100%
+004_95,4/5/2019 15:58:22,Yes,Oña,Rosero,28,Pichincha,Quito,Male,Straight,Black, Thick and bulky,4,Dark brown,Circular,Ovoids,Acute,In S,Elongated,Rectilines,"Afro-American, Native American (indigenous)",30%,20%,50%,100%
+004_96,4/5/2019 17:07:14,Yes,Nato,Pachacama,44,Pichincha,Uyumbicho,Male,Straight,Black,Medium,4,Dark brown,Square,Ovoids,Acute,Right,External Obliques,Rectilines,Native American (indigenous),10%,30%,60%,100%
+004_97,5/30/2019 10:11:20,Yes,Alfonso,Lainez,26,Guayas,Guayaquil,Female,Straight,Black,Thin,4,Dark brown,Oval,Ovoids,Acute,Concave,Sunk,Arched,European,30%,40%,30%,100%
+004_98,4/5/2019 18:02:53,Yes,-,Pillajo,53,Pichincha,Quito,Female,Curly,Black,Thick,4,Dark brown,Triangular,Ovoids,Acute,Right,Sunk,Arched,Native American (indigenous),0%,40%,60%,100%
+004_99,4/5/2019 18:33:09,Yes,Tigsilema,Duque,34,Pichincha,Quito,Male,Wavy,Black,Thin,4,Dark brown,Circular,Triangular,Square,Concave,Elongated,Rectilines,"European, Native American (indigenous)",0%,50%,50%,100%

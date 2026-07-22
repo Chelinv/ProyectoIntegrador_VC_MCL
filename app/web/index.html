@@ -37,7 +37,8 @@
                 <div class="content-grid">
                     <div class="text-content">
                         <h3>Objetivo</h3>
-                        <p>El primer paso de nuestro proyecto consistió en comprender y organizar el conjunto de datos proporcionado por la guía del proyecto. Trabajamos con un dataset de rostros étnicos de personas ecuatorianas.</p>
+                        <p>El primer paso de nuestro proyecto consistió en comprender el dataset original. Más allá de las fotografías completas, descubrimos y analizamos la <strong>Metadata (Archivos XML)</strong>, la cual contiene las coordenadas exactas de las facciones clave (ojos, cejas, nariz, boca) trazadas por expertos.</p>
+                        <p>Esta revelación cambió nuestro enfoque: en lugar de analizar el rostro completo (con ruido de fondo e iluminación), decidimos extraer matemáticamente las facciones para un análisis hiper-enfocado.</p>
                         
                         <h3>Clases Identificadas</h3>
                         <ul class="class-list">
@@ -49,7 +50,7 @@
                     </div>
                     <div class="image-content">
                         <div class="image-card">
-                            <img src="../8266730/Afro-ecuadorians/003_1.JPG" alt="Ejemplo Original" onerror="this.src='https://via.placeholder.com/400x500?text=Imagen+del+Dataset'">
+                            <img src="ejemplo_dataset.jpg" alt="Ejemplo Original" onerror="this.src='https://via.placeholder.com/400x500?text=Imagen+del+Dataset'">
                             <p class="caption">Ejemplo de Imagen en crudo (Dataset Original)</p>
                         </div>
                     </div>
@@ -77,23 +78,23 @@
                     <div class="pipeline-grid static-grid">
                         <div class="step-card">
                             <p class="subtitle">1. Original</p>
-                            <div class="img-wrapper"><img src="../8266730/Afro-ecuadorians/003_1.JPG" alt=""></div>
+                            <div class="img-wrapper"><img src="assets_fase2/raw/Afro-ecuadorians/003_1.JPG" alt=""></div>
                         </div>
                         <div class="step-card">
                             <p class="subtitle">2. Grises</p>
-                            <div class="img-wrapper gray-effect"><img src="../8266730/Afro-ecuadorians/003_1.JPG" alt=""></div>
+                            <div class="img-wrapper"><img src="assets_fase2/processed/Afro-ecuadorians/003_1_gray.jpg" alt=""></div>
                         </div>
                         <div class="step-card">
                             <p class="subtitle">3. CLAHE</p>
-                            <div class="img-wrapper clahe-effect"><img src="../8266730/Afro-ecuadorians/003_1.JPG" alt=""></div>
+                            <div class="img-wrapper"><img src="assets_fase2/processed/Afro-ecuadorians/003_1_clahe.jpg" alt=""></div>
                         </div>
                         <div class="step-card">
                             <p class="subtitle">4. Filtro Bilateral</p>
-                            <div class="img-wrapper blur-effect"><img src="../8266730/Afro-ecuadorians/003_1.JPG" alt=""></div>
+                            <div class="img-wrapper"><img src="assets_fase2/processed/Afro-ecuadorians/003_1_bilateral.jpg" alt=""></div>
                         </div>
                         <div class="step-card">
                             <p class="subtitle">5. Umbralización</p>
-                            <div class="img-wrapper"><img src="../Dataset_Preprocesado/Afro-ecuadorians/003_1.JPG" alt=""></div>
+                            <div class="img-wrapper"><img src="assets_fase2/processed/Afro-ecuadorians/003_1_thresh.jpg" alt=""></div>
                         </div>
                     </div>
                 </div>
@@ -104,23 +105,23 @@
                     <div class="pipeline-grid static-grid">
                         <div class="step-card">
                             <p class="subtitle">1. Original</p>
-                            <div class="img-wrapper"><img src="../8266730/Afro-ecuadorians/003_7.JPG" alt=""></div>
+                            <div class="img-wrapper"><img src="assets_fase2/raw/Afro-ecuadorians/003_7.JPG" alt=""></div>
                         </div>
                         <div class="step-card">
                             <p class="subtitle">2. Grises</p>
-                            <div class="img-wrapper gray-effect"><img src="../8266730/Afro-ecuadorians/003_7.JPG" alt=""></div>
+                            <div class="img-wrapper"><img src="assets_fase2/processed/Afro-ecuadorians/003_7_gray.jpg" alt=""></div>
                         </div>
                         <div class="step-card">
                             <p class="subtitle">3. CLAHE</p>
-                            <div class="img-wrapper clahe-effect"><img src="../8266730/Afro-ecuadorians/003_7.JPG" alt=""></div>
+                            <div class="img-wrapper"><img src="assets_fase2/processed/Afro-ecuadorians/003_7_clahe.jpg" alt=""></div>
                         </div>
                         <div class="step-card">
                             <p class="subtitle">4. Filtro Bilateral</p>
-                            <div class="img-wrapper blur-effect"><img src="../8266730/Afro-ecuadorians/003_7.JPG" alt=""></div>
+                            <div class="img-wrapper"><img src="assets_fase2/processed/Afro-ecuadorians/003_7_bilateral.jpg" alt=""></div>
                         </div>
                         <div class="step-card">
                             <p class="subtitle">5. Umbralización</p>
-                            <div class="img-wrapper"><img src="../Dataset_Preprocesado/Afro-ecuadorians/003_7.JPG" alt=""></div>
+                            <div class="img-wrapper"><img src="assets_fase2/processed/Afro-ecuadorians/003_7_thresh.jpg" alt=""></div>
                         </div>
                     </div>
                 </div>
@@ -131,23 +132,23 @@
                     <div class="pipeline-grid static-grid">
                         <div class="step-card">
                             <p class="subtitle">1. Original</p>
-                            <div class="img-wrapper"><img src="../8266730/European descendants/002_1.JPG" alt=""></div>
+                            <div class="img-wrapper"><img src="assets_fase2/raw/European descendants/002_1.JPG" alt=""></div>
                         </div>
                         <div class="step-card">
                             <p class="subtitle">2. Grises</p>
-                            <div class="img-wrapper gray-effect"><img src="../8266730/European descendants/002_1.JPG" alt=""></div>
+                            <div class="img-wrapper"><img src="assets_fase2/processed/European descendants/002_1_gray.jpg" alt=""></div>
                         </div>
                         <div class="step-card">
                             <p class="subtitle">3. CLAHE</p>
-                            <div class="img-wrapper clahe-effect"><img src="../8266730/European descendants/002_1.JPG" alt=""></div>
+                            <div class="img-wrapper"><img src="assets_fase2/processed/European descendants/002_1_clahe.jpg" alt=""></div>
                         </div>
                         <div class="step-card">
                             <p class="subtitle">4. Filtro Bilateral</p>
-                            <div class="img-wrapper blur-effect"><img src="../8266730/European descendants/002_1.JPG" alt=""></div>
+                            <div class="img-wrapper"><img src="assets_fase2/processed/European descendants/002_1_bilateral.jpg" alt=""></div>
                         </div>
                         <div class="step-card">
                             <p class="subtitle">5. Umbralización</p>
-                            <div class="img-wrapper"><img src="../Dataset_Preprocesado/European descendants/002_1.JPG" alt=""></div>
+                            <div class="img-wrapper"><img src="assets_fase2/processed/European descendants/002_1_thresh.jpg" alt=""></div>
                         </div>
                     </div>
                 </div>
@@ -158,23 +159,23 @@
                     <div class="pipeline-grid static-grid">
                         <div class="step-card">
                             <p class="subtitle">1. Original</p>
-                            <div class="img-wrapper"><img src="../8266730/European descendants/002_2.JPG" alt=""></div>
+                            <div class="img-wrapper"><img src="assets_fase2/raw/European descendants/002_2.JPG" alt=""></div>
                         </div>
                         <div class="step-card">
                             <p class="subtitle">2. Grises</p>
-                            <div class="img-wrapper gray-effect"><img src="../8266730/European descendants/002_2.JPG" alt=""></div>
+                            <div class="img-wrapper"><img src="assets_fase2/processed/European descendants/002_2_gray.jpg" alt=""></div>
                         </div>
                         <div class="step-card">
                             <p class="subtitle">3. CLAHE</p>
-                            <div class="img-wrapper clahe-effect"><img src="../8266730/European descendants/002_2.JPG" alt=""></div>
+                            <div class="img-wrapper"><img src="assets_fase2/processed/European descendants/002_2_clahe.jpg" alt=""></div>
                         </div>
                         <div class="step-card">
                             <p class="subtitle">4. Filtro Bilateral</p>
-                            <div class="img-wrapper blur-effect"><img src="../8266730/European descendants/002_2.JPG" alt=""></div>
+                            <div class="img-wrapper"><img src="assets_fase2/processed/European descendants/002_2_bilateral.jpg" alt=""></div>
                         </div>
                         <div class="step-card">
                             <p class="subtitle">5. Umbralización</p>
-                            <div class="img-wrapper"><img src="../Dataset_Preprocesado/European descendants/002_2.JPG" alt=""></div>
+                            <div class="img-wrapper"><img src="assets_fase2/processed/European descendants/002_2_thresh.jpg" alt=""></div>
                         </div>
                     </div>
                 </div>
@@ -185,23 +186,23 @@
                     <div class="pipeline-grid static-grid">
                         <div class="step-card">
                             <p class="subtitle">1. Original</p>
-                            <div class="img-wrapper"><img src="../8266730/Indigenous/001_1.JPG" alt=""></div>
+                            <div class="img-wrapper"><img src="assets_fase2/raw/Indigenous/001_1.JPG" alt=""></div>
                         </div>
                         <div class="step-card">
                             <p class="subtitle">2. Grises</p>
-                            <div class="img-wrapper gray-effect"><img src="../8266730/Indigenous/001_1.JPG" alt=""></div>
+                            <div class="img-wrapper"><img src="assets_fase2/processed/Indigenous/001_1_gray.jpg" alt=""></div>
                         </div>
                         <div class="step-card">
                             <p class="subtitle">3. CLAHE</p>
-                            <div class="img-wrapper clahe-effect"><img src="../8266730/Indigenous/001_1.JPG" alt=""></div>
+                            <div class="img-wrapper"><img src="assets_fase2/processed/Indigenous/001_1_clahe.jpg" alt=""></div>
                         </div>
                         <div class="step-card">
                             <p class="subtitle">4. Filtro Bilateral</p>
-                            <div class="img-wrapper blur-effect"><img src="../8266730/Indigenous/001_1.JPG" alt=""></div>
+                            <div class="img-wrapper"><img src="assets_fase2/processed/Indigenous/001_1_bilateral.jpg" alt=""></div>
                         </div>
                         <div class="step-card">
                             <p class="subtitle">5. Umbralización</p>
-                            <div class="img-wrapper"><img src="../Dataset_Preprocesado/Indigenous/001_1.JPG" alt=""></div>
+                            <div class="img-wrapper"><img src="assets_fase2/processed/Indigenous/001_1_thresh.jpg" alt=""></div>
                         </div>
                     </div>
                 </div>
@@ -212,23 +213,23 @@
                     <div class="pipeline-grid static-grid">
                         <div class="step-card">
                             <p class="subtitle">1. Original</p>
-                            <div class="img-wrapper"><img src="../8266730/Indigenous/001_38.JPG" alt=""></div>
+                            <div class="img-wrapper"><img src="assets_fase2/raw/Indigenous/001_38.JPG" alt=""></div>
                         </div>
                         <div class="step-card">
                             <p class="subtitle">2. Grises</p>
-                            <div class="img-wrapper gray-effect"><img src="../8266730/Indigenous/001_38.JPG" alt=""></div>
+                            <div class="img-wrapper"><img src="assets_fase2/processed/Indigenous/001_38_gray.jpg" alt=""></div>
                         </div>
                         <div class="step-card">
                             <p class="subtitle">3. CLAHE</p>
-                            <div class="img-wrapper clahe-effect"><img src="../8266730/Indigenous/001_38.JPG" alt=""></div>
+                            <div class="img-wrapper"><img src="assets_fase2/processed/Indigenous/001_38_clahe.jpg" alt=""></div>
                         </div>
                         <div class="step-card">
                             <p class="subtitle">4. Filtro Bilateral</p>
-                            <div class="img-wrapper blur-effect"><img src="../8266730/Indigenous/001_38.JPG" alt=""></div>
+                            <div class="img-wrapper"><img src="assets_fase2/processed/Indigenous/001_38_bilateral.jpg" alt=""></div>
                         </div>
                         <div class="step-card">
                             <p class="subtitle">5. Umbralización</p>
-                            <div class="img-wrapper"><img src="../Dataset_Preprocesado/Indigenous/001_38.JPG" alt=""></div>
+                            <div class="img-wrapper"><img src="assets_fase2/processed/Indigenous/001_38_thresh.jpg" alt=""></div>
                         </div>
                     </div>
                 </div>
@@ -239,23 +240,23 @@
                     <div class="pipeline-grid static-grid">
                         <div class="step-card">
                             <p class="subtitle">1. Original</p>
-                            <div class="img-wrapper"><img src="../8266730/Mestizos/004_1.JPG" alt=""></div>
+                            <div class="img-wrapper"><img src="assets_fase2/raw/Mestizos/004_1.JPG" alt=""></div>
                         </div>
                         <div class="step-card">
                             <p class="subtitle">2. Grises</p>
-                            <div class="img-wrapper gray-effect"><img src="../8266730/Mestizos/004_1.JPG" alt=""></div>
+                            <div class="img-wrapper"><img src="assets_fase2/processed/Mestizos/004_1_gray.jpg" alt=""></div>
                         </div>
                         <div class="step-card">
                             <p class="subtitle">3. CLAHE</p>
-                            <div class="img-wrapper clahe-effect"><img src="../8266730/Mestizos/004_1.JPG" alt=""></div>
+                            <div class="img-wrapper"><img src="assets_fase2/processed/Mestizos/004_1_clahe.jpg" alt=""></div>
                         </div>
                         <div class="step-card">
                             <p class="subtitle">4. Filtro Bilateral</p>
-                            <div class="img-wrapper blur-effect"><img src="../8266730/Mestizos/004_1.JPG" alt=""></div>
+                            <div class="img-wrapper"><img src="assets_fase2/processed/Mestizos/004_1_bilateral.jpg" alt=""></div>
                         </div>
                         <div class="step-card">
                             <p class="subtitle">5. Umbralización</p>
-                            <div class="img-wrapper"><img src="../Dataset_Preprocesado/Mestizos/004_1.JPG" alt=""></div>
+                            <div class="img-wrapper"><img src="assets_fase2/processed/Mestizos/004_1_thresh.jpg" alt=""></div>
                         </div>
                     </div>
                 </div>
@@ -266,29 +267,34 @@
                     <div class="pipeline-grid static-grid">
                         <div class="step-card">
                             <p class="subtitle">1. Original</p>
-                            <div class="img-wrapper"><img src="../8266730/Mestizos/004_154.JPG" alt=""></div>
+                            <div class="img-wrapper"><img src="assets_fase2/raw/Mestizos/004_154.JPG" alt=""></div>
                         </div>
                         <div class="step-card">
                             <p class="subtitle">2. Grises</p>
-                            <div class="img-wrapper gray-effect"><img src="../8266730/Mestizos/004_154.JPG" alt=""></div>
+                            <div class="img-wrapper"><img src="assets_fase2/processed/Mestizos/004_154_gray.jpg" alt=""></div>
                         </div>
                         <div class="step-card">
                             <p class="subtitle">3. CLAHE</p>
-                            <div class="img-wrapper clahe-effect"><img src="../8266730/Mestizos/004_154.JPG" alt=""></div>
+                            <div class="img-wrapper"><img src="assets_fase2/processed/Mestizos/004_154_clahe.jpg" alt=""></div>
                         </div>
                         <div class="step-card">
                             <p class="subtitle">4. Filtro Bilateral</p>
-                            <div class="img-wrapper blur-effect"><img src="../8266730/Mestizos/004_154.JPG" alt=""></div>
+                            <div class="img-wrapper"><img src="assets_fase2/processed/Mestizos/004_154_bilateral.jpg" alt=""></div>
                         </div>
                         <div class="step-card">
                             <p class="subtitle">5. Umbralización</p>
-                            <div class="img-wrapper"><img src="../Dataset_Preprocesado/Mestizos/004_154.JPG" alt=""></div>
+                            <div class="img-wrapper"><img src="assets_fase2/processed/Mestizos/004_154_thresh.jpg" alt=""></div>
                         </div>
                     </div>
                 </div>
 
 
                 <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.1); margin: 3rem 0;">
+
+                <div style="text-align: center; margin: 3rem 0;">
+                    <h3 class="section-divider">Recortes Biométricos Procesados (Nuevo Pipeline)</h3>
+                    <img src="recortes_biometricos.png" alt="Recortes Procesados" style="max-width: 90%; border-radius: 12px; border: 1px solid rgba(255,255,255,0.2); display: inline-block;">
+                </div>
 
                 <!-- Parte B: Procesamiento Interactivo -->
                 <h3 class="section-divider">Demostración en Vivo del Pipeline</h3>
@@ -306,40 +312,35 @@
                     <video id="videoElement" autoplay playsinline style="display:none;"></video>
                 </section>
 
-                <div class="pipeline-grid">
-                    <div class="step-card">
-                        <p class="subtitle">1. Original</p>
-                        <div class="img-wrapper">
-                            <canvas id="canvasOriginal"></canvas>
-                        </div>
+            <div class="pipeline-grid">
+                <div class="step-card">
+                    <p class="subtitle">1. Original</p>
+                    <div class="img-wrapper">
+                        <canvas id="canvasOriginal" width="256" height="256"></canvas>
                     </div>
-                    
-                    <div class="step-card">
-                        <p class="subtitle">2. Grises</p>
-                        <div class="img-wrapper">
-                            <canvas id="canvasGray"></canvas>
-                        </div>
+                </div>
+                <div class="step-card">
+                    <p class="subtitle">2. Grises</p>
+                    <div class="img-wrapper">
+                        <canvas id="canvasGray" width="256" height="256"></canvas>
                     </div>
-
-                    <div class="step-card">
-                        <p class="subtitle">3. CLAHE</p>
-                        <div class="img-wrapper">
-                            <canvas id="canvasClahe"></canvas>
-                        </div>
+                </div>
+                <div class="step-card">
+                    <p class="subtitle">3. CLAHE</p>
+                    <div class="img-wrapper">
+                        <canvas id="canvasClahe" width="256" height="256"></canvas>
                     </div>
-
-                    <div class="step-card">
-                        <p class="subtitle">4. Filtro Bilateral</p>
-                        <div class="img-wrapper">
-                            <canvas id="canvasBilateral"></canvas>
-                        </div>
+                </div>
+                <div class="step-card">
+                    <p class="subtitle">4. Filtro Bilateral</p>
+                    <div class="img-wrapper">
+                        <canvas id="canvasBilateral" width="256" height="256"></canvas>
                     </div>
-
-                    <div class="step-card">
-                        <p class="subtitle">5. Umbralización</p>
-                        <div class="img-wrapper">
-                            <canvas id="canvasThreshold"></canvas>
-                        </div>
+                </div>
+                <div class="step-card">
+                    <p class="subtitle">5. Umbralización</p>
+                    <div class="img-wrapper">
+                        <canvas id="canvasThreshold" width="256" height="256"></canvas>
                     </div>
                 </div>
             </div>
@@ -361,16 +362,21 @@
                         <div class="descriptor-list" style="margin-bottom: 2rem;">
                             <div class="desc-item">
                                 <h4>1. Momentos de Zernike (Ortogonales)</h4>
-                                <p>Capturan características globales usando polinomios sobre un disco unitario. Muy robusto a la rotación. Genera 25 valores.</p>
+                                <p>Genera polinomios sobre los 4 discos de nuestro mosaico biométrico (ojo, ceja, nariz, boca). Muy robusto a la rotación. Resulta en <strong>100 valores</strong> numéricos por persona.</p>
                             </div>
                             <div class="desc-item">
                                 <h4>2. HOG (Avanzado / Local)</h4>
-                                <p>Histogram of Oriented Gradients. Excelente para detectar texturas y contornos de rostros. Genera 144 valores.</p>
+                                <p>Dibuja gradientes que siguen los bordes y texturas de la piel del mosaico. Nuestro algoritmo campeón extrae <strong>7,056 valores</strong> únicos que definen la etnia.</p>
                             </div>
                             <div class="desc-item">
                                 <h4>3. BRISK (Investigado)</h4>
-                                <p>Detecta puntos de interés críticos (keypoints) del rostro y extrae descriptores binarios robustos. Genera 1920 valores.</p>
+                                <p>Detecta puntos clave (estrellas) en las zonas de alto contraste. Genera <strong>7,680 valores</strong> binarios por rostro ensamblado.</p>
                             </div>
+                        </div>
+
+                        <div style="text-align: center; margin-bottom: 3rem;">
+                            <h4>Mosaico Biométrico Ensamblado</h4>
+                            <img src="explicacion_mosaico.jpg" alt="Mosaico Biométrico" style="max-width: 70%; border-radius: 12px; border: 1px solid rgba(255,255,255,0.2); display: inline-block;">
                         </div>
 
                         <h3 class="section-divider">Representación Visual de los Descriptores</h3>
@@ -381,17 +387,32 @@
                             <div class="desc-vis-row">
                                 <div class="desc-vis-info">
                                     <h4>1. Momentos de Zernike</h4>
-                                    <p>Se enfoca en un disco unitario centralizado en el rostro para calcular sus polinomios ortogonales matemáticos.</p>
+                                    <p>Los <strong>Momentos de Zernike</strong> se basan en polinomios ortogonales definidos sobre un disco unitario. Esta técnica es altamente robusta frente a rotaciones, permitiendo extraer características de forma global (siluetas y contornos cerrados).</p>
+                                    <p><strong>¿Por qué el mosaico?</strong> Como se observa en la comparativa, al aplicar Zernike sobre una fotografía completa, el disco de análisis captura grandes porciones de fondo (ropa, cuello, paredes), lo que contamina la representación matemática. En cambio, al proyectar los discos de Zernike sobre cada cuadrante de nuestro mosaico biométrico, logramos aislar únicamente la topología específica de los ojos, cejas, nariz y boca, generando 100 valores numéricos altamente discriminativos de la etnia, libres de ruido.</p>
                                 </div>
                                 <div class="desc-vis-images">
-                                    <div class="vis-box">
-                                        <img src="orig_vis.jpg" alt="Original">
-                                        <p>Original</p>
+                                    <div style="display: flex; flex-direction: column; gap: 1rem; align-items: center;">
+                                        <div class="vis-box">
+                                            <img src="full_raw.jpg" alt="Persona Completa">
+                                            <p>Persona Completa</p>
+                                        </div>
+                                        <div class="vis-box">
+                                            <img src="mosaic_thresh.jpg" alt="Mosaico Umbralizado">
+                                            <p>Mosaico Umbralizado</p>
+                                        </div>
                                     </div>
-                                    <div class="vis-arrow">➡️</div>
-                                    <div class="vis-box">
-                                        <img src="zernike_vis.jpg" alt="Zernike Moments">
-                                        <p>Disco de Zernike</p>
+                                    
+                                    <div class="vis-arrow" style="display: flex; align-items: center; font-size: 2rem;">➡️</div>
+                                    
+                                    <div style="display: flex; flex-direction: column; gap: 1rem; align-items: center;">
+                                        <div class="vis-box">
+                                            <img src="zernike_full.jpg" alt="Zernike en Completa">
+                                            <p>Zernike en Persona</p>
+                                        </div>
+                                        <div class="vis-box">
+                                            <img src="zernike_thresh.jpg" alt="Zernike en Mosaico">
+                                            <p>Zernike en Mosaico</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -400,17 +421,32 @@
                             <div class="desc-vis-row">
                                 <div class="desc-vis-info">
                                     <h4>2. HOG (Gradientes)</h4>
-                                    <p>Calcula la dirección y magnitud de los bordes. Mira cómo detecta perfectamente las texturas y contornos del rostro.</p>
+                                    <p>El <strong>Histograma de Gradientes Orientados (HOG)</strong> es un poderoso descriptor que se especializa en capturar las texturas y la forma de los objetos mediante la distribución de las direcciones de los gradientes (cambios de intensidad de los píxeles) a nivel local.</p>
+                                    <p><strong>¿Por qué el mosaico?</strong> Al procesar la imagen completa, HOG invierte gran parte de su esfuerzo computacional mapeando los bordes de la camisa, las arrugas del cuello y las sombras del entorno (irrelevantes para la etnia). Aplicado sobre el mosaico binarizado, HOG rastrea de manera exhaustiva la textura y los bordes críticos de las facciones puras. Así, el modelo extrae 7,056 características locales de altísimo valor.</p>
                                 </div>
                                 <div class="desc-vis-images">
-                                    <div class="vis-box">
-                                        <img src="orig_vis.jpg" alt="Original">
-                                        <p>Original</p>
+                                    <div style="display: flex; flex-direction: column; gap: 1rem; align-items: center;">
+                                        <div class="vis-box">
+                                            <img src="full_raw.jpg" alt="Persona Completa">
+                                            <p>Persona Completa</p>
+                                        </div>
+                                        <div class="vis-box">
+                                            <img src="mosaic_thresh.jpg" alt="Mosaico Umbralizado">
+                                            <p>Mosaico Umbralizado</p>
+                                        </div>
                                     </div>
-                                    <div class="vis-arrow">➡️</div>
-                                    <div class="vis-box">
-                                        <img src="hog_vis.jpg" alt="HOG">
-                                        <p>Mapa de Gradientes (HOG)</p>
+                                    
+                                    <div class="vis-arrow" style="display: flex; align-items: center; font-size: 2rem;">➡️</div>
+                                    
+                                    <div style="display: flex; flex-direction: column; gap: 1rem; align-items: center;">
+                                        <div class="vis-box">
+                                            <img src="hog_full.jpg" alt="HOG en Completa">
+                                            <p>HOG en Persona</p>
+                                        </div>
+                                        <div class="vis-box">
+                                            <img src="hog_thresh.jpg" alt="HOG en Mosaico">
+                                            <p>HOG en Mosaico</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -419,17 +455,32 @@
                             <div class="desc-vis-row">
                                 <div class="desc-vis-info">
                                     <h4>3. BRISK (Keypoints)</h4>
-                                    <p>Encuentra "puntos de interés" clave que son únicos y robustos aunque la imagen rote o cambie de tamaño.</p>
+                                    <p><strong>BRISK (Binary Robust Invariant Scalable Keypoints)</strong> es un algoritmo de visión artificial diseñado para detectar "puntos de interés" o "keypoints" en regiones de alto contraste espacial, como esquinas y bordes afilados.</p>
+                                    <p><strong>¿Por qué el mosaico?</strong> Si observamos la imagen de la persona completa, los keypoints detectados (puntos verdes) se dispersan ineficientemente por el brillo del cabello e imperfecciones del fondo. Por el contrario, en nuestro mosaico biométrico, el contraste maximizado de la binarización guía al algoritmo BRISK a concentrar sus 7,680 puntos clave exclusivamente en la morfología de las cejas, pupilas, fosas nasales y comisuras de los labios.</p>
                                 </div>
                                 <div class="desc-vis-images">
-                                    <div class="vis-box">
-                                        <img src="orig_vis.jpg" alt="Original">
-                                        <p>Original</p>
+                                    <div style="display: flex; flex-direction: column; gap: 1rem; align-items: center;">
+                                        <div class="vis-box">
+                                            <img src="full_raw.jpg" alt="Persona Completa">
+                                            <p>Persona Completa</p>
+                                        </div>
+                                        <div class="vis-box">
+                                            <img src="mosaic_thresh.jpg" alt="Mosaico Umbralizado">
+                                            <p>Mosaico Umbralizado</p>
+                                        </div>
                                     </div>
-                                    <div class="vis-arrow">➡️</div>
-                                    <div class="vis-box">
-                                        <img src="brisk_vis.jpg" alt="BRISK">
-                                        <p>Keypoints (BRISK)</p>
+                                    
+                                    <div class="vis-arrow" style="display: flex; align-items: center; font-size: 2rem;">➡️</div>
+                                    
+                                    <div style="display: flex; flex-direction: column; gap: 1rem; align-items: center;">
+                                        <div class="vis-box">
+                                            <img src="brisk_full.jpg" alt="BRISK en Completa">
+                                            <p>BRISK en Persona</p>
+                                        </div>
+                                        <div class="vis-box">
+                                            <img src="brisk_thresh.jpg" alt="BRISK en Mosaico">
+                                            <p>BRISK en Mosaico</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -441,25 +492,37 @@
                             <thead>
                                 <tr>
                                     <th>Algoritmo</th>
+                                    <th>Representación</th>
                                     <th>N. Características</th>
                                     <th>Formato de Datos</th>
+                                    <th>Tiempo (seg)</th>
+                                    <th>Costo Computacional</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>Momentos (Zernike)</td>
-                                    <td>25</td>
+                                    <td>Momentos ortogonales (Forma global)</td>
+                                    <td>100</td>
                                     <td>Float64</td>
+                                    <td>6.1893</td>
+                                    <td><span style="color: #4ade80;">Bajo</span></td>
                                 </tr>
                                 <tr>
                                     <td>Avanzado (HOG)</td>
-                                    <td>144</td>
+                                    <td>Histogramas de gradientes (Textura y bordes)</td>
+                                    <td>7,056</td>
                                     <td>Float32</td>
+                                    <td>0.2611</td>
+                                    <td><span style="color: #facc15;">Medio</span></td>
                                 </tr>
                                 <tr>
                                     <td>Investigado (BRISK)</td>
-                                    <td>1920</td>
+                                    <td>Puntos clave locales (Patrones binarios)</td>
+                                    <td>7,680</td>
                                     <td>Uint8 (Binario)</td>
+                                    <td>1.9498</td>
+                                    <td><span style="color: #f87171;">Alto</span></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -480,6 +543,35 @@
                 <video id="videoElement3" autoplay playsinline style="display:none;"></video>
             </section>
 
+            <h4 style="margin-top: 2rem; margin-bottom: 1rem; color: #94a3b8; font-size: 1.2rem; text-align: center;">Análisis en Fotografía Completa (Con Ruido)</h4>
+            <div class="pipeline-grid" style="margin-bottom: 2rem;">
+                <div class="step-card">
+                    <p class="subtitle">1. Original</p>
+                    <div class="img-wrapper">
+                        <canvas id="canvasFullBase3" width="256" height="256"></canvas>
+                    </div>
+                </div>
+                <div class="step-card">
+                    <p class="subtitle">2. Zernike</p>
+                    <div class="img-wrapper">
+                        <canvas id="canvasFullZernike" width="256" height="256"></canvas>
+                    </div>
+                </div>
+                <div class="step-card">
+                    <p class="subtitle">3. HOG</p>
+                    <div class="img-wrapper">
+                        <canvas id="canvasFullHog" width="256" height="256"></canvas>
+                    </div>
+                </div>
+                <div class="step-card">
+                    <p class="subtitle">4. BRISK</p>
+                    <div class="img-wrapper">
+                        <canvas id="canvasFullBrisk" width="256" height="256"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <h4 style="margin-bottom: 1rem; color: #4ade80; font-size: 1.2rem; text-align: center;">Análisis en Mosaico Biométrico (Puro)</h4>
             <div class="pipeline-grid">
                 <div class="step-card">
                     <p class="subtitle">1. Base (Binarizada)</p>
@@ -510,7 +602,6 @@
         </section>
 
     </main>
-
-    <script src="script.js"></script>
+    <script src="script.js?v=2"></script>
 </body>
 </html>

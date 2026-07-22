@@ -36,10 +36,9 @@ for archivo in archivos_csv:
     y_codificado = le.fit_transform(y_texto)
     
     # 4. Split (Entrenamiento/Prueba)
-    # test_size=0.30 significa 70% entrenamiento y 30% prueba.
-    # stratify=y_codificado garantiza que la proporción de clases se mantenga.
+    # test_size=0.20 para coincidir con los modelos finales
     X_train, X_test, y_train, y_test = train_test_split(
-        X, y_codificado, test_size=0.30, random_state=42, stratify=y_codificado
+        X, y_codificado, test_size=0.20, random_state=42, stratify=y_codificado
     )
 
     # 5. Selección de características (ANOVA)
@@ -56,10 +55,11 @@ for archivo in archivos_csv:
         "clases_nombres": le.classes_ # Guardamos los nombres para la matriz de confusión luego
     }
     
-    print(f"Dataset procesado: {archivo}")
-    print(f"   - Total de instancias originales: {len(df)}")
-    print(f"   - Tamaño de Entrenamiento (X_train filtrado): {X_train_sel.shape}")
-    print(f"   - Tamaño de Prueba (X_test filtrado): {X_test_sel.shape}")
+    print(f"Dataset procesado (Biométrico Fusionado): {archivo}")
+    print(f"   - Total de instancias originales (Personas): {len(df)}")
+    print(f"   - Total de características concatenadas: {X.shape[1]}")
+    print(f"   - Tamaño de Entrenamiento (X_train al 50%): {X_train_sel.shape}")
+    print(f"   - Tamaño de Prueba (X_test al 50%): {X_test_sel.shape}")
     print(f"   - Clases codificadas: {list(zip(le.classes_, range(len(le.classes_))))}")
     print("-" * 50)
 

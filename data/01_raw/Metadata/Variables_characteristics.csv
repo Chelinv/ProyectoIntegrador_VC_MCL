@@ -1,0 +1,25 @@
+Attribute ;Type;Options
+ID;Numerical;
+Temporary_mark;Numerical;
+Consent;Categorical;Yes, No
+Paternal_surname;Free text;
+Maternal_surname;Free text;
+Age;Numerical;
+Province_birth;Categorical;
+City_birth;Free text;
+"Gender	";Categorical,Free text;Male, Female, Other
+Hair_type;Categorical;Wavy, Curly, Straight, Afro
+Hair_color;Categorical;Black, Brown, Blond, Ginger hair
+Shape_lips;Categorical;Thin, Medium, Thick,Thick and bulky
+Skin_color;Categorical,Numerical;1,2,3,4
+Eye_color;Categorical;Dark brown, Green, Amber, Blue, Hazelnut
+Shape_face;Categorical;Diamond, Triangular,Circular,Oval, Square, Rectangular
+Shape_ears;Categorical;Ovoids, Triangular,Rectangular,Circulars
+Shape_chin;Categorical;Split chin, Acute,Square,Flat,Arcuate,Fugitive, Outgoing
+Shape_nose;Categorical;Alomado, Concave, Convex, In S, Right, Sinous
+Type_eyes;Categorical;Sunk, Protunding,Elongated, Internal Obliques,External Obliques
+Shape_eyebrows;Categorical;Arched, Rectilines, Sinous,Internal Obliques, External Obliques,Asymmetrical
+Ancestry;Categorical;Afro-American, European, American Indigenous
+Afro-American_percentage;Numerical;0-100%
+European_percentage;Numerical;0-100%
+Indigenous_percentage;Numerical;0-100%

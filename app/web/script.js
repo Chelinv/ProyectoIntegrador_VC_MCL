@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 cameraBtn3.classList.remove('secondary-btn');
                 cameraBtn3.classList.add('primary-btn');
                 
-                ['canvasZernike', 'canvasHog', 'canvasBrisk'].forEach(id => {
+                ['canvasBase3', 'canvasZernike', 'canvasHog', 'canvasBrisk', 'canvasFullBase3', 'canvasFullZernike', 'canvasFullHog', 'canvasFullBrisk'].forEach(id => {
                     document.getElementById(id).classList.remove('loaded');
                 });
                 
@@ -208,29 +208,29 @@ function stopCamera3() {
 function processVideoLive3(video) {
     if (!isStreaming3) return;
     
-    const canvasBase3 = document.getElementById('canvasBase3');
-    const ctx = canvasBase3.getContext('2d');
-    canvasBase3.width = video.videoWidth;
-    canvasBase3.height = video.videoHeight;
-    ctx.drawImage(video, 0, 0, canvasBase3.width, canvasBase3.height);
+    const canvasFullBase3 = document.getElementById('canvasFullBase3');
+    const ctx = canvasFullBase3.getContext('2d');
+    canvasFullBase3.width = video.videoWidth;
+    canvasFullBase3.height = video.videoHeight;
+    ctx.drawImage(video, 0, 0, canvasFullBase3.width, canvasFullBase3.height);
     
-    canvasBase3.classList.add('loaded');
+    canvasFullBase3.classList.add('loaded');
     
     requestAnimationFrame(() => processVideoLive3(video));
 }
 
 function captureFrame3() {
-    runPipelineDescriptors(document.getElementById('canvasBase3'));
+    runPipelineDescriptors(document.getElementById('canvasFullBase3'));
 }
 
 function processImage3(imgElement) {
-    const canvasBase3 = document.getElementById('canvasBase3');
-    const ctx = canvasBase3.getContext('2d', { willReadFrequently: true });
-    canvasBase3.width = imgElement.width;
-    canvasBase3.height = imgElement.height;
+    const canvasFullBase3 = document.getElementById('canvasFullBase3');
+    const ctx = canvasFullBase3.getContext('2d', { willReadFrequently: true });
+    canvasFullBase3.width = imgElement.width;
+    canvasFullBase3.height = imgElement.height;
     ctx.drawImage(imgElement, 0, 0, imgElement.width, imgElement.height);
     
-    runPipelineDescriptors(canvasBase3);
+    runPipelineDescriptors(canvasFullBase3);
 }
 
 async function runPipelineDescriptors(sourceCanvas) {
@@ -257,13 +257,18 @@ async function runPipelineDescriptors(sourceCanvas) {
             const ctx = canvas.getContext('2d');
             const img = new Image();
             img.onload = () => {
-                canvas.width = sourceCanvas.width;
-                canvas.height = sourceCanvas.height;
+                canvas.width = img.width;
+                canvas.height = img.height;
                 ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
                 canvas.classList.add('loaded');
             };
             img.src = base64;
         };
+
+        drawImageToCanvas(data.full_base, 'canvasFullBase3');
+        if (data.full_zernike) drawImageToCanvas(data.full_zernike, 'canvasFullZernike');
+        if (data.full_hog) drawImageToCanvas(data.full_hog, 'canvasFullHog');
+        if (data.full_brisk) drawImageToCanvas(data.full_brisk, 'canvasFullBrisk');
 
         drawImageToCanvas(data.base, 'canvasBase3');
         if (data.zernike) {

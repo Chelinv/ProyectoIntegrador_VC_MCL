@@ -121,8 +121,8 @@ for nombre, ruta in datasets.items():
     os.makedirs(model_dir, exist_ok=True)
     
     joblib.dump(kmeans, os.path.join(model_dir, f"kmeans_model_{extractor_key}.pkl"))
-    joblib.dump(selector, os.path.join(model_dir, f"kmeans_selector_{extractor_key}.pkl"))
     joblib.dump(scaler, os.path.join(model_dir, f"kmeans_scaler_{extractor_key}.pkl"))
+    joblib.dump(selector, os.path.join(model_dir, f"kmeans_selector_{extractor_key}.pkl"))
     # ----------------------------------------
     
     # Calcular las metricas de validacion

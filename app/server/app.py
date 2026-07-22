@@ -4,6 +4,7 @@ import numpy as np
 import cv2
 import pandas as pd
 import mahotas
+import mediapipe as mp
 from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
 from sklearn.svm import SVC
@@ -23,27 +24,47 @@ CORS(app)
 project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 clases_oficiales = ['Afro-ecuadorians', 'European descendants', 'Indigenous', 'Mestizos']
 
-# Modelos en memoria
-models = {
-    'svm': {},
-    'rf': {},
-    'kmeans': {}
-}
-scalers = {
-    'svm': {},
-    'kmeans': {}
-}
-selectors = {
-    'svm': {},
-    'rf': {},
-    'kmeans': {}
-}
+models = {'svm': {}, 'rf': {}, 'kmeans': {}}
+scalers = {'svm': {}, 'kmeans': {}}
+selectors = {'svm': {}, 'rf': {}, 'kmeans': {}}
 cnn_model = None
 
-# Extractores
 hog_descriptor = None
 brisk_descriptor = None
 MAX_KEYPOINTS = 30
+
+import urllib.request
+from mediapipe.tasks import python
+from mediapipe.tasks.python import vision
+
+# Descargar modelo FaceLandmarker si no existe
+task_path = os.path.join(project_root, 'app', 'server', 'face_landmarker.task')
+if not os.path.exists(task_path):
+    print("Descargando modelo FaceLandmarker de MediaPipe...")
+    urllib.request.urlretrieve(
+        "https://storage.googleapis.com/mediapipe-models/face_landmarker/face_landmarker/float16/1/face_landmarker.task",
+        task_path
+    )
+
+base_options = python.BaseOptions(model_asset_path=task_path)
+options = vision.FaceLandmarkerOptions(base_options=base_options,
+                                       output_face_blendshapes=False,
+                                       output_facial_transformation_matrixes=False,
+                                       num_faces=1)
+detector = vision.FaceLandmarker.create_from_options(options)
+
+# Grupos de landmarks para cada facción
+EYES_IDX = [33, 133, 159, 145, 153, 154, 155, 133, 362, 263, 386, 374, 380, 381, 382, 384, 385, 387, 388, 390, 398]
+EYEBROWS_IDX = [70, 63, 105, 66, 107, 55, 65, 52, 53, 46, 336, 296, 334, 293, 300, 276, 283, 282, 295, 285]
+NOSE_IDX = [1, 2, 98, 327, 279, 49, 114, 128, 29, 290, 277, 437]
+MOUTH_IDX = [0, 13, 14, 17, 61, 291, 37, 267, 314, 17, 84, 181]
+
+FACCIONES_MP = {
+    "eye": EYES_IDX,
+    "eyebrow": EYEBROWS_IDX,
+    "nose": NOSE_IDX,
+    "mouth": MOUTH_IDX
+}
 
 # ==========================================
 # 2. Inicialización de Modelos
@@ -55,34 +76,22 @@ def init_models():
     import joblib
     model_dir = os.path.join(project_root, "outputs", "models")
     
-    extractors = ['zernike', 'hog', 'brisk']
-    
-    for ext in extractors:
+    for ext in ['zernike', 'hog', 'brisk']:
         print(f"Cargando modelos para extractor: {ext.upper()}...")
-        # SVM
         try:
             models['svm'][ext] = joblib.load(os.path.join(model_dir, f"svm_model_{ext}.pkl"))
-            selectors['svm'][ext] = joblib.load(os.path.join(model_dir, f"svm_selector_{ext}.pkl"))
             scalers['svm'][ext] = joblib.load(os.path.join(model_dir, f"svm_scaler_{ext}.pkl"))
-        except Exception as e:
-            print(f"  -> Advertencia: No se pudo cargar SVM para {ext}")
+            selectors['svm'][ext] = joblib.load(os.path.join(model_dir, f"svm_selector_{ext}.pkl"))
             
-        # RF
-        try:
             models['rf'][ext] = joblib.load(os.path.join(model_dir, f"rf_model_{ext}.pkl"))
             selectors['rf'][ext] = joblib.load(os.path.join(model_dir, f"rf_selector_{ext}.pkl"))
-        except Exception as e:
-            print(f"  -> Advertencia: No se pudo cargar RF para {ext}")
             
-        # KMeans
-        try:
             models['kmeans'][ext] = joblib.load(os.path.join(model_dir, f"kmeans_model_{ext}.pkl"))
-            selectors['kmeans'][ext] = joblib.load(os.path.join(model_dir, f"kmeans_selector_{ext}.pkl"))
             scalers['kmeans'][ext] = joblib.load(os.path.join(model_dir, f"kmeans_scaler_{ext}.pkl"))
+            selectors['kmeans'][ext] = joblib.load(os.path.join(model_dir, f"kmeans_selector_{ext}.pkl"))
         except Exception as e:
-            print(f"  -> Advertencia: No se pudo cargar KMeans para {ext}")
+            print(f"  -> Advertencia: No se pudieron cargar los modelos para {ext}: {e}")
 
-    # Cargar CNN
     ruta_cnn = os.path.join(project_root, "outputs", "models", "modelo_cnn.keras")
     if os.path.exists(ruta_cnn):
         cnn_model = tf.keras.models.load_model(ruta_cnn)
@@ -97,70 +106,63 @@ def init_models():
     try:
         hog_descriptor = cv2.HOGDescriptor(winSize, blockSize, blockStride, cellSize, nbins)
     except AttributeError:
-        try:
-            from skimage.feature import hog
-        except ImportError:
-            hog = None
-
-        class HOGWrapper:
-            def compute(self, img):
-                if hog is not None:
-                    res = hog(img, orientations=9, pixels_per_cell=(8, 8), cells_per_block=(2, 2), feature_vector=True)
-                    return res.astype(np.float32)
-                return np.zeros(1764, dtype=np.float32)
-
-        hog_descriptor = HOGWrapper()
+        pass
 
     try:
-        brisk_descriptor = cv2.BRISK_create()
+        brisk_descriptor = cv2.ORB_create()
     except AttributeError:
-        class BRISKWrapper:
-            def detectAndCompute(self, img, mask):
-                return [], None
-        brisk_descriptor = BRISKWrapper()
+        pass
 
-# Detector de Rostros basado en Segmentación de Color (HSV) y Contornos
-def extract_face_roi(img_color):
-    hsv = cv2.cvtColor(img_color, cv2.COLOR_BGR2HSV)
-    lower_skin = np.array([0, 20, 70], dtype=np.uint8)
-    upper_skin = np.array([20, 255, 255], dtype=np.uint8)
-    mask = cv2.inRange(hsv, lower_skin, upper_skin)
+# ==========================================
+# 3. Pipeline de Preprocesamiento (MediaPipe)
+# ==========================================
+def extract_biometric_mosaic(img_color):
+    mp_image = mp.Image(image_format=mp.ImageFormat.SRGB, data=cv2.cvtColor(img_color, cv2.COLOR_BGR2RGB))
+    detection_result = detector.detect(mp_image)
     
-    # Filtros Morfológicos
-    kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (11, 11))
-    mask = cv2.erode(mask, kernel, iterations=1)
-    mask = cv2.dilate(mask, kernel, iterations=2)
-    mask = cv2.GaussianBlur(mask, (3, 3), 0)
-    
-    contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-    if not contours:
-        raise ValueError("No face detected")
+    if not detection_result.face_landmarks:
+        raise ValueError("No face detected by MediaPipe")
         
-    c = max(contours, key=cv2.contourArea)
-    if cv2.contourArea(c) < 1500:
-        raise ValueError("No face detected")
-        
-    x, y, w, h = cv2.boundingRect(c)
+    landmarks = detection_result.face_landmarks[0]
+    h, w, _ = img_color.shape
     gray_full = cv2.cvtColor(img_color, cv2.COLOR_BGR2GRAY)
-    return gray_full[y:y+h, x:x+w], gray_full
+    
+    crops = {}
+    
+    for faccion_name, indices in FACCIONES_MP.items():
+        xs = [int(landmarks[i].x * w) for i in indices]
+        ys = [int(landmarks[i].y * h) for i in indices]
+        
+        xmin, xmax = min(xs), max(xs)
+        ymin, ymax = min(ys), max(ys)
+        
+        pad_x = int((xmax - xmin) * 0.05)
+        pad_y = int((ymax - ymin) * 0.05)
+        
+        x1 = max(0, xmin - pad_x)
+        y1 = max(0, ymin - pad_y)
+        x2 = min(w, xmax + pad_x)
+        y2 = min(h, ymax + pad_y)
+        
+        recorte = gray_full[y1:y2, x1:x2]
+        if recorte.size == 0:
+            raise ValueError(f"Invalid crop size for {faccion_name}")
+            
+        clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8,8))
+        img_clahe = clahe.apply(recorte)
+        img_blur = cv2.bilateralFilter(img_clahe, 9, 75, 75)
+        img_thresh = cv2.adaptiveThreshold(img_blur, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 11, 2)
+        
+        crops[faccion_name] = cv2.resize(img_thresh, (64, 64))
+        
+    # Mosaico 2x2: Arriba(eye, eyebrow), Abajo(nose, mouth)
+    top_row = np.hstack((crops["eye"], crops["eyebrow"]))
+    bottom_row = np.hstack((crops["nose"], crops["mouth"]))
+    mosaic = np.vstack((top_row, bottom_row))
+    
+    return mosaic, crops, gray_full
 
 init_models()
-
-# ==========================================
-# 3. Pipeline de Preprocesamiento (Vision.py)
-# ==========================================
-def preprocess_image(image_bytes):
-    np_arr = np.frombuffer(image_bytes, np.uint8)
-    img = cv2.imdecode(np_arr, cv2.IMREAD_COLOR)
-    
-    face_roi, _ = extract_face_roi(img)
-    
-    clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8, 8))
-    clahe_img = clahe.apply(face_roi)
-    blur = cv2.bilateralFilter(clahe_img, 9, 75, 75)
-    thresh = cv2.adaptiveThreshold(blur, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 11, 2)
-    img_resized = cv2.resize(thresh, (64, 64))
-    return img_resized
 
 # ==========================================
 # 4. Endpoints de la API Flask
@@ -172,18 +174,6 @@ def index():
 @app.route('/<path:path>')
 def serve_static(path):
     return send_from_directory(app.static_folder, path)
-
-@app.route('/8266730/<path:filename>')
-def serve_data(filename):
-    return send_from_directory(os.path.join(project_root, 'data', '01_raw'), filename)
-
-@app.route('/Dataset_Preprocesado/<path:filename>')
-def serve_preprocesado(filename):
-    return send_from_directory(os.path.join(project_root, 'data', '02_processed'), filename)
-
-@app.route('/Resultados_Clustering/<path:filename>')
-def serve_clustering(filename):
-    return send_from_directory(os.path.join(project_root, 'outputs', 'plots'), filename)
 
 @app.route('/preprocess_demo', methods=['POST'])
 def preprocess_demo():
@@ -197,28 +187,24 @@ def preprocess_demo():
         np_arr = np.frombuffer(image_bytes, np.uint8)
         img_original = cv2.imdecode(np_arr, cv2.IMREAD_COLOR)
         
-        # A. Detección de Rostro por HSV
-        face_roi, gray = extract_face_roi(img_original)
+        # Usar parámetros matemáticos estrictos (Fase 2)
+        gray = cv2.cvtColor(img_original, cv2.COLOR_BGR2GRAY)
         
-        # B. CLAHE
         clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8,8))
-        img_clahe = clahe.apply(face_roi)
+        img_clahe = clahe.apply(gray)
         
-        # C. Filtro Bilateral
-        img_blur = cv2.bilateralFilter(img_clahe, 9, 75, 75)
+        img_bilateral = cv2.bilateralFilter(img_clahe, 9, 75, 75)
         
-        # D. Umbralización Adaptativa
-        img_thresh = cv2.adaptiveThreshold(img_blur, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 11, 2)
+        img_thresh = cv2.adaptiveThreshold(img_bilateral, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 11, 2)
         
-        # Convert to Base64
         def mat_to_base64(mat):
             _, buffer = cv2.imencode('.jpg', mat)
             return 'data:image/jpeg;base64,' + base64.b64encode(buffer).decode('utf-8')
             
         return jsonify({
             'gray': mat_to_base64(gray),
-            'clahe': mat_to_base64(img_clahe),
-            'bilateral': mat_to_base64(img_blur),
+            'clahe': mat_to_base64(img_clahe), 
+            'bilateral': mat_to_base64(img_bilateral),
             'threshold': mat_to_base64(img_thresh)
         })
     except Exception as e:
@@ -238,46 +224,64 @@ def extract_demo():
         np_arr = np.frombuffer(image_bytes, np.uint8)
         img_original = cv2.imdecode(np_arr, cv2.IMREAD_COLOR)
         
-        # 1. Preprocesamiento Completo con Detección de Rostro HSV
-        face_roi, gray = extract_face_roi(img_original)
-
-        clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8,8))
-        img_clahe = clahe.apply(face_roi)
-        img_blur = cv2.bilateralFilter(img_clahe, 9, 75, 75)
-        img_thresh = cv2.adaptiveThreshold(img_blur, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 11, 2)
+        # 1. Preprocesamiento MediaPipe
+        mosaic, crops, _ = extract_biometric_mosaic(img_original)
         
-        # Redimensionamos a 256x256 para visualización
-        img_resized = cv2.resize(img_thresh, (256, 256))
+        # Redimensionamos a 256x256 para visualización en la UI
+        img_resized = cv2.resize(mosaic, (256, 256))
         img_color_base = cv2.cvtColor(img_resized, cv2.COLOR_GRAY2BGR)
 
-        # 2. Base Binarizada
         base_vis = img_color_base.copy()
 
-        # 2.5 Zernike Visualization (Unit Disk)
+        # Zernike Visualization (4 Discos)
         img_zernike = img_color_base.copy()
-        center = (128, 128)
-        radius = 120
-        cv2.circle(img_zernike, center, radius, (0, 255, 255), 2) # Yellow circle
-        cv2.circle(img_zernike, center, 4, (0, 0, 255), -1) # Red center dot
-        cv2.putText(img_zernike, "Zernike Disk", (80, 20), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 255, 255), 2)
+        centros = [(64, 64), (192, 64), (64, 192), (192, 192)]
+        for cx, cy in centros:
+            cv2.circle(img_zernike, (cx, cy), 60, (0, 255, 255), 2)
+            cv2.circle(img_zernike, (cx, cy), 4, (0, 0, 255), -1)
 
-        # 3. HOG
+        # HOG en Mosaico
         _, hog_image = skimage_hog(img_resized, orientations=9, pixels_per_cell=(16, 16),
                             cells_per_block=(2, 2), visualize=True, channel_axis=None)
         hog_image_rescaled = exposure.rescale_intensity(hog_image, in_range=(0, 10))
         hog_vis = (hog_image_rescaled * 255).astype(np.uint8)
         img_hog = cv2.applyColorMap(hog_vis, cv2.COLORMAP_JET)
 
-        # 5. BRISK
-        brisk = cv2.BRISK_create()
-        kp, _ = brisk.detectAndCompute(img_resized, None)
+        # BRISK en Mosaico (Visualización con ORB para evitar crash)
+        orb = cv2.ORB_create(nfeatures=500)
+        kp, _ = orb.detectAndCompute(img_resized, None)
         img_brisk = cv2.drawKeypoints(img_resized, kp, None, color=(0, 255, 0), flags=cv2.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)
+
+        # --- FULL IMAGE ---
+        img_full_resized = cv2.resize(img_original, (256, 256))
+        
+        # Zernike on Full
+        full_zernike = img_full_resized.copy()
+        cv2.circle(full_zernike, (128, 128), 120, (0, 255, 255), 2)
+        cv2.circle(full_zernike, (128, 128), 4, (0, 0, 255), -1)
+
+        # HOG on Full
+        gray_full_resized = cv2.cvtColor(img_full_resized, cv2.COLOR_BGR2GRAY)
+        _, hog_full_img = skimage_hog(gray_full_resized, orientations=9, pixels_per_cell=(16, 16),
+                            cells_per_block=(2, 2), visualize=True, channel_axis=None)
+        hog_full_rescaled = exposure.rescale_intensity(hog_full_img, in_range=(0, 10))
+        hog_full_vis = (hog_full_rescaled * 255).astype(np.uint8)
+        full_hog = cv2.applyColorMap(hog_full_vis, cv2.COLORMAP_JET)
+
+        # BRISK on Full
+        kp_full, _ = orb.detectAndCompute(img_full_resized, None)
+        full_brisk = cv2.drawKeypoints(img_full_resized, kp_full, None, color=(0, 255, 0), flags=cv2.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)
+
 
         def mat_to_base64(mat):
             _, buffer = cv2.imencode('.jpg', mat)
             return 'data:image/jpeg;base64,' + base64.b64encode(buffer).decode('utf-8')
 
         return jsonify({
+            'full_base': mat_to_base64(img_full_resized),
+            'full_zernike': mat_to_base64(full_zernike),
+            'full_hog': mat_to_base64(full_hog),
+            'full_brisk': mat_to_base64(full_brisk),
             'base': mat_to_base64(base_vis),
             'zernike': mat_to_base64(img_zernike),
             'hog': mat_to_base64(img_hog),
@@ -285,7 +289,6 @@ def extract_demo():
         })
     except Exception as e:
         return jsonify({'error': str(e)}), 500
-
 
 
 @app.route('/predict', methods=['POST'])
@@ -300,39 +303,59 @@ def predict():
         
         base64_img = data['image'].split(',')[1]
         image_bytes = base64.b64decode(base64_img)
-        img_preprocesada = preprocess_image(image_bytes)
+        np_arr = np.frombuffer(image_bytes, np.uint8)
+        img_original = cv2.imdecode(np_arr, cv2.IMREAD_COLOR)
+        
+        mosaic, crops, _ = extract_biometric_mosaic(img_original)
         
         features = None
         
-        # 1. Extracción de características
+        # 1. Extracción de características iterando sobre las 4 facciones
         if req_model != 'cnn':
+            z_acumulado = []
+            h_acumulado = []
+            b_acumulado = []
+            
+            # EL ORDEN DEBE SER IDENTICO A EXTRACCION_CARACTERISTICAS.PY
+            FACCIONES_ORDEN = ["eye", "eyebrow", "nose", "mouth"]
+            
+            for faccion in FACCIONES_ORDEN:
+                crop_64 = crops[faccion]
+                
+                if req_extractor == 'zernike':
+                    z_feats = mahotas.features.zernike_moments(crop_64, radius=32)
+                    z_acumulado.extend(z_feats)
+                    
+                elif req_extractor == 'hog':
+                    h_feats = hog_descriptor.compute(crop_64).flatten()
+                    h_acumulado.extend(h_feats)
+                    
+                elif req_extractor == 'brisk':
+                    keypoints, descriptores = brisk_descriptor.detectAndCompute(crop_64, None)
+                    v_brisk = np.zeros(MAX_KEYPOINTS * 64, dtype=np.uint8)
+                    if descriptores is not None:
+                        desc_aplanados = descriptores.flatten()
+                        longitud_real = len(desc_aplanados)
+                        if longitud_real > len(v_brisk):
+                            v_brisk = desc_aplanados[:len(v_brisk)]
+                        else:
+                            v_brisk[:longitud_real] = desc_aplanados
+                    b_acumulado.extend(v_brisk)
+
             if req_extractor == 'zernike':
-                # El preprocesamiento base la deja en 64x64
-                zernike_features = mahotas.features.zernike_moments(img_preprocesada, radius=32)
-                features = np.array(zernike_features).reshape(1, -1)
-                
+                features = np.array(z_acumulado).reshape(1, -1)
             elif req_extractor == 'hog':
-                caracteristicas_hog = hog_descriptor.compute(img_preprocesada).flatten()
-                features = caracteristicas_hog.reshape(1, -1)
-                
+                features = np.array(h_acumulado).reshape(1, -1)
             elif req_extractor == 'brisk':
-                keypoints, descriptores = brisk_descriptor.detectAndCompute(img_preprocesada, None)
-                vector_brisk = np.zeros(MAX_KEYPOINTS * 64, dtype=np.uint8)
-                if descriptores is not None:
-                    desc_aplanados = descriptores.flatten()
-                    longitud_real = len(desc_aplanados)
-                    if longitud_real > len(vector_brisk):
-                        vector_brisk = desc_aplanados[:len(vector_brisk)]
-                    else:
-                        vector_brisk[:longitud_real] = desc_aplanados
-                features = vector_brisk.reshape(1, -1)
+                features = np.array(b_acumulado).reshape(1, -1)
 
             features = features.astype(np.float64)
 
         # 2. Predicción
         if req_model == 'cnn':
             if cnn_model:
-                X_cnn = img_preprocesada.reshape(1, 64, 64, 1)
+                # CNN ahora recibe el mosaico 128x128 normalizado a [0, 1]
+                X_cnn = (mosaic / 255.0).reshape(1, 128, 128, 1)
                 pred_cnn_raw = cnn_model.predict(X_cnn, verbose=0)[0]
                 class_idx = np.argmax(pred_cnn_raw)
                 prob_cnn = float(np.max(pred_cnn_raw))
@@ -344,9 +367,9 @@ def predict():
         elif req_model == 'svm':
             if 'svm' in models and req_extractor in models['svm']:
                 m = models['svm'][req_extractor]
-                sel = selectors['svm'][req_extractor]
                 s = scalers['svm'][req_extractor]
-                feat_sel = sel.transform(features)
+                sel = selectors['svm'].get(req_extractor)
+                feat_sel = sel.transform(features) if sel else features
                 feat_scaled = s.transform(feat_sel)
                 
                 probs_raw = m.predict_proba(feat_scaled)[0]
@@ -362,8 +385,8 @@ def predict():
         elif req_model == 'rf':
             if 'rf' in models and req_extractor in models['rf']:
                 m = models['rf'][req_extractor]
-                sel = selectors['rf'][req_extractor]
-                feat_sel = sel.transform(features)
+                sel = selectors['rf'].get(req_extractor)
+                feat_sel = sel.transform(features) if sel else features
                 
                 probs_raw = m.predict_proba(feat_sel)[0]
                 max_idx = np.argmax(probs_raw)
@@ -378,9 +401,9 @@ def predict():
         elif req_model == 'kmeans':
             if 'kmeans' in models and req_extractor in models['kmeans']:
                 m = models['kmeans'][req_extractor]
-                sel = selectors['kmeans'][req_extractor]
                 s = scalers['kmeans'][req_extractor]
-                feat_sel = sel.transform(features)
+                sel = selectors['kmeans'].get(req_extractor)
+                feat_sel = sel.transform(features) if sel else features
                 feat_scaled = s.transform(feat_sel)
                 cluster_idx = m.predict(feat_scaled)[0]
                 return jsonify({"clase": f"Grupo {cluster_idx}", "prob": 1.0})

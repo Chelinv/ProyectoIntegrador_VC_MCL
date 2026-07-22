@@ -63,28 +63,28 @@
                                         <th>F1</th>
                                     </tr>
                                     <tr class="winner-row">
+                                        <td>HOG (Mosaico)</td>
+                                        <td>75.58%</td>
+                                        <td>65.19%</td>
+                                        <td>75.58%</td>
+                                        <td>67.63%</td>
+                                    </tr>
+                                    <tr>
                                         <td>Zernike</td>
-                                        <td>65.12%</td>
-                                        <td>42.40%</td>
-                                        <td>65.12%</td>
-                                        <td>51.36%</td>
+                                        <td>55.81%</td>
+                                        <td>50.67%</td>
+                                        <td>55.81%</td>
+                                        <td>52.97%</td>
                                     </tr>
                                     <tr>
                                         <td>BRISK</td>
-                                        <td>61.63%</td>
-                                        <td>48.14%</td>
-                                        <td>61.63%</td>
-                                        <td>51.73%</td>
-                                    </tr>
-                                    <tr>
-                                        <td>HOG</td>
-                                        <td>52.33%</td>
-                                        <td>50.79%</td>
-                                        <td>52.33%</td>
-                                        <td>50.74%</td>
+                                        <td>60.47%</td>
+                                        <td>52.94%</td>
+                                        <td>60.47%</td>
+                                        <td>55.84%</td>
                                     </tr>
                                 </table>
-                                <div class="winner-badge">Ganador: Zernike</div>
+                                <div class="winner-badge">Ganador: HOG (75.58%)</div>
                             </div>
 
                             <!-- Modelo 2: Random Forest -->
@@ -100,36 +100,35 @@
                                         <th>F1</th>
                                     </tr>
                                     <tr class="winner-row">
-                                        <td>HOG</td>
-                                        <td>66.28%</td>
-                                        <td>59.75%</td>
-                                        <td>66.28%</td>
-                                        <td>58.67%</td>
-                                    </tr>
-                                    <tr>
                                         <td>BRISK</td>
                                         <td>63.95%</td>
-                                        <td>42.64%</td>
+                                        <td>48.12%</td>
                                         <td>63.95%</td>
-                                        <td>51.16%</td>
+                                        <td>54.42%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>HOG (Mosaico)</td>
+                                        <td>62.79%</td>
+                                        <td>47.51%</td>
+                                        <td>62.79%</td>
+                                        <td>53.26%</td>
                                     </tr>
                                     <tr>
                                         <td>Zernike</td>
-                                        <td>55.81%</td>
-                                        <td>44.02%</td>
-                                        <td>55.81%</td>
-                                        <td>49.22%</td>
+                                        <td>61.63%</td>
+                                        <td>50.39%</td>
+                                        <td>61.63%</td>
+                                        <td>54.36%</td>
                                     </tr>
                                 </table>
-                                <div class="winner-badge">Ganador: HOG</div>
+                                <div class="winner-badge">Ganador: BRISK (63.95%)</div>
                             </div>
 
                             <!-- Modelo 3: CNN -->
                             <div class="metric-card model-cnn">
                                 <h4>CNN</h4>
                                 <div class="model-badge">Deep Learning</div>
-                                <p style="font-size: 0.75rem; color: #ddd; margin: 0 0 10px 0;">Extrae características
-                                    automáticamente de los píxeles (Raw Pixels).</p>
+                                <p style="font-size: 0.75rem; color: #ddd; margin: 0 0 10px 0;">Extrae características automáticamente a partir del Mosaico Biométrico 128x128.</p>
                                 <table class="comparison-table" style="font-size: 0.75rem;">
                                     <tr>
                                         <th>Entrada</th>
@@ -139,14 +138,14 @@
                                         <th>F1</th>
                                     </tr>
                                     <tr class="winner-row">
-                                        <td>Raw Pixels</td>
-                                        <td>65.12%</td>
-                                        <td>42.40%</td>
-                                        <td>65.12%</td>
-                                        <td>51.36%</td>
+                                        <td>Mosaico 2x2</td>
+                                        <td>74.42%</td>
+                                        <td>58.38%</td>
+                                        <td>74.42%</td>
+                                        <td>64.76%</td>
                                     </tr>
                                 </table>
-                                <div class="winner-badge">Mejor Deep Learning: CNN</div>
+                                <div class="winner-badge">Mejor Deep Learning: CNN (74.42%)</div>
                             </div>
 
                             <!-- Modelo 4: K-Means -->
@@ -163,91 +162,154 @@
                                         <th>NMI</th>
                                     </tr>
                                     <tr class="winner-row">
-                                        <td>Zernike</td>
-                                        <td>0.1153</td>
-                                        <td>0.1145</td>
-                                        <td>0.0517</td>
-                                        <td>0.0195</td>
-                                        <td>0.0285</td>
+                                        <td>BRISK</td>
+                                        <td>0.5762</td>
+                                        <td>0.3450</td>
+                                        <td>0.0372</td>
+                                        <td>0.0085</td>
+                                        <td>0.0196</td>
                                     </tr>
                                     <tr>
                                         <td>HOG</td>
-                                        <td>0.1597</td>
-                                        <td>0.2113</td>
-                                        <td>0.0295</td>
-                                        <td>0.0349</td>
-                                        <td>0.0485</td>
+                                        <td>0.0227</td>
+                                        <td>0.5241</td>
+                                        <td>0.0315</td>
+                                        <td>0.0194</td>
+                                        <td>0.0285</td>
                                     </tr>
                                     <tr>
-                                        <td>BRISK</td>
-                                        <td>0.0021</td>
-                                        <td>0.7940</td>
-                                        <td>-0.0057</td>
-                                        <td>0.0146</td>
-                                        <td>0.0234</td>
+                                        <td>Zernike</td>
+                                        <td>0.0236</td>
+                                        <td>0.3049</td>
+                                        <td>0.0057</td>
+                                        <td>0.0529</td>
+                                        <td>0.0615</td>
                                     </tr>
                                 </table>
-                                <div class="winner-badge">Mejor ARI: Zernike</div>
+                                <div class="winner-badge">Mejor Silueta: BRISK (0.5762)</div>
                             </div>
                         </div>
 
-                        <h3>1. Conclusión Global (Los 4 Modelos)</h3>
-                        <p>Al evaluar los 4 modelos en su totalidad, tras eliminar el balanceo sintético de datos, el ganador absoluto del proyecto ahora es el ensamble clásico <strong>Random Forest (utilizando HOG) con un 66.28% de precisión</strong>. La CNN, al entrenarse solo con los datos desbalanceados originales, redujo su precisión a un 65.12%, demostrando que Random Forest fue más robusto ante el desbalanceo natural de las clases gracias a la excelente extracción de texturas de HOG.</p>
+                                                <h3>1. Conclusión Global: Comparativa de Rendimiento y Costo Computacional</h3>
+                        <p>Tras evaluar rigurosamente los modelos sobre nuestro dataset (430 rostros en total), se evidencia que la <strong>ingeniería de características manual (SVM + HOG)</strong> superó ligeramente a las arquitecturas modernas de <strong>Deep Learning (CNN)</strong> en este contexto específico.</p>
+                        
+                        <table class="data-table" style="margin-bottom: 2rem;">
+                            <thead>
+                                <tr>
+                                    <th>Modelo / Algoritmo</th>
+                                    <th>Descriptor Utilizado</th>
+                                    <th>Precisión (Accuracy)</th>
+                                    <th>Costo Computacional</th>
+                                    <th>Tiempo de Entrenamiento</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td rowspan="3" style="vertical-align: middle; border-bottom: 1px solid #334155;"><strong>Máquina de Soporte Vectorial (SVM)</strong></td>
+                                    <td>Zernike</td>
+                                    <td>55.81%</td>
+                                    <td>Medio</td>
+                                    <td>&lt; 1 segundo</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>HOG (Avanzado)</strong></td>
+                                    <td><strong><span style="color: #4ade80;">75.58%</span></strong></td>
+                                    <td>Medio</td>
+                                    <td><strong><span style="color: #4ade80;">&lt; 1 segundo</span></strong></td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid #334155;">
+                                    <td>BRISK</td>
+                                    <td>60.47%</td>
+                                    <td>Alto</td>
+                                    <td>&lt; 1 segundo</td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="3" style="vertical-align: middle; border-bottom: 1px solid #334155;"><strong>Gradient Boosting / Random Forest</strong></td>
+                                    <td>Zernike</td>
+                                    <td>61.63%</td>
+                                    <td>Medio</td>
+                                    <td>~ 2 segundos</td>
+                                </tr>
+                                <tr>
+                                    <td>HOG (Avanzado)</td>
+                                    <td>62.79%</td>
+                                    <td>Medio</td>
+                                    <td>~ 2 segundos</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid #334155;">
+                                    <td><strong>BRISK</strong></td>
+                                    <td><strong><span style="color: #4ade80;">63.95%</span></strong></td>
+                                    <td>Alto</td>
+                                    <td>~ 2 segundos</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Red Neuronal Convolucional (CNN)</strong></td>
+                                    <td>(Imágenes Mosaico directas)</td>
+                                    <td><span style="color: #facc15;">74.42%</span></td>
+                                    <td><span style="color: #f87171;">Muy Alto</span></td>
+                                    <td><span style="color: #f87171;">34.64 segundos</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
 
-                        <h3>2. Conclusión de Preprocesamiento Manual (SVM, Random Forest y K-Means)</h3>
-                        <p>Al evaluar los modelos clásicos utilizando los datos desbalanceados arrojados por el sistema, el ganador es <strong>Random Forest (utilizando HOG) con 66.28% de precisión</strong>, seguido de cerca por <strong>SVM (utilizando Momentos de Zernike) y la propia CNN, ambos con 65.12%</strong>. Esto demuestra matemáticamente que, ante la falta de datos y desbalanceo, una buena ingeniería de extracción de características (HOG) supera al Deep Learning crudo. Por otro lado, K-Means logró su mejor métrica ARI (0.0517) agrupando los descriptores de Zernike.</p>
+                        <h3>2. ¿Por qué SVM superó a la CNN en este escenario?</h3>
+                        <p>La victoria de <strong>SVM + HOG</strong> radica en la eficiencia con datasets pequeños. Las <strong>Redes Neuronales (CNN)</strong> son modelos "hambrientos de datos" que necesitan miles de imágenes para generalizar correctamente. Al tener solo 430 rostros, la CNN alcanzó un muy respetable 74.42%, pero requirió <strong>34 segundos de procesamiento</strong>. Por otro lado, SVM es un clasificador de margen máximo que destaca estadísticamente en espacios de alta dimensionalidad (como los 7,056 gradientes de HOG) incluso con pocos datos, logrando el primer lugar con 75.58% de forma casi instantánea.</p>
 
+                        <h3>3. Análisis de Descriptores y Clustering (K-Means)</h3>
                         <div class="evidence-list">
                             <!-- Evidencia 1: Comparativa Codo HOG y BRISK -->
                             <div class="evidence-card">
                                 <div class="evidence-img">
-                                    <img src="/Resultados_Clustering/codo_hog.png" alt="Método del Codo HOG"
+                                    <img src="../plots/codo_hog.png" alt="Método del Codo HOG"
                                         class="zoomable-img" onclick="openModal(this.src, this.alt)">
                                 </div>
                                 <div class="evidence-text">
-                                    <h4>1. Estabilidad Geométrica: HOG vs Otros</h4>
-                                    <p>Esta gráfica del <strong>Método del Codo (HOG)</strong> muestra una curvatura
-                                        suave y escalonada. Al compararla con BRISK, notamos que HOG procesa mejor los
-                                        contornos de los rostros y le da al algoritmo K-Means una noción matemática más
-                                        estable de que existen 4 grupos (etnias) latentes.</p>
+                                    <h4>Estabilidad Geométrica: El éxito de HOG</h4>
+                                    <p>Esta gráfica del <strong>Método del Codo (HOG)</strong> muestra una curvatura suave y bien definida. HOG capturó con precisión las micro-texturas y formas de los ojos y la nariz del mosaico biométrico, permitiendo que K-Means (algoritmo no supervisado) agrupara las etnias de forma más estable, obteniendo una puntuación ARI de 0.0315.</p>
                                 </div>
                             </div>
 
                             <!-- Evidencia 2: Codo BRISK -->
                             <div class="evidence-card">
                                 <div class="evidence-img">
-                                    <img src="/Resultados_Clustering/codo_brisk.png" alt="Método del Codo BRISK"
+                                    <img src="../plots/codo_brisk.png" alt="Método del Codo BRISK"
                                         class="zoomable-img" onclick="openModal(this.src, this.alt)">
                                 </div>
                                 <div class="evidence-text">
-                                    <h4>2. Análisis de Puntos Clave (BRISK)</h4>
-                                    <p>El comportamiento de <strong>BRISK</strong> es distinto. Al ser un descriptor
-                                        basado en puntos clave (como esquinas de los ojos), su reducción de inercia es
-                                        más abrupta. K-Means lucha más por agrupar estos puntos de manera lógica, lo que
-                                        explica por qué su puntuación de silueta fue casi cero (0.0019).</p>
+                                    <h4>Análisis de Puntos Clave: El fracaso de BRISK</h4>
+                                    <p>Con la re-extracción mediante MediaPipe, <strong>BRISK</strong> logró el mejor <strong>Coeficiente de Silueta (0.5762)</strong> en K-Means, indicando clusters bien separados. Aunque su rendimiento en SVM (60.47%) es inferior a HOG, BRISK captura patrones locales de puntos clave que resultan útiles para agrupamiento no supervisado.</p>
                                 </div>
                             </div>
 
                             <!-- Evidencia 3: Correlación Zernike -->
                             <div class="evidence-card">
                                 <div class="evidence-img">
-                                    <img src="/Resultados_Clustering/correlacion_zernike.png" alt="Correlación Zernike"
+                                    <img src="../plots/correlacion_zernike.png" alt="Correlación Zernike"
                                         class="zoomable-img" onclick="openModal(this.src, this.alt)">
                                 </div>
                                 <div class="evidence-text">
-                                    <h4>3. Independencia Ortogonal (Zernike)</h4>
-                                    <p>Esta matriz de correlación generada por los 25 <strong>Momentos de Zernike</strong> demuestra matemáticamente su propiedad de <em>ortogonalidad</em>. Al haber poca correlación redundante entre sus variables, Zernike le proporcionó al modelo SVM la robustez necesaria para alcanzar el 63.95% de precisión.</p>
+                                    <h4>Independencia Ortogonal (Zernike)</h4>
+                                    <p>Esta matriz de los Momentos de Zernike demuestra su propiedad de <em>ortogonalidad</em> (poca correlación cruzada). Aunque es un descriptor matemáticamente robusto a rotaciones, es demasiado "global" para capturar detalles finos, quedando por detrás de HOG con un 55.81% de precisión en clasificación supervisada.</p>
                                 </div>
                             </div>
-
+                            
+                            <!-- Evidencia 4: CNN Training -->
+                            <div class="evidence-card">
+                                <div class="evidence-img">
+                                    <img src="../plots/CNN_Training_History.png" alt="Entrenamiento CNN"
+                                        class="zoomable-img" onclick="openModal(this.src, this.alt)">
+                                </div>
+                                <div class="evidence-text">
+                                    <h4>Curvas de Aprendizaje de la CNN</h4>
+                                    <p>Aquí observamos el proceso iterativo de la CNN durante 25 épocas de entrenamiento. La precisión (accuracy) subió al alinear el preprocesamiento con MediaPipe, pero el tiempo requerido computacionalmente sigue siendo alto (34.64 seg) comparado con la extracción manual de características HOG que tomó milisegundos para entrenar al SVM.</p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </div>
         </section>
 
-        <!-- FASE PREDICCION EN VIVO -->
-        <section id="prediccion" class="phase-section" style="display: none;">
+    
+
+            <section id="prediccion" class="phase-section" style="display: none;">
             <div class="glass-container">
                 <header>
                     <h1>Predicción <span>en Tiempo Real</span></h1>
@@ -294,9 +356,9 @@
                                         (Preprocesamiento):</label>
                                     <select id="extractorSelect" disabled
                                         style="background: rgba(255,255,255,0.1); color: white; border: 1px solid rgba(255,255,255,0.2); padding: 5px 10px; border-radius: 6px; outline: none; cursor: pointer; opacity: 0.5;">
-                                        <option value="zernike" style="background: #1a1a2e; color: white;">Momentos de Zernike
-                                        </option>
                                         <option value="hog" style="background: #1a1a2e; color: white;">HOG (Avanzado)
+                                        </option>
+                                        <option value="zernike" style="background: #1a1a2e; color: white;">Momentos de Zernike
                                         </option>
                                         <option value="brisk" style="background: #1a1a2e; color: white;">BRISK (Puntos
                                             Clave)</option>
@@ -310,81 +372,157 @@
                                 </div>
                             </div>
                         </section>
+
                         <div class="camera-wrapper">
+
                             <video id="ml-videoElement" autoplay playsinline></video>
+
                             <canvas id="ml-canvasOriginal" style="display: none;"></canvas>
+
                             <img id="ml-imagePreview" style="display: none; max-width: 100%; border-radius: 12px;" />
+
                         </div>
+
                     </div>
+
+
 
                     <!-- Panel de Resultados Dinámico -->
+
                     <div class="results-panel">
+
                         <div
+
                             style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+
                             <h3 style="margin: 0;">Resultado Dinámico</h3>
+
                             <span id="activeModelBadge"
+
                                 style="background: rgba(46, 204, 113, 0.2); color: #2ecc71; padding: 5px 10px; border-radius: 6px; font-size: 0.8rem; font-weight: bold; border: 1px solid rgba(46, 204, 113, 0.5);">Modelo:
+
                                 CNN (Raw Pixels)</span>
+
                         </div>
+
+
 
                         <div class="prediction-box box-cnn" id="dynamic-result-box" style="padding: 2rem;">
+
                             <h4 id="dynamic-model-name"
+
                                 style="font-size: 1.2rem; color: var(--text-muted); margin-bottom: 1rem;">CNN (Deep
+
                                 Learning)</h4>
+
                             <div class="pred-class" id="dynamic-class"
+
                                 style="font-size: 2.5rem; color: var(--primary);">Esperando imagen...</div>
+
                             <div class="pred-conf" id="dynamic-conf" style="font-size: 1rem; margin-top: 10px;">--%
+
                             </div>
+
+
 
                             <!-- NUEVA SECCION: Distribucion de Probabilidades -->
+
                             <div id="distribution-container"
+
                                 style="display: none; margin-top: 25px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1);">
+
                                 <h5
+
                                     style="margin-top: 0; color: #ccc; font-size: 0.95rem; margin-bottom: 15px; text-align: left;">
+
                                     Distribución de Probabilidades:</h5>
+
                                 <div id="distribution-bars">
+
                                     <!-- Las barras se inyectarán aquí por JS -->
+
                                 </div>
+
                             </div>
+
                         </div>
+
+
 
                         <!-- K-Means Reference Table -->
+
                         <div id="kmeans-reference"
+
                             style="display: none; margin-top: 20px; padding: 15px; background: rgba(0,0,0,0.3); border-radius: 8px; border: 1px solid var(--glass-border);">
+
                             <h4 style="margin-top: 0; color: var(--text-muted); font-size: 0.9rem;">Referencia de Grupos
+
                                 (K-Means HOG)</h4>
+
                             <table class="comparison-table" style="font-size: 0.75rem; margin-top: 10px;">
+
                                 <tr>
+
                                     <th>Grupo</th>
+
                                     <th>Composición Mayoritaria (Morfología)</th>
+
                                 </tr>
+
                                 <tr>
+
                                     <td>Grupo 0</td>
+
                                     <td>Indígenas / Afroecuatorianos</td>
+
                                 </tr>
+
                                 <tr>
+
                                     <td>Grupo 1</td>
+
                                     <td>Mestizos (Variante A) / Indígenas</td>
+
                                 </tr>
+
                                 <tr>
+
                                     <td>Grupo 2</td>
+
                                     <td>Mestizos / Descendientes Europeos</td>
+
                                 </tr>
+
                                 <tr>
+
                                     <td>Grupo 3</td>
+
                                     <td>Mestizos (Variante B)</td>
+
                                 </tr>
+
                             </table>
+
                             <p style="font-size: 0.7rem; color: #aaa; margin-top: 5px;">* K-Means es un modelo no
+
                                 supervisado. Esta tabla muestra cómo el algoritmo agrupó matemáticamente los rostros sin
+
                                 conocer su etnia real, demostrando la complejidad morfológica del dataset.</p>
+
                         </div>
+
                     </div>
+
                 </div>
+
             </div>
+
         </section>
 
-    </main>
+
+
+
+</main>
 
     <!-- Modal para Imágenes -->
     <div id="imageModal" class="modal">

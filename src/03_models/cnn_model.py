@@ -10,37 +10,98 @@ import time
 
 # 1. Definir rutas y parámetros
 project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
-DATASET_DIR = os.path.join(project_root, "data", "02_processed")
-IMG_SIZE = (64, 64) # Mismo tamaño que se usó en extracción de características
+DATASET_DIR = os.path.join(project_root, "data", "01_raw")
+IMG_SIZE_PER_CROP = (64, 64)
+IMG_SIZE = (128, 128) # Mosaico 2x2 de 64x64
 BATCH_SIZE = 32
 
 print("Iniciando Fase de Deep Learning con TensorFlow/Keras...")
 print("=" * 50)
 
-# Verificar si el dataset preprocesado existe
+# Verificar si el dataset existe
 if not os.path.exists(DATASET_DIR):
-    raise FileNotFoundError(f"No se encontró el directorio {DATASET_DIR}. Ejecuta Vision.py primero.")
+    raise FileNotFoundError(f"No se encontró el directorio {DATASET_DIR}.")
 
 from sklearn.model_selection import train_test_split
 import cv2
+import mediapipe as mp
+from mediapipe.tasks import python
+from mediapipe.tasks.python import vision
 
-print(f"Cargando imágenes desde: {DATASET_DIR} en memoria...")
+# Inicializar MediaPipe (mismo pipeline que el servidor)
+task_path = os.path.join(project_root, 'app', 'server', 'face_landmarker.task')
+base_options = python.BaseOptions(model_asset_path=task_path)
+options = vision.FaceLandmarkerOptions(base_options=base_options,
+                                       output_face_blendshapes=False,
+                                       output_facial_transformation_matrixes=False,
+                                       num_faces=1)
+detector = vision.FaceLandmarker.create_from_options(options)
+
+EYES_IDX = [33,133,159,145,153,154,155,133,362,263,386,374,380,381,382,384,385,387,388,390,398]
+EYEBROWS_IDX = [70,63,105,66,107,55,65,52,53,46,336,296,334,293,300,276,283,282,295,285]
+NOSE_IDX = [1,2,98,327,279,49,114,128,29,290,277,437]
+MOUTH_IDX = [0,13,14,17,61,291,37,267,314,17,84,181]
+FACCIONES_MP = {"eye":EYES_IDX,"eyebrow":EYEBROWS_IDX,"nose":NOSE_IDX,"mouth":MOUTH_IDX}
+FACCIONES = ["eye", "eyebrow", "nose", "mouth"]
+
+def extract_crops_mediapipe(img_bgr):
+    mp_image = mp.Image(image_format=mp.ImageFormat.SRGB,
+                        data=cv2.cvtColor(img_bgr, cv2.COLOR_BGR2RGB))
+    result = detector.detect(mp_image)
+    if not result.face_landmarks:
+        return None
+    landmarks = result.face_landmarks[0]
+    h, w = img_bgr.shape[:2]
+    gray = cv2.cvtColor(img_bgr, cv2.COLOR_BGR2GRAY)
+    crops = {}
+    for faccion, indices in FACCIONES_MP.items():
+        xs = [int(landmarks[i].x * w) for i in indices]
+        ys = [int(landmarks[i].y * h) for i in indices]
+        xmin, xmax = min(xs), max(xs)
+        ymin, ymax = min(ys), max(ys)
+        pad_x = int((xmax - xmin) * 0.05)
+        pad_y = int((ymax - ymin) * 0.05)
+        x1 = max(0, xmin - pad_x); y1 = max(0, ymin - pad_y)
+        x2 = min(w, xmax + pad_x); y2 = min(h, ymax + pad_y)
+        recorte = gray[y1:y2, x1:x2]
+        if recorte.size == 0:
+            return None
+        clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8, 8))
+        img_c = clahe.apply(recorte)
+        img_b = cv2.bilateralFilter(img_c, 9, 75, 75)
+        img_t = cv2.adaptiveThreshold(img_b, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 11, 2)
+        crops[faccion] = cv2.resize(img_t, IMG_SIZE_PER_CROP)
+    return crops
+
+print(f"Cargando imágenes desde: {DATASET_DIR} con MediaPipe (creando mosaicos biométricos)...")
 
 X = []
 y = []
-class_names = sorted(os.listdir(DATASET_DIR))
+class_names = ["Afro-ecuadorians", "European descendants", "Indigenous", "Mestizos"]
 num_classes = len(class_names)
-print(f"Clases detectadas: {class_names}")
+print(f"Clases: {class_names}")
 
 for i, class_name in enumerate(class_names):
     class_dir = os.path.join(DATASET_DIR, class_name)
-    for img_name in os.listdir(class_dir):
-        img_path = os.path.join(class_dir, img_name)
-        img = cv2.imread(img_path, cv2.IMREAD_GRAYSCALE)
-        if img is not None:
-            img = cv2.resize(img, IMG_SIZE)
-            X.append(img)
-            y.append(i)
+    if not os.path.isdir(class_dir):
+        continue
+    imagenes = sorted([f for f in os.listdir(class_dir) if f.lower().endswith(('.jpg', '.jpeg', '.png'))])
+    ok = 0
+    for img_file in imagenes:
+        img_bgr = cv2.imread(os.path.join(class_dir, img_file))
+        if img_bgr is None:
+            continue
+        crops = extract_crops_mediapipe(img_bgr)
+        if crops is None:
+            continue
+        # Crear mosaico 2x2: (Arriba: ojo, ceja), (Abajo: nariz, boca)
+        top_row = np.hstack((crops["eye"], crops["eyebrow"]))
+        bottom_row = np.hstack((crops["nose"], crops["mouth"]))
+        mosaic = np.vstack((top_row, bottom_row))
+        X.append(mosaic)
+        y.append(i)
+        ok += 1
+    print(f"  {class_name}: {ok} mosaicos creados")
 
 X = np.array(X)
 y = np.array(y)
